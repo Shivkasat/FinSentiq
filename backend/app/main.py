@@ -13,6 +13,7 @@ from app.api.watchlist import router as watchlist_router
 from app.api.stocks import router as stocks_router
 from app.api.summarize import router as summarize_router
 from app.api.logs import router as logs_router, log_event
+from app.api.auth import router as auth_router
 
 # Configure Structured Logging
 logging.basicConfig(
@@ -79,6 +80,7 @@ def create_application() -> FastAPI:
     app.include_router(stocks_router, prefix=settings.API_V1_STR)
     app.include_router(summarize_router, prefix=settings.API_V1_STR)
     app.include_router(logs_router, prefix=settings.API_V1_STR)
+    app.include_router(auth_router, prefix=settings.API_V1_STR)
 
     @app.get("/health", tags=["Health"])
     async def health_check():

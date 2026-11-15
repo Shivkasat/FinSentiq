@@ -1,0 +1,292 @@
+import React from 'react';
+import {
+  Activity,
+  ArrowRight,
+  TrendingUp,
+  TrendingDown,
+  ShieldCheck,
+  Zap,
+  BarChart3,
+  Sparkles,
+  Lock,
+  Globe2,
+  Cpu,
+  Layers,
+  ChevronRight,
+} from 'lucide-react';
+
+interface LandingPageProps {
+  onLaunchDashboard: () => void;
+  onOpenAuth: (mode: 'login' | 'register') => void;
+  user: any | null;
+  totalArticles?: number;
+}
+
+export const LandingPage: React.FC<LandingPageProps> = ({
+  onLaunchDashboard,
+  onOpenAuth,
+  user,
+  totalArticles = 167,
+}) => {
+  return (
+    <div className="min-h-screen bg-[#0B0E14] text-slate-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+      
+      {/* Top Navigation */}
+      <nav className="border-b border-surface-border bg-surface/70 backdrop-blur-md sticky top-0 z-40 px-6 py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <div className="h-9 w-9 rounded-lg bg-gradient-to-tr from-indigo-600 via-indigo-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+              <Activity className="h-5 w-5 text-white" />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+                FinSentiq
+              </span>
+              <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 font-semibold tracking-wider">
+                v3.0 Cloud
+              </span>
+            </div>
+          </div>
+
+          {/* Nav links */}
+          <div className="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-300">
+            <a href="#features" className="hover:text-white transition">Platform Features</a>
+            <a href="#architecture" className="hover:text-white transition">High-Concurrency Engine</a>
+            <a href="#sectors" className="hover:text-white transition">Sectors Tracked</a>
+          </div>
+
+          {/* Right Action Buttons */}
+          <div className="flex items-center gap-3">
+            {user ? (
+              <button
+                onClick={onLaunchDashboard}
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-semibold text-white shadow-lg shadow-indigo-600/20 transition"
+              >
+                <span>Terminal Dashboard</span>
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            ) : (
+              <>
+                <button
+                  onClick={() => onOpenAuth('login')}
+                  className="px-3.5 py-2 text-xs font-semibold text-slate-300 hover:text-white transition"
+                >
+                  Sign In
+                </button>
+                <button
+                  onClick={onLaunchDashboard}
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-semibold text-white shadow-lg shadow-indigo-600/20 transition"
+                >
+                  <span>Launch Terminal</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </button>
+              </>
+            )}
+          </div>
+
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-16 px-6 overflow-hidden">
+        {/* Ambient Gradient Glows */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-indigo-600/15 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/3 right-1/4 w-[350px] h-[250px] bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
+
+        <div className="max-w-5xl mx-auto text-center relative z-10 space-y-6">
+          
+          {/* Pill Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-surface-border text-xs font-mono text-slate-300 shadow-sm">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Next-Gen Dalal Street Sentiment Intelligence</span>
+            <span className="text-slate-600">•</span>
+            <span className="text-indigo-400 font-semibold">Groq Llama-3.3 70B</span>
+          </div>
+
+          {/* Main Title */}
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+            Transform Indian Market Noise into{' '}
+            <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">
+              High-Conviction Catalysts
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-400 leading-relaxed font-normal">
+            Real-time news aggregation and quantitative sentiment engine monitoring <strong>750+ NSE & BSE equities</strong>. 
+            Sub-second central RAM store caching ensures zero cold-miss latency and zero user-triggered feed reloads.
+          </p>
+
+          {/* Hero CTAs */}
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={onLaunchDashboard}
+              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-bold text-sm shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2.5 transition transform hover:-translate-y-0.5"
+            >
+              <span>Explore Live Terminal</span>
+              <ArrowRight className="h-4 w-4" />
+            </button>
+            <button
+              onClick={() => onOpenAuth('register')}
+              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-surface hover:bg-surface-hover border border-surface-border hover:border-slate-600 text-slate-200 font-semibold text-sm transition"
+            >
+              Create Free Account
+            </button>
+          </div>
+
+          {/* Institutional Metric Strip */}
+          <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="p-4 rounded-xl border border-surface-border bg-surface/50 text-center">
+              <span className="block text-2xl font-extrabold font-mono text-white">758+</span>
+              <span className="text-xs text-slate-400">NSE/BSE Equities Mapped</span>
+            </div>
+            <div className="p-4 rounded-xl border border-surface-border bg-surface/50 text-center">
+              <span className="block text-2xl font-extrabold font-mono text-emerald-400">&lt; 2ms</span>
+              <span className="text-xs text-slate-400">Memory Store Latency</span>
+            </div>
+            <div className="p-4 rounded-xl border border-surface-border bg-surface/50 text-center">
+              <span className="block text-2xl font-extrabold font-mono text-indigo-400">10+</span>
+              <span className="text-xs text-slate-400">Top Financial RSS Feeds</span>
+            </div>
+            <div className="p-4 rounded-xl border border-surface-border bg-surface/50 text-center">
+              <span className="block text-2xl font-extrabold font-mono text-amber-400">100%</span>
+              <span className="text-xs text-slate-400">Zero User Reload Guarantee</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Feature Section */}
+      <section id="features" className="py-20 px-6 border-t border-surface-border/60 bg-[#0B0E14]/80">
+        <div className="max-w-6xl mx-auto space-y-12">
+          
+          <div className="text-center space-y-2">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-indigo-400 font-mono">
+              Designed For High Concurrency
+            </h2>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white">
+              Institutional-Grade Sentiment Engine
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto">
+              Engineered with FastAPI asynchronous workers and React 18 for seamless sub-second speed.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Card 1 */}
+            <div className="p-6 rounded-2xl border border-surface-border bg-surface hover:border-indigo-500/50 transition duration-300 space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                <BarChart3 className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-white">Sectoral Sentiment Matrix</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Automated multi-sector classification grouping news into Banking, IT, Auto, Pharma, Energy, Metals, FMCG, and Realty with weighted bullish/bearish scores.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="p-6 rounded-2xl border border-surface-border bg-surface hover:border-emerald-500/50 transition duration-300 space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                <Sparkles className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-white">Deep AI Full-Body Synthesis</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Click any news article to trigger asynchronous web crawling, extracting the full article body and generating executive bullet-point takeaways in seconds.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="p-6 rounded-2xl border border-surface-border bg-surface hover:border-amber-500/50 transition duration-300 space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center">
+                <Zap className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-white">Time Decay & Source Multipliers</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Scores dynamically halve every 6 hours based on publication recency, with premium financial publications (ET, Mint, BS) receiving priority weighting.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* Architecture Section */}
+      <section id="architecture" className="py-20 px-6 border-t border-surface-border/60 bg-[#111622]/40">
+        <div className="max-w-5xl mx-auto space-y-10">
+          
+          <div className="text-center space-y-2">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-emerald-400 font-mono">
+              Core Architecture
+            </h2>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white">
+              Why FinSentiq Never Re-fetches on User Visits
+            </h3>
+          </div>
+
+          <div className="rounded-2xl border border-surface-border bg-surface p-8 space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              
+              <div className="space-y-2">
+                <span className="text-xs font-mono font-bold text-indigo-400">01. Autonomous Cron</span>
+                <h5 className="text-sm font-bold text-white">Background Daemon</h5>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  A standalone background worker silently polls 10+ Indian feeds every 10 minutes without waiting for any user interaction.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <span className="text-xs font-mono font-bold text-emerald-400">02. Atomic Store</span>
+                <h5 className="text-sm font-bold text-white">Central RAM Cache</h5>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Headlines, tickers, and scores are stored in a thread-safe in-memory store with persistent local disk synchronization.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <span className="text-xs font-mono font-bold text-sky-400">03. Sub-2ms Serving</span>
+                <h5 className="text-sm font-bold text-white">Zero User Latency</h5>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Every user request is answered directly from RAM in under 2 milliseconds with zero rate limits or external dependencies.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Final CTA Strip */}
+      <section className="py-16 px-6 border-t border-surface-border bg-gradient-to-b from-[#111622] to-[#0B0E14] text-center">
+        <div className="max-w-3xl mx-auto space-y-5">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+            Ready to explore real-time Dalal Street sentiment?
+          </h3>
+          <p className="text-xs sm:text-sm text-slate-400">
+            Open the full interactive terminal now or register for personalized portfolio watchlists.
+          </p>
+          <div className="pt-2 flex justify-center gap-4">
+            <button
+              onClick={onLaunchDashboard}
+              className="px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-xl shadow-indigo-600/30 flex items-center gap-2 transition"
+            >
+              <span>Launch Terminal Dashboard</span>
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-surface-border bg-surface/50 py-6 px-6 text-center text-xs text-slate-500">
+        <p>© 2026 FinSentiq. High-Concurrency Indian Stock Market Intelligence Platform.</p>
+      </footer>
+
+    </div>
+  );
+};

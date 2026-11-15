@@ -48,3 +48,31 @@ export const fetchSystemLogs = async (): Promise<{ logs: string[] }> => {
   const { data } = await apiClient.get('/system/logs');
   return data;
 };
+
+export const registerUser = async (data: { username: string; email: string; password: string }) => {
+  const resp = await apiClient.post('/auth/register', data);
+  if (resp.data.access_token) {
+    localStorage.setItem('finsentiq_token', resp.data.access_token);
+    localStorage.setItem('finsentiq_user', JSON.stringify(resp.data.user));
+  }
+  return resp.data;
+};
+
+export const loginUser = async (data: { username_or_email: string; password: string }) => {
+  const resp = await apiClient.post('/auth/login', data);
+  if (resp.data.access_token) {
+    localStorage.setItem('finsentiq_token', resp.data.access_token);
+    localStorage.setItem('finsentiq_user', JSON.stringify(resp.data.user));
+  }
+  return resp.data;
+};
+
+export const logoutUser = () => {
+  localStorage.removeItem('finsentiq_token');
+  localStorage.removeItem('finsentiq_user');
+};
+
+export const getStoredUser = () => {
+  const u = localStorage.getItem('finsentiq_user');
+  return u ? JSON.parse(u) : null;
+};

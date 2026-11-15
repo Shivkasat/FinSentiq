@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Navbar } from './components/Navbar';
+import { LandingPage } from './components/LandingPage';
 import { SectorHeatmap } from './components/SectorHeatmap';
 import { MarketMovers } from './components/MarketMovers';
 import { ArticleCard } from './components/ArticleCard';
 import { AISummaryModal } from './components/AISummaryModal';
 import { WatchlistModal } from './components/WatchlistModal';
 import { LogsModal } from './components/LogsModal';
+import { AuthModal } from './components/AuthModal';
 import {
   fetchArticles,
   fetchMarketOverview,
@@ -15,19 +17,41 @@ import {
   removeWatchlistSymbol,
   summarizeArticle,
   fetchSystemLogs,
+  getStoredUser,
+  logoutUser,
 } from './api';
 import { Search, ShieldAlert, Sparkles, TrendingUp } from 'lucide-react';
 
 export const App: React.FC = () => {
   const queryClient = useQueryClient();
+  
+  // Navigation & Theme
+  const [currentView, setCurrentView] = useState<'landing' | 'dashboard'>('landing');
+  const [isLightMode, setIsLightMode] = useState<boolean>(false);
   const [selectedSector, setSelectedSector] = useState<string>('All');
   const [selectedSentiment, setSelectedSentiment] = useState<string>('');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [isLightMode, setIsLightMode] = useState<boolean>(false);
+
+  // User State
+  const [user, setUser] = useState<any | null>(null);
+
+  useEffect(() => {
+    const savedUser = getStoredUser();
+    if (savedUser) {
+      setUser(savedUser);
+    }
+  }, []);
+
+  const userId = user?.id || 'guest_user';
 
   // Modals state
   const [isWatchlistOpen, setIsWatchlistOpen] = useState<boolean>(false);
   const [isLogsOpen, setIsLogsOpen] = useState<boolean>(false);
+  const [authModalState, setAuthModalState] = useState<{ isOpen: boolean; mode: 'login' | 'register' }>({
+    isOpen: false,
+    mode: 'login',
+  });
+
   const [summaryModalState, setSummaryModalState] = useState<{
     isOpen: boolean;
     loading: boolean;
@@ -62,8 +86,8 @@ export const App: React.FC = () => {
 
   // 3. User Watchlist
   const { data: watchlistData } = useQuery({
-    queryKey: ['watchlist'],
-    queryFn: () => fetchWatchlist('guest_user'),
+    queryKey: ['watchlist', userId],
+    queryFn: () => fetchWatchlist(userId),
   });
 
   // 4. System Logs
@@ -79,13 +103,13 @@ export const App: React.FC = () => {
   const toggleWatchlistMutation = useMutation({
     mutationFn: async (symbol: string) => {
       if (watchlist.includes(symbol)) {
-        return removeWatchlistSymbol(symbol, 'guest_user');
+        return removeWatchlistSymbol(symbol, userId);
       } else {
-        return addWatchlistSymbol(symbol, 'guest_user');
+        return addWatchlistSymbol(symbol, userId);
       }
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['watchlist'] });
+      queryClient.invalidateQueries({ queryKey: ['watchlist', userId] });
     },
   });
 
@@ -93,7 +117,6 @@ export const App: React.FC = () => {
     toggleWatchlistMutation.mutate(symbol);
   };
 
-  // Open AI Brief Modal and fetch deep summary
   const handleOpenSummary = async (url: string, title: string) => {
     setSummaryModalState({
       isOpen: true,
@@ -137,118 +160,137 @@ export const App: React.FC = () => {
     document.documentElement.classList.toggle('dark');
   };
 
+  const handleLogout = () => {
+    logoutUser();
+    setUser(null);
+  };
+
   return (
     <div className={`min-h-screen ${isLightMode ? 'bg-slate-50 text-slate-900' : 'bg-[#0B0E14] text-slate-100'} flex flex-col font-sans transition-colors`}>
       
-      {/* Top Navigation */}
+      {/* Top Navigation Bar */}
       <Navbar
+        currentView={currentView}
+        onNavigate={(v) => setCurrentView(v)}
         lastUpdated={overview?.last_updated}
         totalArticles={overview?.summary?.total_articles}
         overallMood={overview?.summary?.overall_mood}
         watchlistCount={watchlist.length}
         onOpenWatchlist={() => setIsWatchlistOpen(true)}
         onOpenLogs={() => setIsLogsOpen(true)}
+        onOpenAuth={(mode) => setAuthModalState({ isOpen: true, mode })}
+        user={user}
+        onLogout={handleLogout}
         isLightMode={isLightMode}
         onToggleTheme={toggleTheme}
       />
 
-      {/* Main Content Dashboard */}
-      <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 space-y-6">
-        
-        {/* Sector Heatmap */}
-        {overview?.summary?.sectors && (
-          <SectorHeatmap
-            sectors={overview.summary.sectors}
-            selectedSector={selectedSector}
-            onSelectSector={setSelectedSector}
-          />
-        )}
-
-        {/* Top Movers (Bullish vs Bearish) */}
-        {overview && (
-          <MarketMovers
-            gainers={overview.gainers || []}
-            losers={overview.losers || []}
-            watchlist={watchlist}
-            onToggleWatchlist={handleToggleWatchlist}
-          />
-        )}
-
-        {/* Filter & Search Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl border border-surface-border bg-surface">
+      {/* View 1: Landing Page */}
+      {currentView === 'landing' ? (
+        <LandingPage
+          onLaunchDashboard={() => setCurrentView('dashboard')}
+          onOpenAuth={(mode) => setAuthModalState({ isOpen: true, mode })}
+          user={user}
+          totalArticles={overview?.summary?.total_articles}
+        />
+      ) : (
+        /* View 2: Live Quantitative Terminal Dashboard */
+        <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 space-y-6">
           
-          {/* Search */}
-          <div className="relative w-full sm:w-80">
-            <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
-            <input
-              type="text"
-              placeholder="Search symbol (e.g. RELIANCE, TCS) or headline..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-lg bg-[#0B0E14] border border-surface-border text-xs text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition"
+          {/* Sector Heatmap */}
+          {overview?.summary?.sectors && (
+            <SectorHeatmap
+              sectors={overview.summary.sectors}
+              selectedSector={selectedSector}
+              onSelectSector={setSelectedSector}
             />
-          </div>
+          )}
 
-          {/* Sentiment Filter Tabs */}
-          <div className="flex items-center gap-1.5 w-full sm:w-auto">
-            {['', 'Positive', 'Neutral', 'Negative'].map((sent) => (
-              <button
-                key={sent}
-                onClick={() => setSelectedSentiment(sent)}
-                className={`text-xs px-3 py-1.5 rounded-lg font-medium transition ${
-                  selectedSentiment === sent
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
-                    : 'bg-[#0B0E14] text-slate-400 hover:text-white border border-surface-border'
-                }`}
-              >
-                {sent === '' ? 'All Sentiment' : sent}
-              </button>
-            ))}
-          </div>
+          {/* Top Movers (Bullish vs Bearish) */}
+          {overview && (
+            <MarketMovers
+              gainers={overview.gainers || []}
+              losers={overview.losers || []}
+              watchlist={watchlist}
+              onToggleWatchlist={handleToggleWatchlist}
+            />
+          )}
 
-        </div>
-
-        {/* Active Filter Header */}
-        <div className="flex items-center justify-between text-xs text-slate-400">
-          <span>
-            Showing <strong className="text-white">{articlesData?.count || 0}</strong> intelligence articles for sector: <span className="text-indigo-400 font-semibold">{selectedSector}</span>
-          </span>
-          <span className="font-mono text-[11px] text-slate-400">
-            Store State: Active (Zero User Feed Reload)
-          </span>
-        </div>
-
-        {/* Articles Grid */}
-        {articlesLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((n) => (
-              <div key={n} className="h-44 rounded-xl border border-surface-border bg-surface animate-pulse" />
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {articlesData?.articles?.map((art) => (
-              <ArticleCard
-                key={art.id || art.link}
-                article={art}
-                onOpenSummary={handleOpenSummary}
+          {/* Filter & Search Bar */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl border border-surface-border bg-surface">
+            
+            {/* Search */}
+            <div className="relative w-full sm:w-80">
+              <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+              <input
+                type="text"
+                placeholder="Search symbol (e.g. RELIANCE, TCS) or headline..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-9 pr-4 py-2 rounded-lg bg-[#0B0E14] border border-surface-border text-xs text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition"
               />
-            ))}
-            {articlesData?.articles?.length === 0 && (
-              <div className="col-span-full py-16 text-center text-slate-400">
-                <ShieldAlert className="h-8 w-8 mx-auto text-slate-400 mb-2" />
-                <p className="text-sm font-medium">No articles found matching the current criteria.</p>
-              </div>
-            )}
+            </div>
+
+            {/* Sentiment Filter Tabs */}
+            <div className="flex items-center gap-1.5 w-full sm:w-auto">
+              {['', 'Positive', 'Neutral', 'Negative'].map((sent) => (
+                <button
+                  key={sent}
+                  onClick={() => setSelectedSentiment(sent)}
+                  className={`text-xs px-3 py-1.5 rounded-lg font-medium transition ${
+                    selectedSentiment === sent
+                      ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                      : 'bg-[#0B0E14] text-slate-400 hover:text-white border border-surface-border'
+                  }`}
+                >
+                  {sent === '' ? 'All Sentiment' : sent}
+                </button>
+              ))}
+            </div>
+
           </div>
-        )}
 
-      </main>
+          {/* Active Filter Header */}
+          <div className="flex items-center justify-between text-xs text-slate-400">
+            <span>
+              Showing <strong className="text-white">{articlesData?.count || 0}</strong> intelligence articles for sector: <span className="text-indigo-400 font-semibold">{selectedSector}</span>
+            </span>
+            <span className="font-mono text-[11px] text-slate-400">
+              Store State: Active (Zero User Feed Reload)
+            </span>
+          </div>
 
-      {/* Footer */}
-      <footer className="border-t border-surface-border bg-surface/50 py-4 px-6 mt-12 text-center text-xs text-slate-400">
-        <p>FinSentiq v3.0 Cloud Platform • High-Concurrency Async Architecture • NSE/BSE Equity Intelligence</p>
-      </footer>
+          {/* Articles Grid */}
+          {articlesLoading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[1, 2, 3, 4, 5, 6].map((n) => (
+                <div key={n} className="h-44 rounded-xl border border-surface-border bg-surface animate-pulse" />
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {articlesData?.articles?.map((art) => (
+                <ArticleCard
+                  key={art.id || art.link}
+                  article={art}
+                  onOpenSummary={handleOpenSummary}
+                />
+              ))}
+              {articlesData?.articles?.length === 0 && (
+                <div className="col-span-full py-16 text-center text-slate-400">
+                  <ShieldAlert className="h-8 w-8 mx-auto text-slate-400 mb-2" />
+                  <p className="text-sm font-medium">No articles found matching the current criteria.</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Terminal Footer */}
+          <footer className="border-t border-surface-border bg-surface/50 py-4 px-6 mt-12 text-center text-xs text-slate-400">
+            <p>FinSentiq v3.0 Cloud Platform • High-Concurrency Async Architecture • NSE/BSE Equity Intelligence</p>
+          </footer>
+        </main>
+      )}
 
       {/* Modals */}
       <AISummaryModal
@@ -272,6 +314,16 @@ export const App: React.FC = () => {
         onClose={() => setIsLogsOpen(false)}
         logs={logsData?.logs || []}
         onRefresh={() => refetchLogs()}
+      />
+
+      <AuthModal
+        isOpen={authModalState.isOpen}
+        onClose={() => setAuthModalState({ ...authModalState, isOpen: false })}
+        initialMode={authModalState.mode}
+        onSuccess={(u) => {
+          setUser(u);
+          setCurrentView('dashboard');
+        }}
       />
 
     </div>
