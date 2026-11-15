@@ -286,8 +286,9 @@ export const App: React.FC = () => {
             <span>
               Showing <strong className="text-white">{articlesData?.count || 0}</strong> intelligence articles for sector: <span className="text-indigo-400 font-semibold">{selectedSector}</span>
             </span>
-            <span className="font-mono text-[11px] text-slate-400">
-              Store State: Active (Zero User Feed Reload)
+            <span className="font-mono text-[11px] text-emerald-400 flex items-center gap-1.5">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              Live Market Feed
             </span>
           </div>
 
@@ -317,8 +318,8 @@ export const App: React.FC = () => {
           )}
 
           {/* Terminal Footer */}
-          <footer className="border-t border-surface-border bg-surface/50 py-4 px-6 mt-12 text-center text-xs text-slate-400">
-            <p>FinSentiq v3.0 Cloud Platform • High-Concurrency Async Architecture • NSE/BSE Equity Intelligence</p>
+          <footer className="border-t border-surface-border bg-surface/50 py-4 px-6 mt-12 text-center text-xs text-slate-500">
+            <p>© 2026 FinSentiq • Indian Stock Market Intelligence & Sentiment Terminal</p>
           </footer>
         </main>
       )}

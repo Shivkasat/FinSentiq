@@ -41,9 +41,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           {/* Pill Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-surface-border text-xs font-mono text-slate-300 shadow-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Next-Gen Dalal Street Sentiment Intelligence</span>
+            <span>Dalal Street Market Intelligence</span>
             <span className="text-slate-600">•</span>
-            <span className="text-indigo-400 font-semibold">Groq Llama-3.3 70B</span>
+            <span className="text-emerald-400 font-semibold">Live Market Pulse</span>
           </div>
 
           {/* Main Title */}
@@ -56,8 +56,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
           {/* Subtitle */}
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-400 leading-relaxed font-normal">
-            Real-time news aggregation and quantitative sentiment engine monitoring <strong>750+ NSE & BSE equities</strong>. 
-            Sub-second central RAM store caching ensures zero cold-miss latency and zero user-triggered feed reloads.
+            Real-time news sentiment intelligence monitoring <strong>750+ NSE & BSE equities</strong>. 
+            Instant sector matrices, breaking news summaries, and stock catalyst tracking for active market participants.
           </p>
 
           {/* Hero CTAs */}
@@ -84,16 +84,16 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <span className="text-xs text-slate-400">NSE/BSE Equities Mapped</span>
             </div>
             <div className="p-4 rounded-xl border border-surface-border bg-surface/50 text-center">
-              <span className="block text-2xl font-extrabold font-mono text-emerald-400">&lt; 2ms</span>
-              <span className="text-xs text-slate-400">Memory Store Latency</span>
+              <span className="block text-2xl font-extrabold font-mono text-emerald-400">&lt; 1 Sec</span>
+              <span className="text-xs text-slate-400">Live Signal Speed</span>
             </div>
             <div className="p-4 rounded-xl border border-surface-border bg-surface/50 text-center">
               <span className="block text-2xl font-extrabold font-mono text-indigo-400">10+</span>
-              <span className="text-xs text-slate-400">Top Financial RSS Feeds</span>
+              <span className="text-xs text-slate-400">Financial News Feeds</span>
             </div>
             <div className="p-4 rounded-xl border border-surface-border bg-surface/50 text-center">
-              <span className="block text-2xl font-extrabold font-mono text-amber-400">100%</span>
-              <span className="text-xs text-slate-400">Zero User Reload Guarantee</span>
+              <span className="block text-2xl font-extrabold font-mono text-amber-400">24/7</span>
+              <span className="text-xs text-slate-400">Automated Market Coverage</span>
             </div>
           </div>
 
@@ -106,13 +106,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           
           <div className="text-center space-y-2">
             <h2 className="text-xs font-bold uppercase tracking-widest text-indigo-400 font-mono">
-              Designed For High Concurrency
+              Key Platform Advantages
             </h2>
             <h3 className="text-2xl sm:text-3xl font-bold text-white">
-              Institutional-Grade Sentiment Engine
+              Institutional Market Sentiment Intelligence
             </h3>
             <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto">
-              Engineered with FastAPI asynchronous workers and React 18 for seamless sub-second speed.
+              Empowering Indian investors and traders with automated sentiment scoring and sector trend analytics.
             </p>
           </div>
 
@@ -157,15 +157,16 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </section>
 
       {/* Architecture Section */}
+      {/* How it works Section */}
       <section id="architecture" className="py-20 px-6 border-t border-surface-border/60 bg-[#111622]/40">
         <div className="max-w-5xl mx-auto space-y-10">
           
           <div className="text-center space-y-2">
             <h2 className="text-xs font-bold uppercase tracking-widest text-emerald-400 font-mono">
-              Core Architecture
+              Simple 3-Step Workflow
             </h2>
             <h3 className="text-2xl sm:text-3xl font-bold text-white">
-              Why FinSentiq Never Re-fetches on User Visits
+              How FinSentiq Powers Your Trading Edge
             </h3>
           </div>
 
@@ -173,26 +174,26 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               
               <div className="space-y-2">
-                <span className="text-xs font-mono font-bold text-indigo-400">01. Autonomous Cron</span>
-                <h5 className="text-sm font-bold text-white">Background Daemon</h5>
+                <span className="text-xs font-mono font-bold text-indigo-400">01. 24/7 Market Scrape</span>
+                <h5 className="text-sm font-bold text-white">Real-Time Ingestion</h5>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  A standalone background worker silently polls 10+ Indian feeds every 10 minutes without waiting for any user interaction.
+                  Continuously aggregates breaking stories and filings across leading Indian business publications.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <span className="text-xs font-mono font-bold text-emerald-400">02. Atomic Store</span>
-                <h5 className="text-sm font-bold text-white">Central RAM Cache</h5>
+                <span className="text-xs font-mono font-bold text-emerald-400">02. Noise Filtering</span>
+                <h5 className="text-sm font-bold text-white">Catalyst Identification</h5>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Headlines, tickers, and scores are stored in a thread-safe in-memory store with persistent local disk synchronization.
+                  Detects stock tickers, classifies sentiment direction, and filters out irrelevant noise automatically.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <span className="text-xs font-mono font-bold text-sky-400">03. Sub-2ms Serving</span>
-                <h5 className="text-sm font-bold text-white">Zero User Latency</h5>
+                <span className="text-xs font-mono font-bold text-sky-400">03. Actionable Insights</span>
+                <h5 className="text-sm font-bold text-white">Live Terminal Feeds</h5>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Every user request is answered directly from RAM in under 2 milliseconds with zero rate limits or external dependencies.
+                  Presents sector heatmaps, top mover catalysts, and executive article briefs on demand.
                 </p>
               </div>
 
@@ -225,7 +226,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
       {/* Footer */}
       <footer className="border-t border-surface-border bg-surface/50 py-6 px-6 text-center text-xs text-slate-500">
-        <p>© 2026 FinSentiq. High-Concurrency Indian Stock Market Intelligence Platform.</p>
+        <p>© 2026 FinSentiq. Indian Stock Market Intelligence & Sentiment Terminal.</p>
       </footer>
 
     </div>

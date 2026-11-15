@@ -53,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   FinSentiq
                 </span>
                 <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 font-semibold tracking-wider">
-                  v3.0 Cloud
+                  NSE / BSE
                 </span>
               </div>
               <p className="text-xs text-slate-400 font-medium hidden sm:block">

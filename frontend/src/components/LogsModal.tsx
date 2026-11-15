@@ -22,8 +22,8 @@ export const LogsModal: React.FC<LogsModalProps> = ({ isOpen, onClose, logs, onR
               <Terminal className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="text-base font-bold text-white">System & Engine Telemetry Logs</h3>
-              <p className="text-xs text-slate-400 font-mono">Live Ingestion & Processing Feed</p>
+              <h3 className="text-base font-bold text-white">Live Activity & Feed Monitor</h3>
+              <p className="text-xs text-slate-400 font-mono">Real-Time Market Data Stream</p>
             </div>
           </div>
           <div className="flex items-center gap-2">

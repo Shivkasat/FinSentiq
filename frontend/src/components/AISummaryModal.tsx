@@ -30,7 +30,7 @@ export const AISummaryModal: React.FC<SummaryModalProps> = ({ isOpen, onClose, l
               <h3 className="text-base font-bold text-white flex items-center gap-2">
                 Executive AI Intelligence Briefing
               </h3>
-              <p className="text-xs text-slate-400 font-mono">Deep NLP Full-Text Synthesis</p>
+              <p className="text-xs text-slate-400">Executive Article Summary & Market Catalyst</p>
             </div>
           </div>
           <button

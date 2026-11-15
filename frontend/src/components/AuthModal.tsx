@@ -174,8 +174,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           </button>
         </form>
 
-        <p className="text-[11px] text-center text-slate-500 mt-5">
-          Protected by FinSentiq Stateless JWT Architecture & Bcrypt 256
+        <p className="text-[11px] text-center text-slate-500 mt-5 flex items-center justify-center gap-1">
+          <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+          <span>Encrypted & Secure Member Access</span>
         </p>
 
       </div>
