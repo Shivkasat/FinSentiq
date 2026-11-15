@@ -7,6 +7,7 @@ interface NavbarProps {
   lastUpdated?: string;
   totalArticles?: number;
   overallMood?: string;
+  isBackendConnected?: boolean;
   watchlistCount?: number;
   onOpenWatchlist: () => void;
   onOpenLogs: () => void;
@@ -23,6 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   lastUpdated,
   totalArticles = 0,
   overallMood = 'Neutral',
+  isBackendConnected = false,
   watchlistCount = 0,
   onOpenWatchlist,
   onOpenLogs,
@@ -88,19 +90,28 @@ export const Navbar: React.FC<NavbarProps> = ({
           
           {/* Live Status Pill */}
           <div className="hidden xl:flex items-center gap-3 px-3.5 py-1.5 rounded-lg bg-[#0B0E14] border border-surface-border text-xs font-mono">
-            <div className="flex items-center gap-1.5">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span className="text-slate-300 font-semibold">Store Synced</span>
-            </div>
-            <span className="text-slate-600">•</span>
-            <span className="text-slate-400">{totalArticles} Articles</span>
-            <span className="text-slate-600">•</span>
-            <span className={overallMood === 'Bullish' ? 'text-emerald-400 font-bold' : overallMood === 'Bearish' ? 'text-rose-400 font-bold' : 'text-slate-400'}>
-              Mood: {overallMood}
-            </span>
+            {isBackendConnected && totalArticles > 0 ? (
+              <>
+                <div className="flex items-center gap-1.5">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  <span className="text-slate-300 font-semibold">Store Synced</span>
+                </div>
+                <span className="text-slate-600">•</span>
+                <span className="text-slate-400">{totalArticles} Articles Active</span>
+                <span className="text-slate-600">•</span>
+                <span className={overallMood === 'Bullish' ? 'text-emerald-400 font-bold' : overallMood === 'Bearish' ? 'text-rose-400 font-bold' : 'text-slate-400'}>
+                  Mood: {overallMood}
+                </span>
+              </>
+            ) : (
+              <div className="flex items-center gap-2 text-rose-400">
+                <span className="h-2 w-2 rounded-full bg-rose-500 animate-pulse"></span>
+                <span>Backend Offline (Port 8000)</span>
+              </div>
+            )}
           </div>
 
           {/* Watchlist Button */}

@@ -20,7 +20,7 @@ import {
   getStoredUser,
   logoutUser,
 } from './api';
-import { Search, ShieldAlert, Sparkles, TrendingUp } from 'lucide-react';
+import { Search, ShieldAlert, Sparkles, TrendingUp, AlertTriangle, RefreshCw } from 'lucide-react';
 
 export const App: React.FC = () => {
   const queryClient = useQueryClient();
@@ -65,7 +65,12 @@ export const App: React.FC = () => {
   });
 
   // 1. Fetch Market Overview (Cached automatically via TanStack Query)
-  const { data: overview, isLoading: overviewLoading } = useQuery({
+  const {
+    data: overview,
+    isLoading: overviewLoading,
+    isError: overviewError,
+    refetch: refetchOverview,
+  } = useQuery({
     queryKey: ['market-overview'],
     queryFn: fetchMarketOverview,
     refetchInterval: 60 * 1000,
@@ -73,7 +78,12 @@ export const App: React.FC = () => {
   });
 
   // 2. Fetch Articles (Instant load from memory store)
-  const { data: articlesData, isLoading: articlesLoading } = useQuery({
+  const {
+    data: articlesData,
+    isLoading: articlesLoading,
+    isError: articlesError,
+    refetch: refetchArticles,
+  } = useQuery({
     queryKey: ['articles', selectedSector, selectedSentiment, searchQuery],
     queryFn: () =>
       fetchArticles({
@@ -175,6 +185,7 @@ export const App: React.FC = () => {
         lastUpdated={overview?.last_updated}
         totalArticles={overview?.summary?.total_articles}
         overallMood={overview?.summary?.overall_mood}
+        isBackendConnected={Boolean(overview && !overviewError)}
         watchlistCount={watchlist.length}
         onOpenWatchlist={() => setIsWatchlistOpen(true)}
         onOpenLogs={() => setIsLogsOpen(true)}
@@ -197,6 +208,26 @@ export const App: React.FC = () => {
         /* View 2: Live Quantitative Terminal Dashboard */
         <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 space-y-6">
           
+          {/* Backend Offline Warning Banner */}
+          {(overviewError || articlesError) && (
+            <div className="p-4 rounded-xl border border-rose-500/30 bg-rose-500/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-rose-300 animate-fadeIn">
+              <div className="flex items-center gap-2.5">
+                <AlertTriangle className="h-5 w-5 text-rose-400 shrink-0" />
+                <div>
+                  <strong className="block text-sm text-white font-semibold">FastAPI Backend Server Offline (Port 8000)</strong>
+                  <span>Please start the backend terminal: <code className="bg-black/50 px-2 py-0.5 rounded text-rose-200 font-mono">cd backend && uvicorn app.main:app --reload --port 8000</code></span>
+                </div>
+              </div>
+              <button
+                onClick={() => { refetchOverview(); refetchArticles(); }}
+                className="px-3.5 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white font-semibold flex items-center gap-1.5 transition shrink-0"
+              >
+                <RefreshCw className="h-3.5 w-3.5" />
+                <span>Retry Connection</span>
+              </button>
+            </div>
+          )}
+
           {/* Sector Heatmap */}
           {overview?.summary?.sectors && (
             <SectorHeatmap

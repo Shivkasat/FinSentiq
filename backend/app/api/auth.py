@@ -3,7 +3,7 @@ import json
 import logging
 from typing import Dict, Any, Optional
 from datetime import datetime
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 from fastapi import APIRouter, HTTPException, Depends, Header
 from app.core.security import verify_password, get_password_hash, create_access_token, decode_access_token
 
@@ -36,7 +36,7 @@ def _save_users(users: Dict[str, Dict[str, Any]]):
 
 class RegisterRequest(BaseModel):
     username: str
-    email: EmailStr
+    email: str
     password: str
 
 class LoginRequest(BaseModel):
