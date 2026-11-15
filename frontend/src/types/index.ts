@@ -49,3 +49,33 @@ export interface MarketOverview {
   gainers: StockMover[];
   losers: StockMover[];
 }
+
+export interface StockQuote {
+  symbol: string;
+  price: number;
+  change: number;
+  percent_change: number;
+  sector: string;
+}
+
+export interface WatchlistData {
+  user_id: string;
+  symbols: string[];
+  stocks: StockQuote[];
+  total_stocks: number;
+}
+
+export interface AISummaryResult {
+  url: string;
+  title: string;
+  summary: string;
+  stock_mentions: string[];
+  sector: string;
+  sentiment: string;
+  sentiment_score: number;
+  confidence: number;
+  impact_type: string;
+  reasoning: string;
+  word_count: number;
+  analysis_success: boolean;
+}

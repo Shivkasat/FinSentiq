@@ -1,0 +1,78 @@
+import logging
+from typing import List, Optional
+from pydantic import BaseModel
+from fastapi import APIRouter, Query, HTTPException
+from app.services.sector_engine import sector_engine
+
+router = APIRouter(prefix="/stocks", tags=["Stock Search & Info"])
+logger = logging.getLogger("finsentiq.api.stocks")
+
+class StockSearchResult(BaseModel):
+    symbol: str
+    name: str
+    sector: str
+
+@router.get("/search", response_model=List[StockSearchResult])
+async def search_stocks(q: str = Query(..., min_length=1, description="Stock ticker symbol or company name")):
+    """
+    Fast in-memory autocomplete search across 750+ NSE/BSE stocks and company names.
+    """
+    query = q.strip().lower()
+    results = []
+    seen = set()
+
+    # 1. Exact symbol match
+    for sym in sector_engine.valid_symbols:
+        if sym.lower() == query and sym not in seen:
+            seen.add(sym)
+            sec = sector_engine.symbol_to_sector.get(sym, "Broad Market")
+            results.append({"symbol": sym, "name": sym, "sector": sec})
+
+    # 2. Symbol starts with
+    for sym in sorted(sector_engine.valid_symbols):
+        if sym.lower().startswith(query) and sym not in seen:
+            seen.add(sym)
+            sec = sector_engine.symbol_to_sector.get(sym, "Broad Market")
+            results.append({"symbol": sym, "name": sym, "sector": sec})
+            if len(results) >= 15:
+                return results
+
+    # 3. Company name match
+    for company_name, sym in sector_engine.company_to_symbol.items():
+        if query in company_name.lower() and sym not in seen:
+            seen.add(sym)
+            sec = sector_engine.symbol_to_sector.get(sym, "Broad Market")
+            results.append({
+                "symbol": sym,
+                "name": company_name.title(),
+                "sector": sec
+            })
+            if len(results) >= 20:
+                break
+
+    return results
+
+@router.get("/quote/{symbol}")
+async def get_stock_quote(symbol: str):
+    """
+    Returns market reference data for a given stock symbol.
+    """
+    sym = symbol.strip().upper()
+    sec = sector_engine.symbol_to_sector.get(sym)
+    if not sec and sym not in sector_engine.valid_symbols:
+        raise HTTPException(status_code=404, detail="Stock symbol not found")
+
+    import random
+    # Deterministic seed based on symbol for consistent demo prices
+    random.seed(sum(ord(c) for c in sym))
+    base_price = round(random.uniform(150, 4200), 2)
+    change = round(random.uniform(-45, 65), 2)
+    percent_change = round((change / base_price) * 100, 2)
+
+    return {
+        "symbol": sym,
+        "price": base_price,
+        "change": change,
+        "percent_change": percent_change,
+        "sector": sec or "Broad Market"
+    }

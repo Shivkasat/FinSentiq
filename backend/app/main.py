@@ -7,8 +7,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.core.store import central_store
 from app.services.rss_engine import rss_engine
+
 from app.api.news import router as news_router
 from app.api.watchlist import router as watchlist_router
+from app.api.stocks import router as stocks_router
+from app.api.summarize import router as summarize_router
+from app.api.logs import router as logs_router, log_event
 
 # Configure Structured Logging
 logging.basicConfig(
@@ -23,33 +27,29 @@ async def periodic_feed_worker():
         try:
             await asyncio.sleep(settings.FEED_FETCH_INTERVAL_MINUTES * 60)
             logger.info("Executing scheduled background RSS ingestion...")
+            log_event("Triggered scheduled background RSS ingestion cycle")
             await rss_engine.ingest_and_process_all()
+            log_event("RSS ingestion and sentiment analysis complete")
         except asyncio.CancelledError:
             logger.info("Background feed worker stopped.")
             break
         except Exception as e:
             logger.error(f"Error in background ingestion loop: {e}")
+            log_event(f"Ingestion warning: {e}")
             await asyncio.sleep(60)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """
-    Application Lifespan Events:
-    - On Startup: Start native async background worker.
-    - If store has no articles, trigger initial ingest task.
-    - On Shutdown: Cancel worker cleanly.
-    """
     logger.info("Initializing FinSentiq FastAPI Engine...")
     
-    # Check if central store has articles
     overview = central_store.get_market_overview()
     if not overview.get("summary") or overview["summary"].get("total_articles", 0) == 0:
         logger.info("Central store is cold. Triggering initial background ingestion...")
+        log_event("Store cold boot — starting initial RSS ingestion")
         asyncio.create_task(rss_engine.ingest_and_process_all())
 
-    # Launch native background periodic worker
     worker_task = asyncio.create_task(periodic_feed_worker())
-    logger.info(f"Background Ingestion Worker active (every {settings.FEED_FETCH_INTERVAL_MINUTES} mins).")
+    log_event(f"Scheduler active: periodic sweep every {settings.FEED_FETCH_INTERVAL_MINUTES}m")
 
     yield
 
@@ -73,9 +73,12 @@ def create_application() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # Routers
+    # Register All API Routers
     app.include_router(news_router, prefix=settings.API_V1_STR)
     app.include_router(watchlist_router, prefix=settings.API_V1_STR)
+    app.include_router(stocks_router, prefix=settings.API_V1_STR)
+    app.include_router(summarize_router, prefix=settings.API_V1_STR)
+    app.include_router(logs_router, prefix=settings.API_V1_STR)
 
     @app.get("/health", tags=["Health"])
     async def health_check():

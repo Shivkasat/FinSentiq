@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { Article, MarketOverview } from '../types';
+import { Article, MarketOverview, WatchlistData, AISummaryResult } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/v1';
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 15000,
 });
 
 export const fetchArticles = async (params?: { sector?: string; sentiment?: string; search?: string }): Promise<{ count: number; articles: Article[] }> => {
@@ -18,17 +18,33 @@ export const fetchMarketOverview = async (): Promise<MarketOverview> => {
   return data;
 };
 
-export const fetchWatchlist = async (userId: string = 'guest_user'): Promise<{ user_id: string; symbols: string[] }> => {
+export const fetchWatchlist = async (userId: string = 'guest_user'): Promise<WatchlistData> => {
   const { data } = await apiClient.get(`/watchlist/${userId}`);
   return data;
 };
 
-export const addWatchlistSymbol = async (symbol: string, userId: string = 'guest_user'): Promise<{ symbols: string[] }> => {
+export const addWatchlistSymbol = async (symbol: string, userId: string = 'guest_user'): Promise<WatchlistData> => {
   const { data } = await apiClient.post('/watchlist/add', { user_id: userId, symbol });
   return data;
 };
 
-export const removeWatchlistSymbol = async (symbol: string, userId: string = 'guest_user'): Promise<{ symbols: string[] }> => {
+export const removeWatchlistSymbol = async (symbol: string, userId: string = 'guest_user'): Promise<WatchlistData> => {
   const { data } = await apiClient.delete(`/watchlist/remove/${userId}/${symbol}`);
+  return data;
+};
+
+export const searchStocks = async (query: string): Promise<Array<{ symbol: string; name: string; sector: string }>> => {
+  if (!query || query.trim().length < 1) return [];
+  const { data } = await apiClient.get('/stocks/search', { params: { q: query } });
+  return data;
+};
+
+export const summarizeArticle = async (url: string): Promise<AISummaryResult> => {
+  const { data } = await apiClient.get('/ai/summarize', { params: { url } });
+  return data;
+};
+
+export const fetchSystemLogs = async (): Promise<{ logs: string[] }> => {
+  const { data } = await apiClient.get('/system/logs');
   return data;
 };

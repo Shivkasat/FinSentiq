@@ -1,12 +1,13 @@
 import React from 'react';
-import { ExternalLink, Tag, Clock, ArrowUpRight, ArrowDownRight, Minus, AlertCircle } from 'lucide-react';
+import { ExternalLink, Clock, ArrowUpRight, ArrowDownRight, Minus, Sparkles } from 'lucide-react';
 import { Article } from '../types';
 
 interface ArticleCardProps {
   article: Article;
+  onOpenSummary: (url: string, title: string) => void;
 }
 
-export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
+export const ArticleCard: React.FC<ArticleCardProps> = ({ article, onOpenSummary }) => {
   const isPositive = article.sentiment_score > 1.5;
   const isNegative = article.sentiment_score < -1.5;
 
@@ -71,16 +72,18 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
           )}
         </div>
 
-        {/* Impact type & time */}
-        <div className="flex items-center gap-2 font-mono text-[11px]">
-          {article.impact_type && article.impact_type !== 'Unknown' && (
-            <span className="text-slate-400 hidden sm:inline">
-              {article.impact_type}
-            </span>
-          )}
-          <span className="flex items-center gap-1 text-slate-400">
+        {/* Actions & Time */}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => onOpenSummary(article.link, article.title)}
+            className="flex items-center gap-1 text-[11px] font-semibold text-indigo-400 hover:text-white px-2 py-0.5 rounded bg-indigo-500/10 hover:bg-indigo-600 transition"
+          >
+            <Sparkles className="h-3 w-3" />
+            AI Brief
+          </button>
+          <span className="flex items-center gap-1 font-mono text-[11px] text-slate-400">
             <Clock className="h-3 w-3" />
-            {Math.round(article.age_hours)}h ago
+            {Math.round(article.age_hours)}h
           </span>
         </div>
       </div>
