@@ -30,67 +30,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 }) => {
   return (
     <div className="min-h-screen bg-[#0B0E14] text-slate-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
-      
-      {/* Top Navigation */}
-      <nav className="border-b border-surface-border bg-surface/70 backdrop-blur-md sticky top-0 z-40 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-lg bg-gradient-to-tr from-indigo-600 via-indigo-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-              <Activity className="h-5 w-5 text-white" />
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-                FinSentiq
-              </span>
-              <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 font-semibold tracking-wider">
-                v3.0 Cloud
-              </span>
-            </div>
-          </div>
-
-          {/* Nav links */}
-          <div className="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-300">
-            <a href="#features" className="hover:text-white transition">Platform Features</a>
-            <a href="#architecture" className="hover:text-white transition">High-Concurrency Engine</a>
-            <a href="#sectors" className="hover:text-white transition">Sectors Tracked</a>
-          </div>
-
-          {/* Right Action Buttons */}
-          <div className="flex items-center gap-3">
-            {user ? (
-              <button
-                onClick={onLaunchDashboard}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-semibold text-white shadow-lg shadow-indigo-600/20 transition"
-              >
-                <span>Terminal Dashboard</span>
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            ) : (
-              <>
-                <button
-                  onClick={() => onOpenAuth('login')}
-                  className="px-3.5 py-2 text-xs font-semibold text-slate-300 hover:text-white transition"
-                >
-                  Sign In
-                </button>
-                <button
-                  onClick={onLaunchDashboard}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-semibold text-white shadow-lg shadow-indigo-600/20 transition"
-                >
-                  <span>Launch Terminal</span>
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </button>
-              </>
-            )}
-          </div>
-
-        </div>
-      </nav>
-
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-6 overflow-hidden">
+      <section className="relative pt-16 pb-16 px-6 overflow-hidden">
         {/* Ambient Gradient Glows */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-indigo-600/15 blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute top-1/3 right-1/4 w-[350px] h-[250px] bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
