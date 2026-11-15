@@ -237,15 +237,22 @@ export const App: React.FC = () => {
             />
           )}
 
-          {/* Top Movers (Bullish vs Bearish) */}
-          {overview && (
-            <MarketMovers
-              gainers={overview.gainers || []}
-              losers={overview.losers || []}
-              watchlist={watchlist}
-              onToggleWatchlist={handleToggleWatchlist}
-            />
-          )}
+          {/* Top Movers (Bullish vs Bearish) — Dynamic per selected sector or overall market */}
+          <MarketMovers
+            gainers={
+              selectedSector === 'All'
+                ? overview?.gainers || []
+                : articlesData?.sector_gainers || []
+            }
+            losers={
+              selectedSector === 'All'
+                ? overview?.losers || []
+                : articlesData?.sector_losers || []
+            }
+            watchlist={watchlist}
+            onToggleWatchlist={handleToggleWatchlist}
+            selectedSector={selectedSector}
+          />
 
           {/* Filter & Search Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl border border-surface-border bg-surface">

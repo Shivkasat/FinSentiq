@@ -8,7 +8,13 @@ export const apiClient = axios.create({
   timeout: 15000,
 });
 
-export const fetchArticles = async (params?: { sector?: string; sentiment?: string; search?: string }): Promise<{ count: number; articles: Article[] }> => {
+export const fetchArticles = async (params?: { sector?: string; sentiment?: string; search?: string }): Promise<{
+  count: number;
+  articles: Article[];
+  sector: string;
+  sector_gainers: any[];
+  sector_losers: any[];
+}> => {
   const { data } = await apiClient.get('/news/articles', { params });
   return data;
 };
