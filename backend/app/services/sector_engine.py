@@ -8,11 +8,12 @@ from app.core.config import settings
 
 logger = logging.getLogger("finsentiq.sector")
 
-# Tokens that look like symbols but are common English words
+# Tokens that look like symbols but are common English words, commodities, or currencies
 FALSE_POSITIVE_SYMBOLS = frozenset({
     "IT", "AM", "PM", "IN", "ON", "AT", "TO", "OR", "AN", "AS", "BE",
     "IS", "DO", "GO", "BY", "IF", "NO", "SO", "UP", "US", "UK", "EU",
-    "FY", "YY", "QQ", "MF", "PE", "PB", "CF", "ALL", "NEW", "BUY", "SELL"
+    "FY", "YY", "QQ", "MF", "PE", "PB", "CF", "ALL", "NEW", "BUY", "SELL",
+    "DOLLAR", "OIL", "GOLD", "GAS", "TEA", "IDEA", "POWER", "STEEL", "BANK"
 })
 
 # Well-known Indian market company aliases mapping directly to ticker symbols
@@ -119,7 +120,11 @@ SECTOR_KEYWORDS = {
 GENERIC_STOP_WORDS = frozenset({
     "bank", "finance", "industries", "services", "enterprises", "india",
     "power", "steel", "motors", "group", "holdings", "energy", "pharma",
-    "capital", "technology", "technologies", "corp", "corporation"
+    "capital", "technology", "technologies", "corp", "corporation",
+    "dollar", "oil", "gas", "gold", "silver", "copper", "coal", "sugar",
+    "tea", "coffee", "cement", "paper", "chemicals", "market", "global",
+    "national", "international", "digital", "system", "systems", "solutions",
+    "securities", "life", "general", "mutual", "fund", "funds"
 })
 
 class SectorEngine:
@@ -166,6 +171,9 @@ class SectorEngine:
                             clean_name = re.sub(r"\b(ltd|limited|pvt|corporation|corp|india|industries)\b", "", company, flags=re.IGNORECASE).strip()
                             if len(clean_name) >= 3 and clean_name.lower() not in GENERIC_STOP_WORDS:
                                 self.company_to_symbol[clean_name.lower()] = symbol
+                            # Retain full original company name
+                            if len(company) >= 4 and company.lower() not in GENERIC_STOP_WORDS:
+                                self.company_to_symbol[company.lower()] = symbol
 
             for alias, sym in WELL_KNOWN_ALIASES.items():
                 self.valid_symbols.add(sym)

@@ -3,21 +3,32 @@ from typing import List, Optional
 from fastapi import APIRouter, Query, HTTPException
 from app.core.store import central_store
 from app.services.rss_engine import rss_engine
+from app.services.sector_engine import sector_engine
 
 router = APIRouter(prefix="/news", tags=["News & Sentiment"])
 logger = logging.getLogger("finsentiq.api.news")
 
-def calculate_movers_for_articles(articles: list) -> tuple[list, list]:
+def calculate_movers_for_articles(articles: list, target_sector: Optional[str] = None) -> tuple[list, list]:
     stock_scores = {}
+    is_specific = bool(target_sector and target_sector.lower() not in ("all", "all sectors", ""))
+
     for a in articles:
         for sym in a.get("stock_mentions", []):
+            actual_stock_sector = sector_engine.symbol_to_sector.get(sym, "Broad Market")
+
+            # Prevent cross-sector contamination:
+            # Only attribute a stock to the sector it actually belongs to!
+            if is_specific:
+                if actual_stock_sector.lower() != target_sector.lower():
+                    continue
+
             if sym not in stock_scores:
                 stock_scores[sym] = {
                     "symbol": sym,
                     "positive_score": 0.0,
                     "negative_score": 0.0,
                     "article_count": 0,
-                    "sector": a.get("sector", "Broad Market"),
+                    "sector": actual_stock_sector,
                     "top_article_title": a.get("title")
                 }
             score = a.get("sentiment_score", 0.0)
@@ -61,7 +72,7 @@ async def get_articles(
         ]
 
     # Calculate dynamic gainers & losers for this specific filtered view
-    sector_gainers, sector_losers = calculate_movers_for_articles(articles)
+    sector_gainers, sector_losers = calculate_movers_for_articles(articles, sector)
 
     return {
         "count": len(articles),
