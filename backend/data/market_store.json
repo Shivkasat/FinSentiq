@@ -20,7 +20,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 18.12,
-        "decayed_score": 0.77
+        "decayed_score": 0.77,
+        "all_sectors": [
+          "Special Materials"
+        ]
       }
     ],
     "Broad Market": [
@@ -41,7 +44,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 19.15,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_2814479501104659865",
@@ -60,7 +66,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 20.02,
-        "decayed_score": 0.31
+        "decayed_score": 0.31,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_3387400357736314653",
@@ -79,7 +88,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 23.25,
-        "decayed_score": 0.21
+        "decayed_score": 0.21,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_9076640483808534141",
@@ -98,7 +110,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 26.53,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_3515534818580362982",
@@ -117,7 +132,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 39.27,
-        "decayed_score": 0.31
+        "decayed_score": 0.31,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_2759054438945441559",
@@ -136,7 +154,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 3 negative triggers)",
         "age_hours": 41.76,
-        "decayed_score": -0.47
+        "decayed_score": -0.47,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_3712466752157233470",
@@ -155,7 +176,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.67,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_8343943765025526549",
@@ -176,7 +200,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 50.03,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_1743919437876859634",
@@ -195,7 +222,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 19.29,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_3623788525660351191",
@@ -214,7 +244,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 23.81,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_5307262626904911633",
@@ -233,7 +266,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 25.24,
-        "decayed_score": 0.17
+        "decayed_score": 0.17,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_5669357835906802888",
@@ -252,7 +288,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 25.44,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_1662837365985760289",
@@ -271,7 +310,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 26.26,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_6140328980664130572",
@@ -290,7 +332,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 39.48,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_8837553308995115592",
@@ -309,7 +354,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 3 negative triggers)",
         "age_hours": 42.89,
-        "decayed_score": -0.47
+        "decayed_score": -0.47,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_5609520124915697970",
@@ -328,7 +376,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 48.93,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_5984640519604609161",
@@ -347,7 +398,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 49.72,
-        "decayed_score": 0.47
+        "decayed_score": 0.47,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_7087309992538415141",
@@ -366,7 +420,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 59.93,
-        "decayed_score": 0.47
+        "decayed_score": 0.47,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_4651479564495239756",
@@ -385,7 +442,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 63.77,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_1370638090700972338",
@@ -404,7 +464,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 67.59,
-        "decayed_score": 0.16
+        "decayed_score": 0.16,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_6754309054102639470",
@@ -423,7 +486,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 69.43,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_6366754959700637509",
@@ -442,7 +508,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 86.45,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_7347557135091388543",
@@ -461,7 +530,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 91.72,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Economic Times_4717490152128327643",
@@ -480,7 +552,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 97.79,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_9032140349725709790",
@@ -499,7 +574,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 2 negative triggers)",
         "age_hours": 4.76,
-        "decayed_score": -3.46
+        "decayed_score": -3.46,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_4649703143077032653",
@@ -518,7 +596,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 14.01,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_4287763996736708009",
@@ -537,7 +618,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 18.12,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_5993373589042632975",
@@ -556,7 +640,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 18.14,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_9100036497013379617",
@@ -575,7 +662,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 21.2,
-        "decayed_score": 0.77
+        "decayed_score": 0.77,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_1170457876921143704",
@@ -594,7 +684,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 22.14,
-        "decayed_score": 0.23
+        "decayed_score": 0.23,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_3318300005589004220",
@@ -613,7 +706,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 23.42,
-        "decayed_score": 0.6
+        "decayed_score": 0.6,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_828586684174052707",
@@ -632,7 +728,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 1 negative triggers)",
         "age_hours": 25.57,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_286869853077965994",
@@ -651,7 +750,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 3.05,
-        "decayed_score": 2.11
+        "decayed_score": 2.11,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_2781421580567688887",
@@ -670,7 +772,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 4.02,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_8640914256218516211",
@@ -689,7 +794,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 9.44,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_5239848672757442357",
@@ -708,7 +816,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 13.31,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_7836513928072963775",
@@ -727,7 +838,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 13.79,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_105741903211460623",
@@ -746,7 +860,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 15.14,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_4034305382783152528",
@@ -765,7 +882,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 15.43,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_8561086291297593044",
@@ -784,7 +904,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 15.76,
-        "decayed_score": 0.49
+        "decayed_score": 0.49,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_2245802246724385578",
@@ -803,7 +926,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 16.47,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_4144397547184883671",
@@ -822,7 +948,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 18.25,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_2826952066394098945",
@@ -841,7 +970,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 18.28,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_5948325500930210288",
@@ -860,7 +992,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 19.14,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_1500162580890501276",
@@ -879,7 +1014,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 20.23,
-        "decayed_score": 0.29
+        "decayed_score": 0.29,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_5249744573708192213",
@@ -898,7 +1036,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 22.38,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_5339665403726713664",
@@ -917,7 +1058,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 23.15,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_8788697297229577959",
@@ -936,7 +1080,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 24.31,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Livemint_8068478974055354131",
@@ -955,7 +1102,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 24.49,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_8563904610801686459",
@@ -974,7 +1124,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 4 negative triggers)",
         "age_hours": 2.58,
-        "decayed_score": -8.9
+        "decayed_score": -8.9,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_1509323346783988985",
@@ -993,7 +1146,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 26.17,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_6736276258080316878",
@@ -1012,7 +1168,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 35.23,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_5685874184463829493",
@@ -1031,7 +1190,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 36.29,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_302085164553503089",
@@ -1050,7 +1212,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 37.81,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_5110041219121211474",
@@ -1069,7 +1234,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 38.55,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_7878602554153684891",
@@ -1088,7 +1256,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 1 negative triggers)",
         "age_hours": 43.93,
-        "decayed_score": -0.15
+        "decayed_score": -0.15,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_4315608598750069523",
@@ -1107,7 +1278,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 3 negative triggers)",
         "age_hours": 45.11,
-        "decayed_score": -0.45
+        "decayed_score": -0.45,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_3811246987272660818",
@@ -1126,7 +1300,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 45.23,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_6119986320958740344",
@@ -1145,7 +1322,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 2 negative triggers)",
         "age_hours": 45.9,
-        "decayed_score": -0.3
+        "decayed_score": -0.3,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_9111269393398685454",
@@ -1164,7 +1344,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 46.28,
-        "decayed_score": 0.15
+        "decayed_score": 0.15,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_6349905842541151471",
@@ -1183,7 +1366,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 16.03,
-        "decayed_score": 0.47
+        "decayed_score": 0.47,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_2216402211738319199",
@@ -1202,7 +1388,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 18.75,
-        "decayed_score": 1.04
+        "decayed_score": 1.04,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_3478738343373871535",
@@ -1221,7 +1410,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 19.88,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_5536164970129662283",
@@ -1240,7 +1432,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 34.89,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_2076331713440184002",
@@ -1259,7 +1454,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 35.0,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_4357578253231366506",
@@ -1278,7 +1476,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (4 positive, 0 negative triggers)",
         "age_hours": 36.45,
-        "decayed_score": 0.6
+        "decayed_score": 0.6,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_2092159530764598252",
@@ -1297,7 +1498,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (4 positive, 1 negative triggers)",
         "age_hours": 38.45,
-        "decayed_score": 0.45
+        "decayed_score": 0.45,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_8551997572298833295",
@@ -1316,7 +1520,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 39.14,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_2629188298599710005",
@@ -1335,7 +1542,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 39.91,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_8623808879577951919",
@@ -1354,7 +1564,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 40.81,
-        "decayed_score": 0.3
+        "decayed_score": 0.3,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_5807379408996170742",
@@ -1373,7 +1586,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 1 negative triggers)",
         "age_hours": 42.12,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Business Standard_136597103882109546",
@@ -1392,29 +1608,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 42.4,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Business Standard_4829962486122877706",
-        "title": "Grasim Industries Q2FY27 results: Net profit jumps to \u20b92,306 crore",
-        "link": "https://www.business-standard.com/companies/quarterly-results/grasim-industries-q2fy27-results-net-profit-jumps-to-2-306-crore-126111300877_1.html",
-        "published": "Fri, 13 Nov 2026 15:58:49 +0530",
-        "published_iso": "2026-11-13T10:28:49+00:00",
-        "source": "Business Standard",
-        "source_weight": 1.2,
-        "summary": "The Aditya \u200cBirla Group flagship's standalone net profit jumped to \u20b92,306 crore ($244.93 million) for the quarter ended September 30, from \u20b9805 crore a year earlier",
-        "stock_mentions": [
-          "GRASIM",
-          "BIRLACORPN"
-        ],
-        "sector": "Broad Market",
-        "sentiment_label": "Positive",
-        "sentiment_score": 5.0,
-        "confidence": 0.65,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
-        "age_hours": 42.8,
-        "decayed_score": 0.3
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Moneycontrol_8000745755207744434",
@@ -1433,7 +1630,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 22459.93,
-        "decayed_score": 0.29
+        "decayed_score": 0.29,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Moneycontrol_9169660778827593535",
@@ -1452,7 +1652,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 1 negative triggers)",
         "age_hours": 22462.39,
-        "decayed_score": -0.14
+        "decayed_score": -0.14,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Moneycontrol_971830885910582053",
@@ -1471,7 +1674,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 1 negative triggers)",
         "age_hours": 22465.02,
-        "decayed_score": -0.14
+        "decayed_score": -0.14,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Moneycontrol_2597471433779401738",
@@ -1490,7 +1696,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 22460.48,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
       },
       {
         "id": "Moneycontrol_7646469794667196212",
@@ -1509,7 +1718,61 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 22461.13,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Broad Market"
+        ]
+      }
+    ],
+    "Cement": [
+      {
+        "id": "Business Standard_4829962486122877706",
+        "title": "Grasim Industries Q2FY27 results: Net profit jumps to \u20b92,306 crore",
+        "link": "https://www.business-standard.com/companies/quarterly-results/grasim-industries-q2fy27-results-net-profit-jumps-to-2-306-crore-126111300877_1.html",
+        "published": "Fri, 13 Nov 2026 15:58:49 +0530",
+        "published_iso": "2026-11-13T10:28:49+00:00",
+        "source": "Business Standard",
+        "source_weight": 1.2,
+        "summary": "The Aditya \u200cBirla Group flagship's standalone net profit jumped to \u20b92,306 crore ($244.93 million) for the quarter ended September 30, from \u20b9805 crore a year earlier",
+        "stock_mentions": [
+          "GRASIM",
+          "BIRLACORPN"
+        ],
+        "sector": "Cement",
+        "sentiment_label": "Positive",
+        "sentiment_score": 5.0,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
+        "age_hours": 42.8,
+        "decayed_score": 0.3,
+        "all_sectors": [
+          "Cement"
+        ]
+      },
+      {
+        "id": "Economic Times_5772584867311895775",
+        "title": "Aditya Birla Capital among 9 stocks showing White Marubozu Pattern",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/aditya-birla-capital-among-9-stocks-showing-white-marubozu-pattern/slideshow/135788959.cms",
+        "published": "Fri, 13 Nov 2026 09:21:41 +0530",
+        "published_iso": "2026-11-13T03:51:41+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "On November 12, nine stocks in the Nifty500 that rose over 5.5% appeared on the \u2018White Marubozu\u2019 bullish scanner, according to StockEdge\u2019s technical scan data. A White Marubozu is a bullish candlestick pattern in technical analysis that occurs when the opening price is the lowest for a given period, and the closing price is the highest.",
+        "stock_mentions": [
+          "BIRLACORPN"
+        ],
+        "sector": "Cement",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 49.42,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Cement"
+        ]
       }
     ],
     "Textiles & Apparel": [
@@ -1523,18 +1786,25 @@
         "source_weight": 1.25,
         "summary": "An ETMarkets analysis identified seven stocks held by over 100 mutual fund schemes that have more than doubled in FY27 so far. Sterlite Technologies led with 303% gains, followed by Welspun Corp, Ather Energy and Laurus Labs.",
         "stock_mentions": [
-          "WELSPUNIND",
+          "WELCORP",
           "STERLITE",
-          "LAURUSLABS"
+          "LAURUSLABS",
+          "WELSPUNIND"
         ],
-        "sector": "Textiles & Apparel",
+        "sector": "Metals & Mining",
         "sentiment_label": "Positive",
         "sentiment_score": 2.5,
         "confidence": 0.65,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 41.69,
-        "decayed_score": 0.16
+        "decayed_score": 0.16,
+        "all_sectors": [
+          "Metals & Mining",
+          "Pharmaceuticals",
+          "Telecom",
+          "Textiles & Apparel"
+        ]
       },
       {
         "id": "Business Standard_2599448111838688177",
@@ -1555,7 +1825,463 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 25.61,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Textiles & Apparel"
+        ]
+      }
+    ],
+    "Pharmaceuticals": [
+      {
+        "id": "Economic Times_6448973647227767126",
+        "title": "Mutlibaggers: 7 stocks held by 100+ MF schemes in October rally up to 300% in FY27",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/mutlibaggers-7-stocks-held-by-100-mf-schemes-in-october-rally-up-to-300-in-fy27/slideshow/135802136.cms",
+        "published": "Fri, 13 Nov 2026 17:05:39 +0530",
+        "published_iso": "2026-11-13T11:35:39+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "An ETMarkets analysis identified seven stocks held by over 100 mutual fund schemes that have more than doubled in FY27 so far. Sterlite Technologies led with 303% gains, followed by Welspun Corp, Ather Energy and Laurus Labs.",
+        "stock_mentions": [
+          "WELCORP",
+          "STERLITE",
+          "LAURUSLABS",
+          "WELSPUNIND"
+        ],
+        "sector": "Metals & Mining",
+        "sentiment_label": "Positive",
+        "sentiment_score": 2.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
+        "age_hours": 41.69,
+        "decayed_score": 0.16,
+        "all_sectors": [
+          "Metals & Mining",
+          "Pharmaceuticals",
+          "Telecom",
+          "Textiles & Apparel"
+        ]
+      },
+      {
+        "id": "Moneycontrol_621917039971669940",
+        "title": "Taking Stock: Market fails to hold on to day#39;s gains, ends marginally higher",
+        "link": "https://www.moneycontrol.com/news/local-markets/taking-stock-market-fails-to-holdto-day39s-gains-ends-marginally-higher_17531871.html",
+        "published": "Tue, 23 Apr 2024 15:46:31 +0530",
+        "published_iso": "2024-04-23T10:16:31+00:00",
+        "source": "Moneycontrol",
+        "source_weight": 1.15,
+        "summary": "Grasim Industries, Bharti Airtel, Nestle India, Maruti Suzuki and HCL Technologies were the biggest Nifty gainers, while losers included Sun Pharma, BPCL, Reliance Industries, MM and Hindalco Industries",
+        "stock_mentions": [
+          "RELIANCE",
+          "NESTLEIND",
+          "MARUTI",
+          "SUNPHARMA",
+          "BPCL"
+        ],
+        "sector": "Automobile",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 22459.01,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automobile",
+          "FMCG",
+          "Oil & Gas",
+          "Pharmaceuticals"
+        ]
+      },
+      {
+        "id": "Livemint_8758792802564709619",
+        "title": "Kiran Mazumdar-Shaw believes the Microsoft outage creates opportunity for homegrown suite Zoho \u2014 here's how",
+        "link": "https://www.livemint.com/companies/kiran-mazumdar-shaw-believe-microsoft-outage-how-create-opportunity-sridhar-vembu-zoho-offer-homegrown-alternative-suite-11794645738571.html",
+        "published": "Sat, 14 Nov 2026 15:04:15 +0530",
+        "published_iso": "2026-11-14T09:34:15+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Biocon founder Kiran Mazumdar-Shaw believes the recent Microsoft outage creates opportunity for Sridhar Vembu-led Zoho to offer homegrown alternatives to the office suite provider. Here's how\u2026&nbsp;",
+        "stock_mentions": [
+          "BIOCON"
+        ],
+        "sector": "Pharmaceuticals",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 19.71,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Pharmaceuticals"
+        ]
+      },
+      {
+        "id": "Business Standard_8326906296062851042",
+        "title": "Alkem shares fall 3% after Q2 results; MOFSL retains Neutral rating",
+        "link": "https://www.business-standard.com/markets/news/alkem-shares-fall-3-after-q2-results-mofsl-retains-neutral-rating-126111300548_1.html",
+        "published": "Fri, 13 Nov 2026 11:28:42 +0530",
+        "published_iso": "2026-11-13T05:58:42+00:00",
+        "source": "Business Standard",
+        "source_weight": 1.2,
+        "summary": "MOFSL said that FY27 is the year of consolidation for Alkem, as the new business is facing a gestation period before scale-up, with operational cost front-loaded and revenue yet to pick up",
+        "stock_mentions": [
+          "ALKEM"
+        ],
+        "sector": "Pharmaceuticals",
+        "sentiment_label": "Negative",
+        "sentiment_score": -2.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 1 negative triggers)",
+        "age_hours": 47.3,
+        "decayed_score": -0.15,
+        "all_sectors": [
+          "Pharmaceuticals"
+        ]
+      },
+      {
+        "id": "Business Standard_7048986223913667750",
+        "title": "Natco Pharma Q2 results: Net profit declines 60.8% to \u20b9202.6 crore",
+        "link": "https://www.business-standard.com/companies/quarterly-results/natco-pharma-q2-results-net-profit-declines-60-8-to-202-6-crore-126111300944_1.html",
+        "published": "Fri, 13 Nov 2026 15:53:50 +0530",
+        "published_iso": "2026-11-13T10:23:50+00:00",
+        "source": "Business Standard",
+        "source_weight": 1.2,
+        "summary": "Natco Pharma on Friday posted a 60.8 per cent decline in consolidated net profit to Rs 202.6 crore during the September quarter, weighed down by a fall in revenues.\nThe pharma company had reported a net profit of Rs 517.9 crore in the corresponding period of the preceding fiscal.\nIts revenue from operations declined to Rs 967.3 crore in the second quarter of FY27 from Rs 1,363 crore a year ago, th",
+        "stock_mentions": [
+          "NATCOPHARM"
+        ],
+        "sector": "Pharmaceuticals",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (3 positive, 3 negative triggers)",
+        "age_hours": 42.89,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Pharmaceuticals"
+        ]
+      }
+    ],
+    "Telecom": [
+      {
+        "id": "Economic Times_6448973647227767126",
+        "title": "Mutlibaggers: 7 stocks held by 100+ MF schemes in October rally up to 300% in FY27",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/mutlibaggers-7-stocks-held-by-100-mf-schemes-in-october-rally-up-to-300-in-fy27/slideshow/135802136.cms",
+        "published": "Fri, 13 Nov 2026 17:05:39 +0530",
+        "published_iso": "2026-11-13T11:35:39+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "An ETMarkets analysis identified seven stocks held by over 100 mutual fund schemes that have more than doubled in FY27 so far. Sterlite Technologies led with 303% gains, followed by Welspun Corp, Ather Energy and Laurus Labs.",
+        "stock_mentions": [
+          "WELCORP",
+          "STERLITE",
+          "LAURUSLABS",
+          "WELSPUNIND"
+        ],
+        "sector": "Metals & Mining",
+        "sentiment_label": "Positive",
+        "sentiment_score": 2.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
+        "age_hours": 41.69,
+        "decayed_score": 0.16,
+        "all_sectors": [
+          "Metals & Mining",
+          "Pharmaceuticals",
+          "Telecom",
+          "Textiles & Apparel"
+        ]
+      },
+      {
+        "id": "Livemint_5453646442926510433",
+        "title": "MCX, BSE, Bharti Airtel shares: Top 3 stocks to buy; check expected returns, ratings, target price by market expert",
+        "link": "https://www.livemint.com/market/stock-market-news/mcx-bse-bharti-airtel-shares-top-3-stocks-to-buy-check-expected-returns-ratings-target-price-by-market-expert-11794714137509.html",
+        "published": "Sun, 15 Nov 2026 09:43:39 +0530",
+        "published_iso": "2026-11-15T04:13:39+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Sensex fell 318.56 points to 81,592.45 and Nifty 50 dropped 155.05 points to 25,144.30 on Friday, ending a three-session rally as October retail inflation rose to 6.09%. Analyst Chandan Taparia recommended MCX, BSE and Bharti Airtel, while identifying key index support and resistance levels.",
+        "stock_mentions": [
+          "BHARTIARTL"
+        ],
+        "sector": "Telecom",
+        "sentiment_label": "Positive",
+        "sentiment_score": 2.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
+        "age_hours": 1.06,
+        "decayed_score": 2.66,
+        "all_sectors": [
+          "Telecom"
+        ]
+      },
+      {
+        "id": "Livemint_4166638767248757520",
+        "title": "Around 600% jump in 5 years: Citi maintains 'buy' on Maharatna defence PSU HAL for up to 28% - Check target, rationale",
+        "link": "https://www.livemint.com/market/stock-market-news/around-600-jump-in-5-years-citi-maintains-buy-on-maharatna-defence-psu-hal-for-up-to-28-check-target-rationale-11794630844431.html",
+        "published": "Sat, 14 Nov 2026 10:28:42 +0530",
+        "published_iso": "2026-11-14T04:58:42+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "HAL shares have weakened recently, but Citi retained its Buy rating and  \u20b96,175 target, implying about 28% upside. Citi cited higher inventory and support from engines, helicopters and repairs amid delayed Tejas Mk1A deliveries.",
+        "stock_mentions": [
+          "HAL",
+          "TEJAS"
+        ],
+        "sector": "Defense",
+        "sentiment_label": "Positive",
+        "sentiment_score": 2.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
+        "age_hours": 24.3,
+        "decayed_score": 0.18,
+        "all_sectors": [
+          "Defense",
+          "Telecom"
+        ]
+      },
+      {
+        "id": "Livemint_5776875723061990619",
+        "title": "Bharti Airtel\u2019s Sunil Mittal wants mobile tariff hiked to  \u20b910-12/day or  \u20b9350 per month; here\u2019s why",
+        "link": "https://www.livemint.com/companies/news/bharti-airtel-sunil-mittal-wants-mobile-tariff-hike-why-rs-350-monthly-12-per-day-cost-less-than-soap-pepsi-chips-packet-11794638826764.html",
+        "published": "Sat, 14 Nov 2026 14:08:21 +0530",
+        "published_iso": "2026-11-14T08:38:21+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Bharti Airtel founder and chairman Sunil Mittal wants mobile tariffs in India hiked to  \u20b9350 per month as \u201cprices are up\u201d. He said entry plan costs could thus work out to  \u20b910-12 per day for users.&nbsp;",
+        "stock_mentions": [
+          "BHARTIARTL"
+        ],
+        "sector": "Telecom",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 20.64,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Telecom"
+        ]
+      },
+      {
+        "id": "Business Standard_4187248817604005828",
+        "title": "Vodafone Idea shares decline 3.5% on wider-than-expected loss in Q2",
+        "link": "https://www.business-standard.com/markets/news/vodafone-idea-share-price-declines-3-5-on-wider-than-expected-loss-in-q2-126111300408_1.html",
+        "published": "Fri, 13 Nov 2026 09:46:57 +0530",
+        "published_iso": "2026-11-13T04:16:57+00:00",
+        "source": "Business Standard",
+        "source_weight": 1.2,
+        "summary": "Vodafone Idea share price: Sustained subscriber growth, ARPU improvement, and successful execution of the capex programme will be critical for achieving a sustainable financial turnaround.",
+        "stock_mentions": [
+          "IDEA"
+        ],
+        "sector": "Telecom",
+        "sentiment_label": "Negative",
+        "sentiment_score": -5.0,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 2 negative triggers)",
+        "age_hours": 49.0,
+        "decayed_score": -0.3,
+        "all_sectors": [
+          "Telecom"
+        ]
+      },
+      {
+        "id": "Moneycontrol_4821106035231013520",
+        "title": "Razorpay announces #39;UPI Switch#39; in partnership with Airtel Payments Bank",
+        "link": "https://www.moneycontrol.com/news/business/razorpay-announces-39upi-switch39partnershipairtel-payments-bank_17531791.html",
+        "published": "Tue, 23 Apr 2024 14:42:21 +0530",
+        "published_iso": "2024-04-23T09:12:21+00:00",
+        "source": "Moneycontrol",
+        "source_weight": 1.15,
+        "summary": "Boosting success rates by 4-5 per cent, the solution is designed to handle up to 10,000 transactions per second (TPS) at any given time, according to a release.",
+        "stock_mentions": [
+          "BHARTIARTL"
+        ],
+        "sector": "Telecom",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 22460.08,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Telecom"
+        ]
+      },
+      {
+        "id": "Livemint_6704771594412006622",
+        "title": "Top 3 stocks to buy: Bharti Airtel, Bajaj Finance, Nestle by Sumeet Bagadia | Targets, stop-loss, market prediction",
+        "link": "https://www.livemint.com/market/stock-market-news/top-3-stocks-to-buy-bharti-airtel-bajaj-finance-nestle-by-sumeet-bagadia-targets-stop-loss-market-prediction-11794622858676.html",
+        "published": "Sat, 14 Nov 2026 08:41:12 +0530",
+        "published_iso": "2026-11-14T03:11:12+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "The Nifty 50 index may witness further consolidation after its sharp rally, says Sumeet Bagadia of Choice Broking.",
+        "stock_mentions": [
+          "NESTLEIND",
+          "BHARTIARTL",
+          "BAJFINANCE",
+          "BAJAJ"
+        ],
+        "sector": "Consumer Durables",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 26.1,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Consumer Durables",
+          "FMCG",
+          "Financial Services",
+          "Telecom"
+        ]
+      }
+    ],
+    "Metals & Mining": [
+      {
+        "id": "Economic Times_6448973647227767126",
+        "title": "Mutlibaggers: 7 stocks held by 100+ MF schemes in October rally up to 300% in FY27",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/mutlibaggers-7-stocks-held-by-100-mf-schemes-in-october-rally-up-to-300-in-fy27/slideshow/135802136.cms",
+        "published": "Fri, 13 Nov 2026 17:05:39 +0530",
+        "published_iso": "2026-11-13T11:35:39+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "An ETMarkets analysis identified seven stocks held by over 100 mutual fund schemes that have more than doubled in FY27 so far. Sterlite Technologies led with 303% gains, followed by Welspun Corp, Ather Energy and Laurus Labs.",
+        "stock_mentions": [
+          "WELCORP",
+          "STERLITE",
+          "LAURUSLABS",
+          "WELSPUNIND"
+        ],
+        "sector": "Metals & Mining",
+        "sentiment_label": "Positive",
+        "sentiment_score": 2.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
+        "age_hours": 41.69,
+        "decayed_score": 0.16,
+        "all_sectors": [
+          "Metals & Mining",
+          "Pharmaceuticals",
+          "Telecom",
+          "Textiles & Apparel"
+        ]
+      },
+      {
+        "id": "Livemint_4622774788162275796",
+        "title": "Best stocks to buy under  \u20b9100: Lloyds Engineering, Niva Bupa, Vedanta Power by Sumeet Bagadia | Targets, stop-loss",
+        "link": "https://www.livemint.com/market/stock-market-news/best-stocks-to-buy-under-rs-100-lloyds-engineering-niva-bupa-vedanta-power-by-sumeet-bagadia-targets-stoploss-11794674607528.html",
+        "published": "Sun, 15 Nov 2026 06:30:17 +0530",
+        "published_iso": "2026-11-15T01:00:17+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Stock market prediction: Sumeet Bagadia of Choice Broking believes the bias for the Indian stock market is positive, until the Nifty 50 index is above 25,000",
+        "stock_mentions": [
+          "VEDL"
+        ],
+        "sector": "Metals & Mining",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 4.28,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Metals & Mining"
+        ]
+      },
+      {
+        "id": "Livemint_4554017288898010018",
+        "title": "Beyond Coal India, ONGC: 10 lesser-known dividend stocks with up to 19.6% yield - Premco, GOCL, Accelya to D-Link | List",
+        "link": "https://www.livemint.com/market/stock-market-news/beyond-coal-india-ongc-10-lesser-known-dividend-stocks-with-up-to-19-yield-premco-gocl-accelya-to-d-link-list-11794671719253.html",
+        "published": "Sat, 14 Nov 2026 21:31:01 +0530",
+        "published_iso": "2026-11-14T16:01:01+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Several lesser-known Indian stocks delivered high dividend yields in FY26. CyberTech Systems led the listed examples at 19.6%, followed by Majestic Auto at 16.4%, Jagran Prakashan at 16.1%, IL&amp;FS Investment Managers at 15.9%, and Premco Global at 11.2%.",
+        "stock_mentions": [
+          "COALINDIA",
+          "ACCELYA",
+          "JAGRAN",
+          "ONGC"
+        ],
+        "sector": "IT",
+        "sentiment_label": "Positive",
+        "sentiment_score": 7.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
+        "age_hours": 13.27,
+        "decayed_score": 1.94,
+        "all_sectors": [
+          "IT",
+          "Media & Entertainment",
+          "Metals & Mining",
+          "Oil & Gas"
+        ]
+      },
+      {
+        "id": "Livemint_6684887613512846302",
+        "title": "Dividend king PSU stock: Down 23% in 6 months! Nuvama sees 42% upside; target price, rationale",
+        "link": "https://www.livemint.com/market/stock-market-news/dividend-king-psu-stock-down-23-in-6-months-nuvama-sees-42-upside-target-price-rationale-11794660044292.html",
+        "published": "Sat, 14 Nov 2026 19:41:10 +0530",
+        "published_iso": "2026-11-14T14:11:10+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "NMDC shares fell 1.76% to  \u20b969.90 on Friday after its second-quarter EBITDA declined 3% year over year to  \u20b919.4 billion, below expectations. Nuvama retained a Buy rating and raised its target price to  \u20b9100, citing normalized supplies and potential second-half volume growth.",
+        "stock_mentions": [
+          "NMDC"
+        ],
+        "sector": "Metals & Mining",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (1 positive, 1 negative triggers)",
+        "age_hours": 15.1,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Metals & Mining"
+        ]
+      },
+      {
+        "id": "Livemint_2332021376591402967",
+        "title": "Mahanadi Coalfields IPO: Coal India subsidiary files RHP - Latest GMP at  \u20b912.5; check key dates, size, valuation, more",
+        "link": "https://www.livemint.com/market/ipo/mahanadi-coalfields-ipo-coal-india-subsidiary-files-rhp-latest-gmp-at-rs-12-5-check-key-dates-size-valuation-more-11794640652111.html",
+        "published": "Sat, 14 Nov 2026 13:39:25 +0530",
+        "published_iso": "2026-11-14T08:09:25+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Mahanadi Coalfields has filed its RHP for an IPO opening November 19, 2026. The offer is an offer for sale of up to 66.18 crore shares by Coal India, with no proceeds going to MCL. The company produced 218.31 million tonnes of coal in FY26.",
+        "stock_mentions": [
+          "COALINDIA"
+        ],
+        "sector": "Metals & Mining",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 21.13,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Metals & Mining"
+        ]
       }
     ],
     "IT": [
@@ -1569,16 +2295,21 @@
         "source_weight": 1.25,
         "summary": "In a significant update, MSCI has revealed modifications to its indices, impacting several Indian stocks starting November 30. This shift is predicted to boost India's representation within the MSCI Emerging Markets Index. Notable stocks like Coforge and LIC are anticipated to attract considerable investments, while PI Industries may experience a decline.",
         "stock_mentions": [
+          "PIIND",
           "COFORGE"
         ],
-        "sector": "IT",
+        "sector": "Chemicals & Fertilizers",
         "sentiment_label": "Neutral",
         "sentiment_score": 0.0,
         "confidence": 0.5,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 47.18,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Chemicals & Fertilizers",
+          "IT"
+        ]
       },
       {
         "id": "Economic Times_3592403071009520300",
@@ -1599,7 +2330,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.53,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "IT"
+        ]
       },
       {
         "id": "Economic Times_3993173547079601886",
@@ -1620,7 +2354,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.94,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "IT"
+        ]
       },
       {
         "id": "Economic Times_7138999298097305376",
@@ -1641,7 +2378,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 48.77,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "IT"
+        ]
       },
       {
         "id": "Livemint_3544097077283655643",
@@ -1662,7 +2402,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 14.15,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "IT"
+        ]
       },
       {
         "id": "Business Standard_4707862388109914964",
@@ -1683,7 +2426,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 48.38,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "IT"
+        ]
       },
       {
         "id": "Business Standard_2033544619940260286",
@@ -1704,7 +2450,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 43.54,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "IT"
+        ]
       },
       {
         "id": "Moneycontrol_6225401442922565307",
@@ -1725,7 +2474,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 2 negative triggers)",
         "age_hours": 22455.92,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "IT"
+        ]
       },
       {
         "id": "Moneycontrol_883093742295511795",
@@ -1746,7 +2498,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 22456.84,
-        "decayed_score": 0.14
+        "decayed_score": 0.14,
+        "all_sectors": [
+          "IT"
+        ]
       },
       {
         "id": "Moneycontrol_1331806602284099905",
@@ -1767,7 +2522,68 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 1 negative triggers)",
         "age_hours": 22458.93,
-        "decayed_score": 0.14
+        "decayed_score": 0.14,
+        "all_sectors": [
+          "IT"
+        ]
+      },
+      {
+        "id": "Livemint_4554017288898010018",
+        "title": "Beyond Coal India, ONGC: 10 lesser-known dividend stocks with up to 19.6% yield - Premco, GOCL, Accelya to D-Link | List",
+        "link": "https://www.livemint.com/market/stock-market-news/beyond-coal-india-ongc-10-lesser-known-dividend-stocks-with-up-to-19-yield-premco-gocl-accelya-to-d-link-list-11794671719253.html",
+        "published": "Sat, 14 Nov 2026 21:31:01 +0530",
+        "published_iso": "2026-11-14T16:01:01+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Several lesser-known Indian stocks delivered high dividend yields in FY26. CyberTech Systems led the listed examples at 19.6%, followed by Majestic Auto at 16.4%, Jagran Prakashan at 16.1%, IL&amp;FS Investment Managers at 15.9%, and Premco Global at 11.2%.",
+        "stock_mentions": [
+          "COALINDIA",
+          "ACCELYA",
+          "JAGRAN",
+          "ONGC"
+        ],
+        "sector": "IT",
+        "sentiment_label": "Positive",
+        "sentiment_score": 7.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
+        "age_hours": 13.27,
+        "decayed_score": 1.94,
+        "all_sectors": [
+          "IT",
+          "Media & Entertainment",
+          "Metals & Mining",
+          "Oil & Gas"
+        ]
+      }
+    ],
+    "Chemicals & Fertilizers": [
+      {
+        "id": "Economic Times_7944776836854648384",
+        "title": "MSCI rejig: Which stocks may see the biggest inflows & outflows?",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/msci-rejig-which-stocks-may-see-the-biggest-inflows-amp-outflows/slideshow/135792280.cms",
+        "published": "Fri, 13 Nov 2026 11:36:12 +0530",
+        "published_iso": "2026-11-13T06:06:12+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "In a significant update, MSCI has revealed modifications to its indices, impacting several Indian stocks starting November 30. This shift is predicted to boost India's representation within the MSCI Emerging Markets Index. Notable stocks like Coforge and LIC are anticipated to attract considerable investments, while PI Industries may experience a decline.",
+        "stock_mentions": [
+          "PIIND",
+          "COFORGE"
+        ],
+        "sector": "Chemicals & Fertilizers",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 47.18,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Chemicals & Fertilizers",
+          "IT"
+        ]
       }
     ],
     "Paints & Coatings": [
@@ -1790,30 +2606,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 48.77,
-        "decayed_score": 0.0
-      }
-    ],
-    "Cement": [
-      {
-        "id": "Economic Times_5772584867311895775",
-        "title": "Aditya Birla Capital among 9 stocks showing White Marubozu Pattern",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/aditya-birla-capital-among-9-stocks-showing-white-marubozu-pattern/slideshow/135788959.cms",
-        "published": "Fri, 13 Nov 2026 09:21:41 +0530",
-        "published_iso": "2026-11-13T03:51:41+00:00",
-        "source": "Economic Times",
-        "source_weight": 1.25,
-        "summary": "On November 12, nine stocks in the Nifty500 that rose over 5.5% appeared on the \u2018White Marubozu\u2019 bullish scanner, according to StockEdge\u2019s technical scan data. A White Marubozu is a bullish candlestick pattern in technical analysis that occurs when the opening price is the lowest for a given period, and the closing price is the highest.",
-        "stock_mentions": [
-          "BIRLACORPN"
-        ],
-        "sector": "Cement",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 49.42,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Paints & Coatings"
+        ]
       }
     ],
     "Logistics & Transportation": [
@@ -1836,7 +2632,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.69,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Logistics & Transportation"
+        ]
       },
       {
         "id": "Business Standard_7970329222827009841",
@@ -1857,7 +2656,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 3.18,
-        "decayed_score": 6.24
+        "decayed_score": 6.24,
+        "all_sectors": [
+          "Logistics & Transportation"
+        ]
       },
       {
         "id": "Business Standard_4216188021370452186",
@@ -1879,7 +2681,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 35.28,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Logistics & Transportation"
+        ]
       },
       {
         "id": "Moneycontrol_8780094019658033942",
@@ -1900,7 +2705,37 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 22460.04,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Logistics & Transportation"
+        ]
+      },
+      {
+        "id": "Business Standard_862133985301058835",
+        "title": "Crude-sensitive stocks fall as oil trades at $95; BPCL, IndiGo down over 2%",
+        "link": "https://www.business-standard.com/markets/news/crude-sensitive-stocks-fall-as-oil-trades-at-95-bpcl-indigo-down-over-2-126111300478_1.html",
+        "published": "Fri, 13 Nov 2026 10:46:09 +0530",
+        "published_iso": "2026-11-13T05:16:09+00:00",
+        "source": "Business Standard",
+        "source_weight": 1.2,
+        "summary": "On Dalal Street, shares of oil marketing companies fell over 2 per cent, with Bharat Petroleum Corporation leading the fall.",
+        "stock_mentions": [
+          "INDIGO",
+          "BPCL",
+          "OIL"
+        ],
+        "sector": "Logistics & Transportation",
+        "sentiment_label": "Negative",
+        "sentiment_score": -5.0,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 2 negative triggers)",
+        "age_hours": 48.01,
+        "decayed_score": -0.3,
+        "all_sectors": [
+          "Logistics & Transportation",
+          "Oil & Gas"
+        ]
       }
     ],
     "Automobile": [
@@ -1923,7 +2758,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.76,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automobile"
+        ]
       },
       {
         "id": "Economic Times_3269950698906187953",
@@ -1944,7 +2782,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.85,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automobile"
+        ]
       },
       {
         "id": "Economic Times_3173992670409453474",
@@ -1965,7 +2806,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.86,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automobile"
+        ]
       },
       {
         "id": "Business Standard_4429706060603236602",
@@ -1986,7 +2830,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (4 positive, 0 negative triggers)",
         "age_hours": 38.98,
-        "decayed_score": 0.6
+        "decayed_score": 0.6,
+        "all_sectors": [
+          "Automobile"
+        ]
       },
       {
         "id": "Business Standard_2000328561443988428",
@@ -2007,7 +2854,69 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 41.74,
-        "decayed_score": 0.3
+        "decayed_score": 0.3,
+        "all_sectors": [
+          "Automobile"
+        ]
+      },
+      {
+        "id": "Moneycontrol_621917039971669940",
+        "title": "Taking Stock: Market fails to hold on to day#39;s gains, ends marginally higher",
+        "link": "https://www.moneycontrol.com/news/local-markets/taking-stock-market-fails-to-holdto-day39s-gains-ends-marginally-higher_17531871.html",
+        "published": "Tue, 23 Apr 2024 15:46:31 +0530",
+        "published_iso": "2024-04-23T10:16:31+00:00",
+        "source": "Moneycontrol",
+        "source_weight": 1.15,
+        "summary": "Grasim Industries, Bharti Airtel, Nestle India, Maruti Suzuki and HCL Technologies were the biggest Nifty gainers, while losers included Sun Pharma, BPCL, Reliance Industries, MM and Hindalco Industries",
+        "stock_mentions": [
+          "RELIANCE",
+          "NESTLEIND",
+          "MARUTI",
+          "SUNPHARMA",
+          "BPCL"
+        ],
+        "sector": "Automobile",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 22459.01,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automobile",
+          "FMCG",
+          "Oil & Gas",
+          "Pharmaceuticals"
+        ]
+      },
+      {
+        "id": "Livemint_8159795132475396014",
+        "title": "Upcoming dividend, stock split, buyback record date next week, 16-20 Nov: MRF, SCI, PFC, Power Grid, Venus Pipes, more",
+        "link": "https://www.livemint.com/market/stock-market-news/upcoming-dividend-stock-split-buyback-record-date-next-week-16-20-nov-mrf-sci-pfc-power-grid-venus-pipes-more-11794644624084.html",
+        "published": "Sat, 14 Nov 2026 14:26:49 +0530",
+        "published_iso": "2026-11-14T08:56:49+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Investors will track several corporate actions next week, including BN Agrochem\u2019s 10-for-1 stock split, InvIT income distributions, an amalgamation, rights issues and a share buyback. Record dates run from November 16 to November 20. The Nifty 50 and Sensex gained nearly 0.70%\u20131.30% for the week.",
+        "stock_mentions": [
+          "POWERGRID",
+          "PFC",
+          "MRF"
+        ],
+        "sector": "Automobile",
+        "sentiment_label": "Positive",
+        "sentiment_score": 7.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
+        "age_hours": 20.34,
+        "decayed_score": 0.85,
+        "all_sectors": [
+          "Automobile",
+          "Financial Services",
+          "Power"
+        ]
       }
     ],
     "Oil & Gas": [
@@ -2030,7 +2939,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.83,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Oil & Gas"
+        ]
       },
       {
         "id": "Livemint_3486333643570754607",
@@ -2051,7 +2963,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 23.14,
-        "decayed_score": 0.21
+        "decayed_score": 0.21,
+        "all_sectors": [
+          "Oil & Gas"
+        ]
       },
       {
         "id": "Business Standard_862133985301058835",
@@ -2063,18 +2978,22 @@
         "source_weight": 1.2,
         "summary": "On Dalal Street, shares of oil marketing companies fell over 2 per cent, with Bharat Petroleum Corporation leading the fall.",
         "stock_mentions": [
-          "OIL",
           "INDIGO",
-          "BPCL"
+          "BPCL",
+          "OIL"
         ],
-        "sector": "Oil & Gas",
+        "sector": "Logistics & Transportation",
         "sentiment_label": "Negative",
         "sentiment_score": -5.0,
         "confidence": 0.65,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 2 negative triggers)",
         "age_hours": 48.01,
-        "decayed_score": -0.3
+        "decayed_score": -0.3,
+        "all_sectors": [
+          "Logistics & Transportation",
+          "Oil & Gas"
+        ]
       },
       {
         "id": "Business Standard_6217640248021665089",
@@ -2095,7 +3014,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 2 negative triggers)",
         "age_hours": 48.63,
-        "decayed_score": -0.3
+        "decayed_score": -0.3,
+        "all_sectors": [
+          "Oil & Gas"
+        ]
       },
       {
         "id": "Moneycontrol_621917039971669940",
@@ -2107,23 +3029,90 @@
         "source_weight": 1.15,
         "summary": "Grasim Industries, Bharti Airtel, Nestle India, Maruti Suzuki and HCL Technologies were the biggest Nifty gainers, while losers included Sun Pharma, BPCL, Reliance Industries, MM and Hindalco Industries",
         "stock_mentions": [
-          "BPCL",
-          "HINDALCO",
+          "RELIANCE",
+          "NESTLEIND",
           "MARUTI",
-          "GRASIM",
-          "BHARTIARTL"
+          "SUNPHARMA",
+          "BPCL"
         ],
-        "sector": "Oil & Gas",
+        "sector": "Automobile",
         "sentiment_label": "Neutral",
         "sentiment_score": 0.0,
         "confidence": 0.5,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 22459.01,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automobile",
+          "FMCG",
+          "Oil & Gas",
+          "Pharmaceuticals"
+        ]
+      },
+      {
+        "id": "Livemint_4554017288898010018",
+        "title": "Beyond Coal India, ONGC: 10 lesser-known dividend stocks with up to 19.6% yield - Premco, GOCL, Accelya to D-Link | List",
+        "link": "https://www.livemint.com/market/stock-market-news/beyond-coal-india-ongc-10-lesser-known-dividend-stocks-with-up-to-19-yield-premco-gocl-accelya-to-d-link-list-11794671719253.html",
+        "published": "Sat, 14 Nov 2026 21:31:01 +0530",
+        "published_iso": "2026-11-14T16:01:01+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Several lesser-known Indian stocks delivered high dividend yields in FY26. CyberTech Systems led the listed examples at 19.6%, followed by Majestic Auto at 16.4%, Jagran Prakashan at 16.1%, IL&amp;FS Investment Managers at 15.9%, and Premco Global at 11.2%.",
+        "stock_mentions": [
+          "COALINDIA",
+          "ACCELYA",
+          "JAGRAN",
+          "ONGC"
+        ],
+        "sector": "IT",
+        "sentiment_label": "Positive",
+        "sentiment_score": 7.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
+        "age_hours": 13.27,
+        "decayed_score": 1.94,
+        "all_sectors": [
+          "IT",
+          "Media & Entertainment",
+          "Metals & Mining",
+          "Oil & Gas"
+        ]
       }
     ],
     "FMCG": [
+      {
+        "id": "Moneycontrol_621917039971669940",
+        "title": "Taking Stock: Market fails to hold on to day#39;s gains, ends marginally higher",
+        "link": "https://www.moneycontrol.com/news/local-markets/taking-stock-market-fails-to-holdto-day39s-gains-ends-marginally-higher_17531871.html",
+        "published": "Tue, 23 Apr 2024 15:46:31 +0530",
+        "published_iso": "2024-04-23T10:16:31+00:00",
+        "source": "Moneycontrol",
+        "source_weight": 1.15,
+        "summary": "Grasim Industries, Bharti Airtel, Nestle India, Maruti Suzuki and HCL Technologies were the biggest Nifty gainers, while losers included Sun Pharma, BPCL, Reliance Industries, MM and Hindalco Industries",
+        "stock_mentions": [
+          "RELIANCE",
+          "NESTLEIND",
+          "MARUTI",
+          "SUNPHARMA",
+          "BPCL"
+        ],
+        "sector": "Automobile",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 22459.01,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automobile",
+          "FMCG",
+          "Oil & Gas",
+          "Pharmaceuticals"
+        ]
+      },
       {
         "id": "Economic Times_917032667728512915",
         "title": "HUL Share Price Highlights: HUL Stock Price History",
@@ -2143,7 +3132,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.86,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "FMCG"
+        ]
       },
       {
         "id": "Business Standard_5706422243202002667",
@@ -2164,7 +3156,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 1 negative triggers)",
         "age_hours": 18.58,
-        "decayed_score": 0.7
+        "decayed_score": 0.7,
+        "all_sectors": [
+          "FMCG"
+        ]
       },
       {
         "id": "Moneycontrol_1116413284510202071",
@@ -2185,7 +3180,40 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 22458.69,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "FMCG"
+        ]
+      },
+      {
+        "id": "Livemint_6704771594412006622",
+        "title": "Top 3 stocks to buy: Bharti Airtel, Bajaj Finance, Nestle by Sumeet Bagadia | Targets, stop-loss, market prediction",
+        "link": "https://www.livemint.com/market/stock-market-news/top-3-stocks-to-buy-bharti-airtel-bajaj-finance-nestle-by-sumeet-bagadia-targets-stop-loss-market-prediction-11794622858676.html",
+        "published": "Sat, 14 Nov 2026 08:41:12 +0530",
+        "published_iso": "2026-11-14T03:11:12+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "The Nifty 50 index may witness further consolidation after its sharp rally, says Sumeet Bagadia of Choice Broking.",
+        "stock_mentions": [
+          "NESTLEIND",
+          "BHARTIARTL",
+          "BAJFINANCE",
+          "BAJAJ"
+        ],
+        "sector": "Consumer Durables",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 26.1,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Consumer Durables",
+          "FMCG",
+          "Financial Services",
+          "Telecom"
+        ]
       }
     ],
     "Financial Services": [
@@ -2199,38 +3227,21 @@
         "source_weight": 1.25,
         "summary": "",
         "stock_mentions": [
-          "HDFC",
-          "HDFCBANK"
+          "HDFCBANK",
+          "HDFC"
         ],
-        "sector": "Financial Services",
+        "sector": "Banking",
         "sentiment_label": "Neutral",
         "sentiment_score": 0.0,
         "confidence": 0.5,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.95,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Economic Times_3666547045079650923",
-        "title": "Food inflation to stay elevated; ICICI Bank sees 25 bps RBI rate hike in December",
-        "link": "https://economictimes.indiatimes.com/news/economy/indicators/food-inflation-to-stay-elevated-icici-bank-sees-25-bps-rbi-rate-hike-in-december/articleshow/135789519.cms",
-        "published": "Fri, 13 Nov 2026 10:06:54 +0530",
-        "published_iso": "2026-11-13T04:36:54+00:00",
-        "source": "Economic Times",
-        "source_weight": 1.25,
-        "summary": "Food inflation in India is projected to remain elevated in the coming months due to a shortfall in crops. The Reserve Bank of India is anticipated to raise interest rates by 25 basis points to manage retail inflation. Factors such as weak monsoon and high energy prices contribute to the rising inflation. Many essential food items are experiencing upward price pressure amid ongoing inflationary tre",
-        "stock_mentions": [
-          "ICICIBANK"
-        ],
-        "sector": "Financial Services",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (1 positive, 1 negative triggers)",
-        "age_hours": 48.67,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking",
+          "Financial Services"
+        ]
       },
       {
         "id": "Business Standard_1762620787587523872",
@@ -2251,7 +3262,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 47.43,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Financial Services"
+        ]
       },
       {
         "id": "Business Standard_8843434313173259877",
@@ -2272,7 +3286,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (4 positive, 0 negative triggers)",
         "age_hours": 40.51,
-        "decayed_score": 0.6
+        "decayed_score": 0.6,
+        "all_sectors": [
+          "Financial Services"
+        ]
       },
       {
         "id": "Moneycontrol_6768331867324792937",
@@ -2288,14 +3305,155 @@
           "LICI",
           "ICICIBANK"
         ],
-        "sector": "Financial Services",
+        "sector": "Banking",
         "sentiment_label": "Negative",
         "sentiment_score": -2.5,
         "confidence": 0.65,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 1 negative triggers)",
         "age_hours": 22452.17,
-        "decayed_score": -0.14
+        "decayed_score": -0.14,
+        "all_sectors": [
+          "Banking",
+          "Financial Services"
+        ]
+      },
+      {
+        "id": "Livemint_8159795132475396014",
+        "title": "Upcoming dividend, stock split, buyback record date next week, 16-20 Nov: MRF, SCI, PFC, Power Grid, Venus Pipes, more",
+        "link": "https://www.livemint.com/market/stock-market-news/upcoming-dividend-stock-split-buyback-record-date-next-week-16-20-nov-mrf-sci-pfc-power-grid-venus-pipes-more-11794644624084.html",
+        "published": "Sat, 14 Nov 2026 14:26:49 +0530",
+        "published_iso": "2026-11-14T08:56:49+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Investors will track several corporate actions next week, including BN Agrochem\u2019s 10-for-1 stock split, InvIT income distributions, an amalgamation, rights issues and a share buyback. Record dates run from November 16 to November 20. The Nifty 50 and Sensex gained nearly 0.70%\u20131.30% for the week.",
+        "stock_mentions": [
+          "POWERGRID",
+          "PFC",
+          "MRF"
+        ],
+        "sector": "Automobile",
+        "sentiment_label": "Positive",
+        "sentiment_score": 7.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
+        "age_hours": 20.34,
+        "decayed_score": 0.85,
+        "all_sectors": [
+          "Automobile",
+          "Financial Services",
+          "Power"
+        ]
+      },
+      {
+        "id": "Livemint_6704771594412006622",
+        "title": "Top 3 stocks to buy: Bharti Airtel, Bajaj Finance, Nestle by Sumeet Bagadia | Targets, stop-loss, market prediction",
+        "link": "https://www.livemint.com/market/stock-market-news/top-3-stocks-to-buy-bharti-airtel-bajaj-finance-nestle-by-sumeet-bagadia-targets-stop-loss-market-prediction-11794622858676.html",
+        "published": "Sat, 14 Nov 2026 08:41:12 +0530",
+        "published_iso": "2026-11-14T03:11:12+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "The Nifty 50 index may witness further consolidation after its sharp rally, says Sumeet Bagadia of Choice Broking.",
+        "stock_mentions": [
+          "NESTLEIND",
+          "BHARTIARTL",
+          "BAJFINANCE",
+          "BAJAJ"
+        ],
+        "sector": "Consumer Durables",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 26.1,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Consumer Durables",
+          "FMCG",
+          "Financial Services",
+          "Telecom"
+        ]
+      }
+    ],
+    "Banking": [
+      {
+        "id": "Economic Times_2141380591824711150",
+        "title": "HDFC Bank Share Price Highlights: HDFC Bank Stock Price History",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/hdfc-bank-stock-price-live-updates-13-nov-2026/liveblog/135787827.cms",
+        "published": "Fri, 13 Nov 2026 08:50:09 +0530",
+        "published_iso": "2026-11-13T03:20:09+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "",
+        "stock_mentions": [
+          "HDFCBANK",
+          "HDFC"
+        ],
+        "sector": "Banking",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 49.95,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking",
+          "Financial Services"
+        ]
+      },
+      {
+        "id": "Economic Times_3666547045079650923",
+        "title": "Food inflation to stay elevated; ICICI Bank sees 25 bps RBI rate hike in December",
+        "link": "https://economictimes.indiatimes.com/news/economy/indicators/food-inflation-to-stay-elevated-icici-bank-sees-25-bps-rbi-rate-hike-in-december/articleshow/135789519.cms",
+        "published": "Fri, 13 Nov 2026 10:06:54 +0530",
+        "published_iso": "2026-11-13T04:36:54+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "Food inflation in India is projected to remain elevated in the coming months due to a shortfall in crops. The Reserve Bank of India is anticipated to raise interest rates by 25 basis points to manage retail inflation. Factors such as weak monsoon and high energy prices contribute to the rising inflation. Many essential food items are experiencing upward price pressure amid ongoing inflationary tre",
+        "stock_mentions": [
+          "ICICIBANK"
+        ],
+        "sector": "Banking",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (1 positive, 1 negative triggers)",
+        "age_hours": 48.67,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking"
+        ]
+      },
+      {
+        "id": "Moneycontrol_6768331867324792937",
+        "title": "ICICI Prudential Life Insurance to focus on growing absolute VNB amid slump in FY24",
+        "link": "https://www.moneycontrol.com/news/business/icici-prudential-life-insurance-to-focusgrowing-absolute-vnb-amid-slumpfy24_17532041.html",
+        "published": "Tue, 23 Apr 2024 22:36:32 +0530",
+        "published_iso": "2024-04-23T17:06:32+00:00",
+        "source": "Moneycontrol",
+        "source_weight": 1.15,
+        "summary": "In its Q4FY24 results, the company#39;s VNB fell 19.45 percent to Rs 2,227 crore for FY24",
+        "stock_mentions": [
+          "ICICIPRULI",
+          "LICI",
+          "ICICIBANK"
+        ],
+        "sector": "Banking",
+        "sentiment_label": "Negative",
+        "sentiment_score": -2.5,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 1 negative triggers)",
+        "age_hours": 22452.17,
+        "decayed_score": -0.14,
+        "all_sectors": [
+          "Banking",
+          "Financial Services"
+        ]
       },
       {
         "id": "Moneycontrol_8742378228831403374",
@@ -2309,14 +3467,137 @@
         "stock_mentions": [
           "ICICIBANK"
         ],
-        "sector": "Financial Services",
+        "sector": "Banking",
         "sentiment_label": "Positive",
         "sentiment_score": 5.0,
         "confidence": 0.65,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 22456.35,
-        "decayed_score": 0.29
+        "decayed_score": 0.29,
+        "all_sectors": [
+          "Banking"
+        ]
+      },
+      {
+        "id": "Economic Times_7609025355012236977",
+        "title": "SBI Share Price Highlights: SBI Stock Price History",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/sbi-share-price-today-live-13-nov-2026/liveblog/135787707.cms",
+        "published": "Fri, 13 Nov 2026 08:46:07 +0530",
+        "published_iso": "2026-11-13T03:16:07+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "",
+        "stock_mentions": [
+          "SBIN"
+        ],
+        "sector": "Banking",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 50.01,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking"
+        ]
+      },
+      {
+        "id": "Economic Times_3231032605925692948",
+        "title": "SBI economists halve December RBI rate hike forecast to 25 bps on easing rupee pressure, foreign inflows",
+        "link": "https://economictimes.indiatimes.com/news/economy/indicators/sbi-economists-halve-december-rbi-rate-hike-forecast-to-25-bps-on-easing-rupee-pressure-foreign-inflows/articleshow/135774632.cms",
+        "published": "Thu, 12 Nov 2026 20:54:13 +0530",
+        "published_iso": "2026-11-12T15:24:13+00:00",
+        "source": "Economic Times",
+        "source_weight": 1.25,
+        "summary": "State Bank of India has revised its estimate for the upcoming Reserve Bank of India rate hike. The new projection suggests a 0.25 percent increase instead of a previously expected 0.50 percent. This adjustment follows improvements in external conditions and a revival in foreign fund inflows. Analysts note that inflation is projected to remain above 6 percent in November before easing.",
+        "stock_mentions": [
+          "SBIN"
+        ],
+        "sector": "Banking",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 61.88,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking"
+        ]
+      },
+      {
+        "id": "Livemint_3467665719907651800",
+        "title": "Top 3 stocks to buy: Redington, Aster DM, Canara Bank by Ganesh Dongre of Anand Rathi | Targets, stop-loss, market view",
+        "link": "https://www.livemint.com/market/stock-market-news/top-3-stocks-to-buy-redington-aster-dm-canara-bank-by-ganesh-dongre-of-anand-rathi-targets-stop-loss-market-view-11794710212072.html",
+        "published": "Sun, 15 Nov 2026 08:31:01 +0530",
+        "published_iso": "2026-11-15T03:01:01+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "Nifty 50 prediction: The 25,500\u201325,600 zone will be the next significant resistance area to watch, says Ganesh Dongre of Anand Rathi",
+        "stock_mentions": [
+          "CANBK"
+        ],
+        "sector": "Banking",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 2.27,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking"
+        ]
+      },
+      {
+        "id": "Livemint_2428590916087161648",
+        "title": "Dividend stock to buy: TD Power shares rally 369% in 3 years, more upside ahead? Check target price before record date",
+        "link": "https://www.livemint.com/market/stock-market-news/dividend-stock-to-buy-td-power-shares-rally-369-in-3-years-more-upside-ahead-check-target-price-before-record-date-11794648803654.html",
+        "published": "Sat, 14 Nov 2026 15:57:17 +0530",
+        "published_iso": "2026-11-14T10:27:17+00:00",
+        "source": "Livemint",
+        "source_weight": 1.2,
+        "summary": "TD Power Systems will be in focus ahead of its November 18 dividend record date. The board approved a dividend of  \u20b90.65 per share. Strong Q2 results, a robust order book and upgraded guidance have supported the stock, which SBI Securities rates Buy with a  \u20b9732 target.",
+        "stock_mentions": [
+          "SBIN"
+        ],
+        "sector": "Banking",
+        "sentiment_label": "Positive",
+        "sentiment_score": 10.0,
+        "confidence": 0.65,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (6 positive, 0 negative triggers)",
+        "age_hours": 18.83,
+        "decayed_score": 1.37,
+        "all_sectors": [
+          "Banking"
+        ]
+      },
+      {
+        "id": "Business Standard_4109035127602966563",
+        "title": "Yes Bank files review petition in SC over \u20b98,415 crore AT-1 bonds",
+        "link": "https://www.business-standard.com/companies/news/yes-bank-seeks-sc-review-of-ruling-on-8-415-crore-at-1-bond-write-down-126111301764_1.html",
+        "published": "Fri, 13 Nov 2026 21:39:26 +0530",
+        "published_iso": "2026-11-13T16:09:26+00:00",
+        "source": "Business Standard",
+        "source_weight": 1.2,
+        "summary": "Supreme Court review petition challenges the October 15 ruling overturning YES Bank's \u20b98,415 crore AT-1 bond write-down, with potential implications for its capital position",
+        "stock_mentions": [
+          "YESBANK"
+        ],
+        "sector": "Banking",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
+        "impact_type": "Sector / Market Update",
+        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
+        "age_hours": 37.13,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking"
+        ]
       }
     ],
     "Power": [
@@ -2339,7 +3620,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 50.01,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Power"
+        ]
       },
       {
         "id": "Economic Times_6653156535863023669",
@@ -2360,7 +3644,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 50.02,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Power"
+        ]
       },
       {
         "id": "Livemint_8159795132475396014",
@@ -2376,121 +3663,45 @@
           "PFC",
           "MRF"
         ],
-        "sector": "Power",
+        "sector": "Automobile",
         "sentiment_label": "Positive",
         "sentiment_score": 7.5,
         "confidence": 0.65,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 20.34,
-        "decayed_score": 0.85
-      }
-    ],
-    "Banking": [
+        "decayed_score": 0.85,
+        "all_sectors": [
+          "Automobile",
+          "Financial Services",
+          "Power"
+        ]
+      },
       {
-        "id": "Economic Times_7609025355012236977",
-        "title": "SBI Share Price Highlights: SBI Stock Price History",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/sbi-share-price-today-live-13-nov-2026/liveblog/135787707.cms",
-        "published": "Fri, 13 Nov 2026 08:46:07 +0530",
-        "published_iso": "2026-11-13T03:16:07+00:00",
-        "source": "Economic Times",
-        "source_weight": 1.25,
-        "summary": "",
+        "id": "Moneycontrol_3411352741444699341",
+        "title": "Juniper Green Energy, Tata Power sign PPA for 85 MW hybrid project in Maharashtra",
+        "link": "https://www.moneycontrol.com/news/business/juniper-green-energy-tata-power-sign-ppa-for-85-mw-hybrid-projectmaharashtra_17531681.html",
+        "published": "Tue, 23 Apr 2024 13:40:48 +0530",
+        "published_iso": "2024-04-23T08:10:48+00:00",
+        "source": "Moneycontrol",
+        "source_weight": 1.15,
+        "summary": "\"The project is the first wind-solar energy project for the company. It will utilize both wind and solar resources by combining 51 MW of wind energy and 34 MW of solar power,\" Juniper Green Energy said in a statement.",
         "stock_mentions": [
-          "SBIN"
+          "TATAPOWER",
+          "SOLARIND"
         ],
-        "sector": "Banking",
+        "sector": "Defense",
         "sentiment_label": "Neutral",
         "sentiment_score": 0.0,
         "confidence": 0.5,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 50.01,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Economic Times_3231032605925692948",
-        "title": "SBI economists halve December RBI rate hike forecast to 25 bps on easing rupee pressure, foreign inflows",
-        "link": "https://economictimes.indiatimes.com/news/economy/indicators/sbi-economists-halve-december-rbi-rate-hike-forecast-to-25-bps-on-easing-rupee-pressure-foreign-inflows/articleshow/135774632.cms",
-        "published": "Thu, 12 Nov 2026 20:54:13 +0530",
-        "published_iso": "2026-11-12T15:24:13+00:00",
-        "source": "Economic Times",
-        "source_weight": 1.25,
-        "summary": "State Bank of India has revised its estimate for the upcoming Reserve Bank of India rate hike. The new projection suggests a 0.25 percent increase instead of a previously expected 0.50 percent. This adjustment follows improvements in external conditions and a revival in foreign fund inflows. Analysts note that inflation is projected to remain above 6 percent in November before easing.",
-        "stock_mentions": [
-          "SBIN"
-        ],
-        "sector": "Banking",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 61.88,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Livemint_3467665719907651800",
-        "title": "Top 3 stocks to buy: Redington, Aster DM, Canara Bank by Ganesh Dongre of Anand Rathi | Targets, stop-loss, market view",
-        "link": "https://www.livemint.com/market/stock-market-news/top-3-stocks-to-buy-redington-aster-dm-canara-bank-by-ganesh-dongre-of-anand-rathi-targets-stop-loss-market-view-11794710212072.html",
-        "published": "Sun, 15 Nov 2026 08:31:01 +0530",
-        "published_iso": "2026-11-15T03:01:01+00:00",
-        "source": "Livemint",
-        "source_weight": 1.2,
-        "summary": "Nifty 50 prediction: The 25,500\u201325,600 zone will be the next significant resistance area to watch, says Ganesh Dongre of Anand Rathi",
-        "stock_mentions": [
-          "CANBK"
-        ],
-        "sector": "Banking",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 2.27,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Livemint_2428590916087161648",
-        "title": "Dividend stock to buy: TD Power shares rally 369% in 3 years, more upside ahead? Check target price before record date",
-        "link": "https://www.livemint.com/market/stock-market-news/dividend-stock-to-buy-td-power-shares-rally-369-in-3-years-more-upside-ahead-check-target-price-before-record-date-11794648803654.html",
-        "published": "Sat, 14 Nov 2026 15:57:17 +0530",
-        "published_iso": "2026-11-14T10:27:17+00:00",
-        "source": "Livemint",
-        "source_weight": 1.2,
-        "summary": "TD Power Systems will be in focus ahead of its November 18 dividend record date. The board approved a dividend of  \u20b90.65 per share. Strong Q2 results, a robust order book and upgraded guidance have supported the stock, which SBI Securities rates Buy with a  \u20b9732 target.",
-        "stock_mentions": [
-          "SBIN"
-        ],
-        "sector": "Banking",
-        "sentiment_label": "Positive",
-        "sentiment_score": 10.0,
-        "confidence": 0.65,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (6 positive, 0 negative triggers)",
-        "age_hours": 18.83,
-        "decayed_score": 1.37
-      },
-      {
-        "id": "Business Standard_4109035127602966563",
-        "title": "Yes Bank files review petition in SC over \u20b98,415 crore AT-1 bonds",
-        "link": "https://www.business-standard.com/companies/news/yes-bank-seeks-sc-review-of-ruling-on-8-415-crore-at-1-bond-write-down-126111301764_1.html",
-        "published": "Fri, 13 Nov 2026 21:39:26 +0530",
-        "published_iso": "2026-11-13T16:09:26+00:00",
-        "source": "Business Standard",
-        "source_weight": 1.2,
-        "summary": "Supreme Court review petition challenges the October 15 ruling overturning YES Bank's \u20b98,415 crore AT-1 bond write-down, with potential implications for its capital position",
-        "stock_mentions": [
-          "YESBANK"
-        ],
-        "sector": "Banking",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 37.13,
-        "decayed_score": 0.0
+        "age_hours": 22461.1,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Defense",
+          "Power"
+        ]
       }
     ],
     "FMCG & Consumer": [
@@ -2511,7 +3722,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 19.37,
-        "decayed_score": 0.67
+        "decayed_score": 0.67,
+        "all_sectors": [
+          "FMCG & Consumer"
+        ]
       },
       {
         "id": "Economic Times_5582157412482656629",
@@ -2530,7 +3744,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 61.24,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "FMCG & Consumer"
+        ]
       },
       {
         "id": "Livemint_262652836882248458",
@@ -2549,7 +3766,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 13.62,
-        "decayed_score": 0.62
+        "decayed_score": 0.62,
+        "all_sectors": [
+          "FMCG & Consumer"
+        ]
       },
       {
         "id": "Moneycontrol_5781383837242518857",
@@ -2568,7 +3788,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 22458.32,
-        "decayed_score": 0.29
+        "decayed_score": 0.29,
+        "all_sectors": [
+          "FMCG & Consumer"
+        ]
       }
     ],
     "Banking & Finance": [
@@ -2589,7 +3812,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 1 negative triggers)",
         "age_hours": 37.18,
-        "decayed_score": -0.16
+        "decayed_score": -0.16,
+        "all_sectors": [
+          "Banking & Finance"
+        ]
       },
       {
         "id": "Economic Times_586539533626099857",
@@ -2608,7 +3834,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 43.33,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking & Finance"
+        ]
       },
       {
         "id": "Economic Times_803917763986569720",
@@ -2627,7 +3856,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 49.69,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking & Finance"
+        ]
       },
       {
         "id": "Economic Times_876261803731540450",
@@ -2646,7 +3878,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 68.03,
-        "decayed_score": 0.16
+        "decayed_score": 0.16,
+        "all_sectors": [
+          "Banking & Finance"
+        ]
       },
       {
         "id": "Livemint_1830741962744531277",
@@ -2665,7 +3900,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 16.82,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking & Finance"
+        ]
       },
       {
         "id": "Business Standard_6530359929599940805",
@@ -2684,7 +3922,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 48.65,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking & Finance"
+        ]
       },
       {
         "id": "Business Standard_6747840072909230479",
@@ -2703,31 +3944,13 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 41.31,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Banking & Finance"
+        ]
       }
     ],
-    "Telecom": [
-      {
-        "id": "Livemint_5453646442926510433",
-        "title": "MCX, BSE, Bharti Airtel shares: Top 3 stocks to buy; check expected returns, ratings, target price by market expert",
-        "link": "https://www.livemint.com/market/stock-market-news/mcx-bse-bharti-airtel-shares-top-3-stocks-to-buy-check-expected-returns-ratings-target-price-by-market-expert-11794714137509.html",
-        "published": "Sun, 15 Nov 2026 09:43:39 +0530",
-        "published_iso": "2026-11-15T04:13:39+00:00",
-        "source": "Livemint",
-        "source_weight": 1.2,
-        "summary": "Sensex fell 318.56 points to 81,592.45 and Nifty 50 dropped 155.05 points to 25,144.30 on Friday, ending a three-session rally as October retail inflation rose to 6.09%. Analyst Chandan Taparia recommended MCX, BSE and Bharti Airtel, while identifying key index support and resistance levels.",
-        "stock_mentions": [
-          "BHARTIARTL"
-        ],
-        "sector": "Telecom",
-        "sentiment_label": "Positive",
-        "sentiment_score": 2.5,
-        "confidence": 0.65,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
-        "age_hours": 1.06,
-        "decayed_score": 2.66
-      },
+    "Defense": [
       {
         "id": "Livemint_4166638767248757520",
         "title": "Around 600% jump in 5 years: Citi maintains 'buy' on Maharatna defence PSU HAL for up to 28% - Check target, rationale",
@@ -2738,80 +3961,71 @@
         "source_weight": 1.2,
         "summary": "HAL shares have weakened recently, but Citi retained its Buy rating and  \u20b96,175 target, implying about 28% upside. Citi cited higher inventory and support from engines, helicopters and repairs amid delayed Tejas Mk1A deliveries.",
         "stock_mentions": [
-          "TEJAS",
-          "HAL"
+          "HAL",
+          "TEJAS"
         ],
-        "sector": "Telecom",
+        "sector": "Defense",
         "sentiment_label": "Positive",
         "sentiment_score": 2.5,
         "confidence": 0.65,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 24.3,
-        "decayed_score": 0.18
+        "decayed_score": 0.18,
+        "all_sectors": [
+          "Defense",
+          "Telecom"
+        ]
       },
       {
-        "id": "Livemint_5776875723061990619",
-        "title": "Bharti Airtel\u2019s Sunil Mittal wants mobile tariff hiked to  \u20b910-12/day or  \u20b9350 per month; here\u2019s why",
-        "link": "https://www.livemint.com/companies/news/bharti-airtel-sunil-mittal-wants-mobile-tariff-hike-why-rs-350-monthly-12-per-day-cost-less-than-soap-pepsi-chips-packet-11794638826764.html",
-        "published": "Sat, 14 Nov 2026 14:08:21 +0530",
-        "published_iso": "2026-11-14T08:38:21+00:00",
-        "source": "Livemint",
-        "source_weight": 1.2,
-        "summary": "Bharti Airtel founder and chairman Sunil Mittal wants mobile tariffs in India hiked to  \u20b9350 per month as \u201cprices are up\u201d. He said entry plan costs could thus work out to  \u20b910-12 per day for users.&nbsp;",
-        "stock_mentions": [
-          "BHARTIARTL"
-        ],
-        "sector": "Telecom",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 20.64,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Business Standard_4187248817604005828",
-        "title": "Vodafone Idea shares decline 3.5% on wider-than-expected loss in Q2",
-        "link": "https://www.business-standard.com/markets/news/vodafone-idea-share-price-declines-3-5-on-wider-than-expected-loss-in-q2-126111300408_1.html",
-        "published": "Fri, 13 Nov 2026 09:46:57 +0530",
-        "published_iso": "2026-11-13T04:16:57+00:00",
+        "id": "Business Standard_1278503502618571247",
+        "title": "Bharat Dynamics shares fall 3% as Q2 margin pressure weighs on earnings",
+        "link": "https://www.business-standard.com/markets/news/bharat-dynamics-shares-fall-3-as-q2-margin-pressure-weighs-on-earnings-126111300659_1.html",
+        "published": "Fri, 13 Nov 2026 12:42:26 +0530",
+        "published_iso": "2026-11-13T07:12:26+00:00",
         "source": "Business Standard",
         "source_weight": 1.2,
-        "summary": "Vodafone Idea share price: Sustained subscriber growth, ARPU improvement, and successful execution of the capex programme will be critical for achieving a sustainable financial turnaround.",
+        "summary": "MOFSL said that Bharat Dynamics delivered a surge in revenue, driven by the execution of pending orders of Akash and Astra MK 1, which were delayed over the past 1-2 quarters.",
         "stock_mentions": [
-          "IDEA"
+          "BDL"
         ],
-        "sector": "Telecom",
-        "sentiment_label": "Negative",
-        "sentiment_score": -5.0,
-        "confidence": 0.65,
+        "sector": "Defense",
+        "sentiment_label": "Neutral",
+        "sentiment_score": 0.0,
+        "confidence": 0.5,
         "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 2 negative triggers)",
-        "age_hours": 49.0,
-        "decayed_score": -0.3
+        "reasoning": "Lexical keyword density matched (1 positive, 1 negative triggers)",
+        "age_hours": 46.08,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Defense"
+        ]
       },
       {
-        "id": "Moneycontrol_4821106035231013520",
-        "title": "Razorpay announces #39;UPI Switch#39; in partnership with Airtel Payments Bank",
-        "link": "https://www.moneycontrol.com/news/business/razorpay-announces-39upi-switch39partnershipairtel-payments-bank_17531791.html",
-        "published": "Tue, 23 Apr 2024 14:42:21 +0530",
-        "published_iso": "2024-04-23T09:12:21+00:00",
+        "id": "Moneycontrol_3411352741444699341",
+        "title": "Juniper Green Energy, Tata Power sign PPA for 85 MW hybrid project in Maharashtra",
+        "link": "https://www.moneycontrol.com/news/business/juniper-green-energy-tata-power-sign-ppa-for-85-mw-hybrid-projectmaharashtra_17531681.html",
+        "published": "Tue, 23 Apr 2024 13:40:48 +0530",
+        "published_iso": "2024-04-23T08:10:48+00:00",
         "source": "Moneycontrol",
         "source_weight": 1.15,
-        "summary": "Boosting success rates by 4-5 per cent, the solution is designed to handle up to 10,000 transactions per second (TPS) at any given time, according to a release.",
+        "summary": "\"The project is the first wind-solar energy project for the company. It will utilize both wind and solar resources by combining 51 MW of wind energy and 34 MW of solar power,\" Juniper Green Energy said in a statement.",
         "stock_mentions": [
-          "BHARTIARTL"
+          "TATAPOWER",
+          "SOLARIND"
         ],
-        "sector": "Telecom",
+        "sector": "Defense",
         "sentiment_label": "Neutral",
         "sentiment_score": 0.0,
         "confidence": 0.5,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 22460.08,
-        "decayed_score": 0.0
+        "age_hours": 22461.1,
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Defense",
+          "Power"
+        ]
       }
     ],
     "Information Technology": [
@@ -2832,7 +4046,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 3.21,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Information Technology"
+        ]
       },
       {
         "id": "Livemint_7497592191005728693",
@@ -2851,7 +4068,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 17.46,
-        "decayed_score": 0.4
+        "decayed_score": 0.4,
+        "all_sectors": [
+          "Information Technology"
+        ]
       },
       {
         "id": "Livemint_5979483020123366806",
@@ -2870,7 +4090,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 33.31,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Information Technology"
+        ]
       },
       {
         "id": "Livemint_7407595004673042426",
@@ -2889,7 +4112,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 12.78,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Information Technology"
+        ]
       },
       {
         "id": "Livemint_6434569302625094543",
@@ -2908,7 +4134,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 14.91,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Information Technology"
+        ]
       },
       {
         "id": "Livemint_640357382529902819",
@@ -2927,31 +4156,13 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 17.17,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Information Technology"
+        ]
       }
     ],
-    "Metals & Mining": [
-      {
-        "id": "Livemint_4622774788162275796",
-        "title": "Best stocks to buy under  \u20b9100: Lloyds Engineering, Niva Bupa, Vedanta Power by Sumeet Bagadia | Targets, stop-loss",
-        "link": "https://www.livemint.com/market/stock-market-news/best-stocks-to-buy-under-rs-100-lloyds-engineering-niva-bupa-vedanta-power-by-sumeet-bagadia-targets-stoploss-11794674607528.html",
-        "published": "Sun, 15 Nov 2026 06:30:17 +0530",
-        "published_iso": "2026-11-15T01:00:17+00:00",
-        "source": "Livemint",
-        "source_weight": 1.2,
-        "summary": "Stock market prediction: Sumeet Bagadia of Choice Broking believes the bias for the Indian stock market is positive, until the Nifty 50 index is above 25,000",
-        "stock_mentions": [
-          "VEDL"
-        ],
-        "sector": "Metals & Mining",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 4.28,
-        "decayed_score": 0.0
-      },
+    "Media & Entertainment": [
       {
         "id": "Livemint_4554017288898010018",
         "title": "Beyond Coal India, ONGC: 10 lesser-known dividend stocks with up to 19.6% yield - Premco, GOCL, Accelya to D-Link | List",
@@ -2963,60 +4174,24 @@
         "summary": "Several lesser-known Indian stocks delivered high dividend yields in FY26. CyberTech Systems led the listed examples at 19.6%, followed by Majestic Auto at 16.4%, Jagran Prakashan at 16.1%, IL&amp;FS Investment Managers at 15.9%, and Premco Global at 11.2%.",
         "stock_mentions": [
           "COALINDIA",
-          "JAGRAN",
           "ACCELYA",
+          "JAGRAN",
           "ONGC"
         ],
-        "sector": "Metals & Mining",
+        "sector": "IT",
         "sentiment_label": "Positive",
         "sentiment_score": 7.5,
         "confidence": 0.65,
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 13.27,
-        "decayed_score": 1.94
-      },
-      {
-        "id": "Livemint_6684887613512846302",
-        "title": "Dividend king PSU stock: Down 23% in 6 months! Nuvama sees 42% upside; target price, rationale",
-        "link": "https://www.livemint.com/market/stock-market-news/dividend-king-psu-stock-down-23-in-6-months-nuvama-sees-42-upside-target-price-rationale-11794660044292.html",
-        "published": "Sat, 14 Nov 2026 19:41:10 +0530",
-        "published_iso": "2026-11-14T14:11:10+00:00",
-        "source": "Livemint",
-        "source_weight": 1.2,
-        "summary": "NMDC shares fell 1.76% to  \u20b969.90 on Friday after its second-quarter EBITDA declined 3% year over year to  \u20b919.4 billion, below expectations. Nuvama retained a Buy rating and raised its target price to  \u20b9100, citing normalized supplies and potential second-half volume growth.",
-        "stock_mentions": [
-          "NMDC"
-        ],
-        "sector": "Metals & Mining",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (1 positive, 1 negative triggers)",
-        "age_hours": 15.1,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Livemint_2332021376591402967",
-        "title": "Mahanadi Coalfields IPO: Coal India subsidiary files RHP - Latest GMP at  \u20b912.5; check key dates, size, valuation, more",
-        "link": "https://www.livemint.com/market/ipo/mahanadi-coalfields-ipo-coal-india-subsidiary-files-rhp-latest-gmp-at-rs-12-5-check-key-dates-size-valuation-more-11794640652111.html",
-        "published": "Sat, 14 Nov 2026 13:39:25 +0530",
-        "published_iso": "2026-11-14T08:09:25+00:00",
-        "source": "Livemint",
-        "source_weight": 1.2,
-        "summary": "Mahanadi Coalfields has filed its RHP for an IPO opening November 19, 2026. The offer is an offer for sale of up to 66.18 crore shares by Coal India, with no proceeds going to MCL. The company produced 218.31 million tonnes of coal in FY26.",
-        "stock_mentions": [
-          "COALINDIA"
-        ],
-        "sector": "Metals & Mining",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 21.13,
-        "decayed_score": 0.0
+        "decayed_score": 1.94,
+        "all_sectors": [
+          "IT",
+          "Media & Entertainment",
+          "Metals & Mining",
+          "Oil & Gas"
+        ]
       }
     ],
     "Glass & Packaging": [
@@ -3039,7 +4214,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 22.89,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Glass & Packaging"
+        ]
       }
     ],
     "Retail": [
@@ -3062,7 +4240,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (5 positive, 0 negative triggers)",
         "age_hours": 24.91,
-        "decayed_score": 0.67
+        "decayed_score": 0.67,
+        "all_sectors": [
+          "Retail"
+        ]
       },
       {
         "id": "Business Standard_5416056549985805451",
@@ -3083,7 +4264,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 1 negative triggers)",
         "age_hours": 46.36,
-        "decayed_score": 0.15
+        "decayed_score": 0.15,
+        "all_sectors": [
+          "Retail"
+        ]
       }
     ],
     "Consumer Durables": [
@@ -3097,10 +4281,10 @@
         "source_weight": 1.2,
         "summary": "The Nifty 50 index may witness further consolidation after its sharp rally, says Sumeet Bagadia of Choice Broking.",
         "stock_mentions": [
-          "BAJAJ",
-          "BHARTIARTL",
           "NESTLEIND",
-          "BAJFINANCE"
+          "BHARTIARTL",
+          "BAJFINANCE",
+          "BAJAJ"
         ],
         "sector": "Consumer Durables",
         "sentiment_label": "Neutral",
@@ -3109,7 +4293,13 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 26.1,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Consumer Durables",
+          "FMCG",
+          "Financial Services",
+          "Telecom"
+        ]
       }
     ],
     "Infrastructure & Realty": [
@@ -3130,7 +4320,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 27.78,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Infrastructure & Realty"
+        ]
       },
       {
         "id": "Business Standard_250743373967442169",
@@ -3149,72 +4342,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (2 positive, 0 negative triggers)",
         "age_hours": 48.58,
-        "decayed_score": 0.3
-      }
-    ],
-    "Pharmaceuticals": [
-      {
-        "id": "Livemint_8758792802564709619",
-        "title": "Kiran Mazumdar-Shaw believes the Microsoft outage creates opportunity for homegrown suite Zoho \u2014 here's how",
-        "link": "https://www.livemint.com/companies/kiran-mazumdar-shaw-believe-microsoft-outage-how-create-opportunity-sridhar-vembu-zoho-offer-homegrown-alternative-suite-11794645738571.html",
-        "published": "Sat, 14 Nov 2026 15:04:15 +0530",
-        "published_iso": "2026-11-14T09:34:15+00:00",
-        "source": "Livemint",
-        "source_weight": 1.2,
-        "summary": "Biocon founder Kiran Mazumdar-Shaw believes the recent Microsoft outage creates opportunity for Sridhar Vembu-led Zoho to offer homegrown alternatives to the office suite provider. Here's how\u2026&nbsp;",
-        "stock_mentions": [
-          "BIOCON"
-        ],
-        "sector": "Pharmaceuticals",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 19.71,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Business Standard_8326906296062851042",
-        "title": "Alkem shares fall 3% after Q2 results; MOFSL retains Neutral rating",
-        "link": "https://www.business-standard.com/markets/news/alkem-shares-fall-3-after-q2-results-mofsl-retains-neutral-rating-126111300548_1.html",
-        "published": "Fri, 13 Nov 2026 11:28:42 +0530",
-        "published_iso": "2026-11-13T05:58:42+00:00",
-        "source": "Business Standard",
-        "source_weight": 1.2,
-        "summary": "MOFSL said that FY27 is the year of consolidation for Alkem, as the new business is facing a gestation period before scale-up, with operational cost front-loaded and revenue yet to pick up",
-        "stock_mentions": [
-          "ALKEM"
-        ],
-        "sector": "Pharmaceuticals",
-        "sentiment_label": "Negative",
-        "sentiment_score": -2.5,
-        "confidence": 0.65,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 1 negative triggers)",
-        "age_hours": 47.3,
-        "decayed_score": -0.15
-      },
-      {
-        "id": "Business Standard_7048986223913667750",
-        "title": "Natco Pharma Q2 results: Net profit declines 60.8% to \u20b9202.6 crore",
-        "link": "https://www.business-standard.com/companies/quarterly-results/natco-pharma-q2-results-net-profit-declines-60-8-to-202-6-crore-126111300944_1.html",
-        "published": "Fri, 13 Nov 2026 15:53:50 +0530",
-        "published_iso": "2026-11-13T10:23:50+00:00",
-        "source": "Business Standard",
-        "source_weight": 1.2,
-        "summary": "Natco Pharma on Friday posted a 60.8 per cent decline in consolidated net profit to Rs 202.6 crore during the September quarter, weighed down by a fall in revenues.\nThe pharma company had reported a net profit of Rs 517.9 crore in the corresponding period of the preceding fiscal.\nIts revenue from operations declined to Rs 967.3 crore in the second quarter of FY27 from Rs 1,363 crore a year ago, th",
-        "stock_mentions": [
-          "NATCOPHARM"
-        ],
-        "sector": "Pharmaceuticals",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (3 positive, 3 negative triggers)",
-        "age_hours": 42.89,
-        "decayed_score": 0.0
+        "decayed_score": 0.3,
+        "all_sectors": [
+          "Infrastructure & Realty"
+        ]
       }
     ],
     "Automotive": [
@@ -3235,7 +4366,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 43.54,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automotive"
+        ]
       },
       {
         "id": "Business Standard_4385105336249812151",
@@ -3254,52 +4388,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 36.78,
-        "decayed_score": 0.0
-      }
-    ],
-    "Defense": [
-      {
-        "id": "Business Standard_1278503502618571247",
-        "title": "Bharat Dynamics shares fall 3% as Q2 margin pressure weighs on earnings",
-        "link": "https://www.business-standard.com/markets/news/bharat-dynamics-shares-fall-3-as-q2-margin-pressure-weighs-on-earnings-126111300659_1.html",
-        "published": "Fri, 13 Nov 2026 12:42:26 +0530",
-        "published_iso": "2026-11-13T07:12:26+00:00",
-        "source": "Business Standard",
-        "source_weight": 1.2,
-        "summary": "MOFSL said that Bharat Dynamics delivered a surge in revenue, driven by the execution of pending orders of Akash and Astra MK 1, which were delayed over the past 1-2 quarters.",
-        "stock_mentions": [
-          "BDL"
-        ],
-        "sector": "Defense",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (1 positive, 1 negative triggers)",
-        "age_hours": 46.08,
-        "decayed_score": 0.0
-      },
-      {
-        "id": "Moneycontrol_3411352741444699341",
-        "title": "Juniper Green Energy, Tata Power sign PPA for 85 MW hybrid project in Maharashtra",
-        "link": "https://www.moneycontrol.com/news/business/juniper-green-energy-tata-power-sign-ppa-for-85-mw-hybrid-projectmaharashtra_17531681.html",
-        "published": "Tue, 23 Apr 2024 13:40:48 +0530",
-        "published_iso": "2024-04-23T08:10:48+00:00",
-        "source": "Moneycontrol",
-        "source_weight": 1.15,
-        "summary": "\"The project is the first wind-solar energy project for the company. It will utilize both wind and solar resources by combining 51 MW of wind energy and 34 MW of solar power,\" Juniper Green Energy said in a statement.",
-        "stock_mentions": [
-          "SOLARIND",
-          "TATAPOWER"
-        ],
-        "sector": "Defense",
-        "sentiment_label": "Neutral",
-        "sentiment_score": 0.0,
-        "confidence": 0.5,
-        "impact_type": "Sector / Market Update",
-        "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
-        "age_hours": 22461.1,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Automotive"
+        ]
       }
     ],
     "Energy, Oil & Gas": [
@@ -3320,7 +4412,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 47.56,
-        "decayed_score": 0.15
+        "decayed_score": 0.15,
+        "all_sectors": [
+          "Energy, Oil & Gas"
+        ]
       },
       {
         "id": "Moneycontrol_323301550694450698",
@@ -3339,7 +4434,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (0 positive, 0 negative triggers)",
         "age_hours": 22459.99,
-        "decayed_score": 0.0
+        "decayed_score": 0.0,
+        "all_sectors": [
+          "Energy, Oil & Gas"
+        ]
       }
     ],
     "Capital Goods & Engineering": [
@@ -3362,7 +4460,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (1 positive, 0 negative triggers)",
         "age_hours": 47.75,
-        "decayed_score": 0.15
+        "decayed_score": 0.15,
+        "all_sectors": [
+          "Capital Goods & Engineering"
+        ]
       },
       {
         "id": "Business Standard_4570958732327630624",
@@ -3383,7 +4484,10 @@
         "impact_type": "Sector / Market Update",
         "reasoning": "Lexical keyword density matched (3 positive, 0 negative triggers)",
         "age_hours": 39.27,
-        "decayed_score": 0.45
+        "decayed_score": 0.45,
+        "all_sectors": [
+          "Capital Goods & Engineering"
+        ]
       }
     ]
   },
@@ -3397,6 +4501,16 @@
         "sector": "Automobile",
         "top_article_title": "Eicher Motors Share Price Highlights: Eicher Motors Stock Price History",
         "net_score": 15.0,
+        "sentiment_label": "Bullish"
+      },
+      {
+        "symbol": "EDELWEISS",
+        "positive_score": 10.0,
+        "negative_score": 0.0,
+        "article_count": 1,
+        "sector": "Financial Services",
+        "top_article_title": "Edelweiss Financial Services Q2 FY27 results: Profit rises 18% to \u20b9207 cr",
+        "net_score": 10.0,
         "sentiment_label": "Bullish"
       },
       {
@@ -3416,16 +4530,6 @@
         "article_count": 1,
         "sector": "Retail",
         "top_article_title": "\u20b9150 Dividend Alert! Record date next week of Jockey firm for biggest payout declared in Q2 - check key dates, history",
-        "net_score": 10.0,
-        "sentiment_label": "Bullish"
-      },
-      {
-        "symbol": "EDELWEISS",
-        "positive_score": 10.0,
-        "negative_score": 0.0,
-        "article_count": 1,
-        "sector": "Financial Services",
-        "top_article_title": "Edelweiss Financial Services Q2 FY27 results: Profit rises 18% to \u20b9207 cr",
         "net_score": 10.0,
         "sentiment_label": "Bullish"
       },
@@ -3460,30 +4564,30 @@
         "sentiment_label": "Bullish"
       },
       {
+        "symbol": "PFC",
+        "positive_score": 7.5,
+        "negative_score": 0.0,
+        "article_count": 1,
+        "sector": "Financial Services",
+        "top_article_title": "Upcoming dividend, stock split, buyback record date next week, 16-20 Nov: MRF, SCI, PFC, Power Grid, Venus Pipes, more",
+        "net_score": 7.5,
+        "sentiment_label": "Bullish"
+      },
+      {
+        "symbol": "MRF",
+        "positive_score": 7.5,
+        "negative_score": 0.0,
+        "article_count": 1,
+        "sector": "Automobile",
+        "top_article_title": "Upcoming dividend, stock split, buyback record date next week, 16-20 Nov: MRF, SCI, PFC, Power Grid, Venus Pipes, more",
+        "net_score": 7.5,
+        "sentiment_label": "Bullish"
+      },
+      {
         "symbol": "COALINDIA",
         "positive_score": 7.5,
         "negative_score": 0.0,
         "article_count": 2,
-        "sector": "Metals & Mining",
-        "top_article_title": "Beyond Coal India, ONGC: 10 lesser-known dividend stocks with up to 19.6% yield - Premco, GOCL, Accelya to D-Link | List",
-        "net_score": 7.5,
-        "sentiment_label": "Bullish"
-      },
-      {
-        "symbol": "JAGRAN",
-        "positive_score": 7.5,
-        "negative_score": 0.0,
-        "article_count": 1,
-        "sector": "Metals & Mining",
-        "top_article_title": "Beyond Coal India, ONGC: 10 lesser-known dividend stocks with up to 19.6% yield - Premco, GOCL, Accelya to D-Link | List",
-        "net_score": 7.5,
-        "sentiment_label": "Bullish"
-      },
-      {
-        "symbol": "ACCELYA",
-        "positive_score": 7.5,
-        "negative_score": 0.0,
-        "article_count": 1,
         "sector": "Metals & Mining",
         "top_article_title": "Beyond Coal India, ONGC: 10 lesser-known dividend stocks with up to 19.6% yield - Premco, GOCL, Accelya to D-Link | List",
         "net_score": 7.5,
@@ -3506,8 +4610,8 @@
         "positive_score": 0.0,
         "negative_score": 5.0,
         "article_count": 2,
-        "sector": "Oil & Gas",
-        "top_article_title": "Crude-sensitive stocks fall as oil trades at $95; BPCL, IndiGo down over 2%",
+        "sector": "Logistics & Transportation",
+        "top_article_title": "Air India, AI Express extends flight cancellations to Saudi Arabia",
         "net_score": -5.0,
         "sentiment_label": "Bearish"
       },
@@ -3532,16 +4636,6 @@
         "sentiment_label": "Bearish"
       },
       {
-        "symbol": "ALKEM",
-        "positive_score": 0.0,
-        "negative_score": 2.5,
-        "article_count": 1,
-        "sector": "Pharmaceuticals",
-        "top_article_title": "Alkem shares fall 3% after Q2 results; MOFSL retains Neutral rating",
-        "net_score": -2.5,
-        "sentiment_label": "Bearish"
-      },
-      {
         "symbol": "ICICIPRULI",
         "positive_score": 0.0,
         "negative_score": 2.5,
@@ -3560,6 +4654,16 @@
         "top_article_title": "ICICI Prudential Life Insurance to focus on growing absolute VNB amid slump in FY24",
         "net_score": -2.5,
         "sentiment_label": "Bearish"
+      },
+      {
+        "symbol": "ALKEM",
+        "positive_score": 0.0,
+        "negative_score": 2.5,
+        "article_count": 1,
+        "sector": "Pharmaceuticals",
+        "top_article_title": "Alkem shares fall 3% after Q2 results; MOFSL retains Neutral rating",
+        "net_score": -2.5,
+        "sentiment_label": "Bearish"
       }
     ]
   },
@@ -3567,129 +4671,48 @@
     "total_articles": 167,
     "sectors": [
       {
-        "sector": "Special Materials",
-        "article_count": 1,
-        "avg_sentiment": 5.0,
-        "positive_count": 1,
-        "negative_count": 0,
-        "neutral_count": 0,
-        "sentiment_label": "Bullish"
-      },
-      {
         "sector": "Broad Market",
-        "article_count": 78,
-        "avg_sentiment": 0.64,
-        "positive_count": 21,
+        "article_count": 77,
+        "avg_sentiment": 0.58,
+        "positive_count": 20,
         "negative_count": 9,
         "neutral_count": 48,
         "sentiment_label": "Neutral"
       },
       {
-        "sector": "Textiles & Apparel",
-        "article_count": 2,
-        "avg_sentiment": 1.25,
-        "positive_count": 1,
-        "negative_count": 0,
-        "neutral_count": 1,
-        "sentiment_label": "Bullish"
-      },
-      {
         "sector": "IT",
-        "article_count": 10,
-        "avg_sentiment": 0.5,
-        "positive_count": 2,
+        "article_count": 11,
+        "avg_sentiment": 1.14,
+        "positive_count": 3,
         "negative_count": 0,
         "neutral_count": 8,
-        "sentiment_label": "Neutral"
-      },
-      {
-        "sector": "Paints & Coatings",
-        "article_count": 1,
-        "avg_sentiment": 0.0,
-        "positive_count": 0,
-        "negative_count": 0,
-        "neutral_count": 1,
-        "sentiment_label": "Neutral"
-      },
-      {
-        "sector": "Cement",
-        "article_count": 1,
-        "avg_sentiment": 0.0,
-        "positive_count": 0,
-        "negative_count": 0,
-        "neutral_count": 1,
-        "sentiment_label": "Neutral"
-      },
-      {
-        "sector": "Logistics & Transportation",
-        "article_count": 4,
-        "avg_sentiment": 1.88,
-        "positive_count": 1,
-        "negative_count": 0,
-        "neutral_count": 3,
-        "sentiment_label": "Bullish"
-      },
-      {
-        "sector": "Automobile",
-        "article_count": 5,
-        "avg_sentiment": 3.0,
-        "positive_count": 2,
-        "negative_count": 0,
-        "neutral_count": 3,
-        "sentiment_label": "Bullish"
-      },
-      {
-        "sector": "Oil & Gas",
-        "article_count": 5,
-        "avg_sentiment": -1.5,
-        "positive_count": 1,
-        "negative_count": 2,
-        "neutral_count": 2,
-        "sentiment_label": "Bearish"
-      },
-      {
-        "sector": "FMCG",
-        "article_count": 3,
-        "avg_sentiment": 1.67,
-        "positive_count": 1,
-        "negative_count": 0,
-        "neutral_count": 2,
-        "sentiment_label": "Bullish"
-      },
-      {
-        "sector": "Financial Services",
-        "article_count": 6,
-        "avg_sentiment": 2.08,
-        "positive_count": 2,
-        "negative_count": 1,
-        "neutral_count": 3,
-        "sentiment_label": "Bullish"
-      },
-      {
-        "sector": "Power",
-        "article_count": 3,
-        "avg_sentiment": 2.5,
-        "positive_count": 1,
-        "negative_count": 0,
-        "neutral_count": 2,
         "sentiment_label": "Bullish"
       },
       {
         "sector": "Banking",
-        "article_count": 5,
-        "avg_sentiment": 2.0,
-        "positive_count": 1,
-        "negative_count": 0,
-        "neutral_count": 4,
+        "article_count": 9,
+        "avg_sentiment": 1.39,
+        "positive_count": 2,
+        "negative_count": 1,
+        "neutral_count": 6,
         "sentiment_label": "Bullish"
       },
       {
-        "sector": "FMCG & Consumer",
-        "article_count": 4,
-        "avg_sentiment": 3.12,
+        "sector": "Telecom",
+        "article_count": 7,
+        "avg_sentiment": 0.36,
+        "positive_count": 3,
+        "negative_count": 1,
+        "neutral_count": 3,
+        "sentiment_label": "Neutral"
+      },
+      {
+        "sector": "Automobile",
+        "article_count": 7,
+        "avg_sentiment": 3.21,
         "positive_count": 3,
         "negative_count": 0,
-        "neutral_count": 1,
+        "neutral_count": 4,
         "sentiment_label": "Bullish"
       },
       {
@@ -3702,13 +4725,22 @@
         "sentiment_label": "Neutral"
       },
       {
-        "sector": "Telecom",
-        "article_count": 5,
+        "sector": "Oil & Gas",
+        "article_count": 6,
         "avg_sentiment": 0.0,
         "positive_count": 2,
-        "negative_count": 1,
+        "negative_count": 2,
         "neutral_count": 2,
         "sentiment_label": "Neutral"
+      },
+      {
+        "sector": "Financial Services",
+        "article_count": 6,
+        "avg_sentiment": 2.5,
+        "positive_count": 2,
+        "negative_count": 1,
+        "neutral_count": 3,
+        "sentiment_label": "Bullish"
       },
       {
         "sector": "Information Technology",
@@ -3720,7 +4752,43 @@
         "sentiment_label": "Neutral"
       },
       {
+        "sector": "Pharmaceuticals",
+        "article_count": 5,
+        "avg_sentiment": 0.0,
+        "positive_count": 1,
+        "negative_count": 1,
+        "neutral_count": 3,
+        "sentiment_label": "Neutral"
+      },
+      {
         "sector": "Metals & Mining",
+        "article_count": 5,
+        "avg_sentiment": 2.0,
+        "positive_count": 2,
+        "negative_count": 0,
+        "neutral_count": 3,
+        "sentiment_label": "Bullish"
+      },
+      {
+        "sector": "Logistics & Transportation",
+        "article_count": 5,
+        "avg_sentiment": 0.5,
+        "positive_count": 1,
+        "negative_count": 1,
+        "neutral_count": 3,
+        "sentiment_label": "Neutral"
+      },
+      {
+        "sector": "FMCG",
+        "article_count": 5,
+        "avg_sentiment": 1.0,
+        "positive_count": 1,
+        "negative_count": 0,
+        "neutral_count": 4,
+        "sentiment_label": "Neutral"
+      },
+      {
+        "sector": "Power",
         "article_count": 4,
         "avg_sentiment": 1.88,
         "positive_count": 1,
@@ -3729,13 +4797,40 @@
         "sentiment_label": "Bullish"
       },
       {
-        "sector": "Glass & Packaging",
-        "article_count": 1,
-        "avg_sentiment": 0.0,
-        "positive_count": 0,
+        "sector": "FMCG & Consumer",
+        "article_count": 4,
+        "avg_sentiment": 3.12,
+        "positive_count": 3,
         "negative_count": 0,
         "neutral_count": 1,
+        "sentiment_label": "Bullish"
+      },
+      {
+        "sector": "Defense",
+        "article_count": 3,
+        "avg_sentiment": 0.83,
+        "positive_count": 1,
+        "negative_count": 0,
+        "neutral_count": 2,
         "sentiment_label": "Neutral"
+      },
+      {
+        "sector": "Cement",
+        "article_count": 2,
+        "avg_sentiment": 2.5,
+        "positive_count": 1,
+        "negative_count": 0,
+        "neutral_count": 1,
+        "sentiment_label": "Bullish"
+      },
+      {
+        "sector": "Textiles & Apparel",
+        "article_count": 2,
+        "avg_sentiment": 1.25,
+        "positive_count": 1,
+        "negative_count": 0,
+        "neutral_count": 1,
+        "sentiment_label": "Bullish"
       },
       {
         "sector": "Retail",
@@ -3747,15 +4842,6 @@
         "sentiment_label": "Bullish"
       },
       {
-        "sector": "Consumer Durables",
-        "article_count": 1,
-        "avg_sentiment": 0.0,
-        "positive_count": 0,
-        "negative_count": 0,
-        "neutral_count": 1,
-        "sentiment_label": "Neutral"
-      },
-      {
         "sector": "Infrastructure & Realty",
         "article_count": 2,
         "avg_sentiment": 2.5,
@@ -3765,25 +4851,7 @@
         "sentiment_label": "Bullish"
       },
       {
-        "sector": "Pharmaceuticals",
-        "article_count": 3,
-        "avg_sentiment": -0.83,
-        "positive_count": 0,
-        "negative_count": 1,
-        "neutral_count": 2,
-        "sentiment_label": "Neutral"
-      },
-      {
         "sector": "Automotive",
-        "article_count": 2,
-        "avg_sentiment": 0.0,
-        "positive_count": 0,
-        "negative_count": 0,
-        "neutral_count": 2,
-        "sentiment_label": "Neutral"
-      },
-      {
-        "sector": "Defense",
         "article_count": 2,
         "avg_sentiment": 0.0,
         "positive_count": 0,
@@ -3808,6 +4876,60 @@
         "negative_count": 0,
         "neutral_count": 0,
         "sentiment_label": "Bullish"
+      },
+      {
+        "sector": "Special Materials",
+        "article_count": 1,
+        "avg_sentiment": 5.0,
+        "positive_count": 1,
+        "negative_count": 0,
+        "neutral_count": 0,
+        "sentiment_label": "Bullish"
+      },
+      {
+        "sector": "Chemicals & Fertilizers",
+        "article_count": 1,
+        "avg_sentiment": 0.0,
+        "positive_count": 0,
+        "negative_count": 0,
+        "neutral_count": 1,
+        "sentiment_label": "Neutral"
+      },
+      {
+        "sector": "Paints & Coatings",
+        "article_count": 1,
+        "avg_sentiment": 0.0,
+        "positive_count": 0,
+        "negative_count": 0,
+        "neutral_count": 1,
+        "sentiment_label": "Neutral"
+      },
+      {
+        "sector": "Media & Entertainment",
+        "article_count": 1,
+        "avg_sentiment": 7.5,
+        "positive_count": 1,
+        "negative_count": 0,
+        "neutral_count": 0,
+        "sentiment_label": "Bullish"
+      },
+      {
+        "sector": "Glass & Packaging",
+        "article_count": 1,
+        "avg_sentiment": 0.0,
+        "positive_count": 0,
+        "negative_count": 0,
+        "neutral_count": 1,
+        "sentiment_label": "Neutral"
+      },
+      {
+        "sector": "Consumer Durables",
+        "article_count": 1,
+        "avg_sentiment": 0.0,
+        "positive_count": 0,
+        "negative_count": 0,
+        "neutral_count": 1,
+        "sentiment_label": "Neutral"
       }
     ],
     "overall_mood": "Bullish"

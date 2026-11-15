@@ -60,15 +60,14 @@ MANAPPURAM,Manappuram Finance,Financial Services
 SRTRANSFIN,Shriram Transport Finance,Financial Services
 IFCI,IFCI Limited,Financial Services
 NIACL,New India Assurance,Financial Services
-GICRE,General Insurance Corporation,Financial Services
+GICRE,General Insurance Corporation of India,Financial Services
 UIIC,United India Insurance,Financial Services
 ORIENTINS,Oriental Insurance,Financial Services
-STARHEALTH,Star Health Insurance,Financial Services
+STARHEALTH,Star Health and Allied Insurance,Financial Services
 KFINTECH,KFin Technologies,Financial Services
 CAMSB,Computer Age Management Services,Financial Services
 NSDL,National Securities Depository,Financial Services
 ANGELONE,Angel One,Financial Services
-ICICIBANK,ICICI Securities,Financial Services
 MOTILALOFS,Motilal Oswal Financial Services,Financial Services
 EDELWEISS,Edelweiss Financial Services,Financial Services
 JMFINANCIAL,JM Financial,Financial Services
@@ -101,7 +100,7 @@ FSL,Firstsource Solutions,IT
 INFOEDGE,Info Edge India,IT
 JUSTDIAL,Just Dial,IT
 ZOMATO,Zomato,IT
-NAUKRI,Naukri.com,IT
+NAUKRI,Info Edge (Naukri.com),IT
 PAYTM,Paytm,IT
 POLICYBZR,PB Fintech,IT
 DELHIVERY,Delhivery,IT
@@ -110,9 +109,9 @@ RATEGAIN,RateGain Travel Technologies,IT
 TANLA,Tanla Platforms,IT
 INDIAMART,IndiaMART InterMESH,IT
 CARTRADE,CarTrade Tech,IT
-NYKAA,FSN E-Commerce Ventures,IT
+NYKAA,FSN E-Commerce Ventures (Nykaa),Retail
 MAPMYINDIA,CE Info Systems,IT
-NAZARA,Nazara Technologies,IT
+NAZARA,Nazara Technologies,Media & Entertainment
 CLEAN,Clean Science and Technology,IT
 LATENTVIEW,Latent View Analytics,IT
 XCHANGING,Xchanging Solutions,IT
@@ -137,8 +136,8 @@ ADANIGAS,Adani Total Gas,Oil & Gas
 GSPL,Gujarat State Petronet,Oil & Gas
 AEGISLOG,Aegis Logistics,Oil & Gas
 MRPL,Mangalore Refinery,Oil & Gas
-DEEPAKFERT,Deepak Fertilizers,Oil & Gas
-TATACHEM,Tata Chemicals,Oil & Gas
+DEEPAKFERT,Deepak Fertilisers and Petrochemicals,Chemicals & Fertilizers
+TATACHEM,Tata Chemicals,Chemicals & Fertilizers
 GNFC,Gujarat Narmada Valley,Oil & Gas
 GULFPETRO,Gulf Oil Lubricants,Oil & Gas
 CASTROLIND,Castrol India,Oil & Gas
@@ -156,7 +155,7 @@ ALKEM,Alkem Laboratories,Pharmaceuticals
 BIOCON,Biocon,Pharmaceuticals
 ZYDUSLIFE,Zydus Lifesciences,Pharmaceuticals
 GLENMARK,Glenmark Pharmaceuticals,Pharmaceuticals
-IPCALAB,Ipca Laboratories,Pharmaceuticals
+IPCALAB,IPCA Laboratories,Pharmaceuticals
 MANKIND,Mankind Pharma,Pharmaceuticals
 LAURUSLABS,Laurus Labs,Pharmaceuticals
 GRANULES,Granules India,Pharmaceuticals
@@ -303,10 +302,10 @@ VAIBHAVGBL,Vaibhav Global,FMCG
 UNILEVERHPC,Unilever Personal Care,FMCG
 CCL,CCL Products India,FMCG
 HATSUN,Hatsun Agro Product,FMCG
-KRBL,KRBL,FMCG
+KRBL,KRBL,Agriculture & Food Processing
 LTFOODS,LT Foods,FMCG
-USHAMART,Usha Martin,FMCG
-AVANTIFEED,Avanti Feeds,FMCG
+USHAMART,Usha Martin,Metals & Mining
+AVANTIFEED,Avanti Feeds,Agriculture & Food Processing
 ZYDUSWELL,Zydus Wellness,FMCG
 PATANJALI,Patanjali Foods,FMCG
 DLF,DLF,Real Estate
@@ -319,13 +318,13 @@ PHOENIXLTD,Phoenix Mills,Real Estate
 LODHA,Macrotech Developers,Real Estate
 SUNTECK,Sunteck Realty,Real Estate
 MAHLIFE,Mahindra Lifespace Developers,Real Estate
-RAYMOND,Raymond,Real Estate
+RAYMOND,Raymond,Textiles & Apparel
 KOLTEPATIL,Kolte-Patil Developers,Real Estate
 ANANTRAJ,Anant Raj,Real Estate
 ELDECO,Eldeco Housing & Industries,Real Estate
 SIGNATURE,Signature Global,Real Estate
 KEYSTONE,Keystone Realtors,Real Estate
-AHLUCONT,Ahluwalia Contracts,Real Estate
+AHLUCONT,Ahluwalia Contracts,Infrastructure
 ASHIANA,Ashiana Housing,Real Estate
 HEMIPROP,Hemisphere Properties India,Real Estate
 NESCO,NESCO,Real Estate
@@ -375,7 +374,7 @@ BOROSIL,Borosil Renewables,Power
 WEBSOL,Websol Energy System,Power
 JPPOWER,Jaiprakash Power Ventures,Power
 RPOWER,Reliance Power,Power
-GUJALKALI,Gujarat Alkalies,Power
+GUJALKALI,Gujarat Alkalies and Chemicals,Chemicals & Fertilizers
 KPCL,Karnataka Power Corporation,Power
 NVVNLTD,NVVN,Power
 GREENPOWER,Green Power,Power
@@ -391,7 +390,6 @@ KHADIM,Khadim India,Retail
 LIBERTY,Liberty Shoes,Retail
 CANTABIL,Cantabil Retail India,Retail
 VEDANT,Vedant Fashions,Retail
-NYKAA,Nykaa Fashion,Retail
 METRO,Metro Brands,Retail
 KALYANKJIL,Kalyan Jewellers,Retail
 SENCO,Senco Gold,Retail
@@ -400,7 +398,7 @@ JUBLLOGIST,Jubilant Ingrevia,Retail
 TCNSBRANDS,TCNS Clothing,Retail
 GLOBALHEALTH,Global Health,Retail
 LT,Larsen & Toubro,Infrastructure
-ADANIPORTS,Adani Ports and SEZ,Infrastructure
+ADANIPORTS,Adani Ports and SEZ,Logistics & Transportation
 GMRINFRA,GMR Infrastructure,Infrastructure
 IRB,IRB Infrastructure Developers,Infrastructure
 KNRCON,KNR Constructions,Infrastructure
@@ -410,16 +408,15 @@ ASHOKA,Ashoka Buildcon,Infrastructure
 SADBHAV,Sadbhav Engineering,Infrastructure
 HGINFRA,HG Infra Engineering,Infrastructure
 DILIPBUILDCON,Dilip Buildcon,Infrastructure
-GPPL,Gujarat Pipavav Port,Infrastructure
+GPPL,Gujarat Pipavav Port,Logistics & Transportation
 CONCOR,Container Corporation of India,Infrastructure
 JSWINFRA,JSW Infrastructure,Infrastructure
 RITES,RITES,Infrastructure
 IRCON,Ircon International,Infrastructure
 NBCC,NBCC India,Infrastructure
-WOCKPHARMA,Wockhardt,Infrastructure
-MHRIL,Mahindra Holidays & Resorts,Infrastructure
+WOCKPHARMA,Wockhardt,Pharmaceuticals
+MHRIL,Mahindra Holidays & Resorts,Hospitality & Tourism
 CAPACITE,Capacite Infraprojects,Infrastructure
-BRIGADE,Brigade Hotel Ventures,Infrastructure
 TEXRAIL,Texmaco Rail & Engineering,Infrastructure
 RVNL,Rail Vikas Nigam,Infrastructure
 RAILINFRA,Rail Infrastructure,Infrastructure
@@ -438,7 +435,6 @@ SUMICHEM,Sumitomo Chemical India,Chemicals & Fertilizers
 INSECTICID,Insecticides India,Chemicals & Fertilizers
 DHANUKA,Dhanuka Agritech,Chemicals & Fertilizers
 RALLIS,Rallis India,Chemicals & Fertilizers
-TATACHEM,Tata Chemicals,Chemicals & Fertilizers
 AARTI,Aarti Industries,Chemicals & Fertilizers
 NAVINFLUOR,Navin Fluorine International,Chemicals & Fertilizers
 FLUOROCHEM,Gujarat Fluorochemicals,Chemicals & Fertilizers
@@ -456,18 +452,16 @@ TATVA,Tatva Chintan Pharma Chem,Chemicals & Fertilizers
 WELENT,Welspun Enterprises,Chemicals & Fertilizers
 VARDHACRLC,Vardhman Acrylics,Chemicals & Fertilizers
 TIRUMALCHM,Thirumalai Chemicals,Chemicals & Fertilizers
-GUJALKALI,Gujarat Alkalies and Chemicals,Chemicals & Fertilizers
 APCOTEX,Apcotex Industries,Chemicals & Fertilizers
 ARCHIES,Archies,Chemicals & Fertilizers
 SHANKARA,Shankara Building Products,Chemicals & Fertilizers
 TEXINFRA,Texmaco Infrastructure & Holdings,Chemicals & Fertilizers
 WELSPUNIND,Welspun India,Textiles & Apparel
 VARDHMAN,Vardhman Textiles,Textiles & Apparel
-RAYMOND,Raymond,Textiles & Apparel
 ARVIND,Arvind,Textiles & Apparel
 TRIDENT,Trident,Textiles & Apparel
 NITIN,Nitin Spinners,Textiles & Apparel
-SPANDANA,Spandana Sphoorty Financial,Textiles & Apparel
+SPANDANA,Spandana Sphoorty Financial,Financial Services
 KTIL,Kitex Garments,Textiles & Apparel
 GOKALDAS,Gokaldas Exports,Textiles & Apparel
 RUPA,Rupa & Company,Textiles & Apparel
@@ -494,7 +488,7 @@ CROMPTON,Crompton Greaves Consumer Electricals,Consumer Durables
 VGUARD,V-Guard Industries,Consumer Durables
 ORIENTELEC,Orient Electric,Consumer Durables
 SYMPHONY,Symphony,Consumer Durables
-BLUEDART,Blue Dart Express,Consumer Durables
+BLUEDART,Blue Dart Express,Logistics & Transportation
 WHIRLPOOL,Whirlpool of India,Consumer Durables
 AMBER,Amber Enterprises India,Consumer Durables
 DIXON,Dixon Technologies India,Consumer Durables
@@ -505,7 +499,7 @@ IFBIND,IFB Industries,Consumer Durables
 STOVEKRAFT,Stove Kraft,Consumer Durables
 TTK,TTK Prestige,Consumer Durables
 RACL,RACL Geartech,Consumer Durables
-KARURVYSYA,Karur Vysya Bank,Consumer Durables
+KARURVYSYA,Karur Vysya Bank,Banking
 ELIN,Elin Electronics,Consumer Durables
 BAJAJELEC,Bajaj Electricals,Consumer Durables
 KELVINATOR,Kelvinator,Consumer Durables
@@ -527,24 +521,19 @@ JETAIRWAYS,Jet Airways,Logistics & Transportation
 INDIGO,InterGlobe Aviation,Logistics & Transportation
 SPICEJET,SpiceJet,Logistics & Transportation
 AIRINDIA,Air India,Logistics & Transportation
-BLUEDART,Blue Dart Express,Logistics & Transportation
 MAHSEAMLES,Maharashtra Seamless,Logistics & Transportation
-ADANIPORTS,Adani Ports,Logistics & Transportation
-ESAB,ESAB India,Logistics & Transportation
-SEQUENT,SeQuent Scientific,Logistics & Transportation
-NAVNETEDUL,Navneet Education,Logistics & Transportation
+ESAB,ESAB India,Capital Goods & Engineering
+SEQUENT,SeQuent Scientific,Pharmaceuticals
+NAVNETEDUL,Navneet Education,Media & Entertainment
 TEAMLEASE,TeamLease Services,Agriculture & Food Processing
-NIACL,Niacl Agro,Agriculture & Food Processing
 GODREJAGRO,Godrej Agrovet,Agriculture & Food Processing
 KAVERI,Kaveri Seed Company,Agriculture & Food Processing
 RASI,Rasi Seeds,Agriculture & Food Processing
 JUBLPHARM,Jubilant FoodWorks,Agriculture & Food Processing
 TASTY,Tasty Bite Eatables,Agriculture & Food Processing
-KRBL,KRBL,Agriculture & Food Processing
 KOHINOOR,Kohinoor Foods,Agriculture & Food Processing
 VIJAYDIAM,Vijay Diamonds,Agriculture & Food Processing
 ADF,ADF Foods,Agriculture & Food Processing
-USHAMART,Usha Martin,Agriculture & Food Processing
 SUGARIND,Balrampur Chini Mills,Agriculture & Food Processing
 TRIVENI,Triveni Engineering & Industries,Agriculture & Food Processing
 DHAMPUR,Dhampur Sugar Mills,Agriculture & Food Processing
@@ -552,10 +541,6 @@ MAGADSUGAR,Magadh Sugar & Energy,Agriculture & Food Processing
 RENUKA,Shree Renuka Sugars,Agriculture & Food Processing
 DHARANI,Dharani Sugars & Chemicals,Agriculture & Food Processing
 DALAMIASUG,Dalmia Sugar,Agriculture & Food Processing
-HATSUN,Hatsun Agro,Agriculture & Food Processing
-PARAG,Parag Milk Foods,Agriculture & Food Processing
-HERITAGE,Heritage Foods,Agriculture & Food Processing
-AVANTIFEED,Avanti Feeds,Agriculture & Food Processing
 WATERBASE,Waterbase,Agriculture & Food Processing
 ZEAL,Zeal Aqua,Agriculture & Food Processing
 ELGIEQUIP,Elgi Equipments,Capital Goods & Engineering
@@ -564,7 +549,6 @@ BHEL,Bharat Heavy Electricals,Capital Goods & Engineering
 SIEMENS,Siemens India,Capital Goods & Engineering
 ABB,ABB India,Capital Goods & Engineering
 CUMMINSIND,Cummins India,Capital Goods & Engineering
-VOLTAS,Voltas,Capital Goods & Engineering
 GRINDWELL,Grindwell Norton,Capital Goods & Engineering
 AIAENG,AIA Engineering,Capital Goods & Engineering
 KENNAMETAL,Kennametal India,Capital Goods & Engineering
@@ -581,10 +565,9 @@ LAKSHMI,Lakshmi Machine Works,Capital Goods & Engineering
 ISGEC,ISGEC Heavy Engineering,Capital Goods & Engineering
 PRAJ,Praj Industries,Capital Goods & Engineering
 TRIVENIM,Triveni Turbine,Capital Goods & Engineering
-TRIL,Transformers and Rectifiers,Capital Goods & Engineering
+TRIL,Transformers and Rectifiers India,Capital Goods & Engineering
 BFUTILITIE,BF Utilities,Capital Goods & Engineering
 VOVL,VOITH Hydro,Capital Goods & Engineering
-SUZLON,Suzlon Energy (Turbines),Capital Goods & Engineering
 WPIL,WPIL,Capital Goods & Engineering
 RAJRATAN,Rajratan Global Wire,Capital Goods & Engineering
 TARC,TARC,Capital Goods & Engineering
@@ -607,12 +590,10 @@ THOMASCOOK,Thomas Cook India,Hospitality & Tourism
 COX,Cox & Kings,Hospitality & Tourism
 SOTL,Sotl,Hospitality & Tourism
 DIVGI,Divgi TorqTransfer Systems,Hospitality & Tourism
-MHRIL,Club Mahindra,Hospitality & Tourism
 ROYALORCH,Royal Orchid Hotels,Hospitality & Tourism
 BERGEPAINT,Berger Paints India,Paints & Coatings
 ASIANPAINT,Asian Paints,Paints & Coatings
 KANSAINER,Kansai Nerolac Paints,Paints & Coatings
-INDIGO,Indigo Paints,Paints & Coatings
 AKZOINDIA,Akzo Nobel India,Paints & Coatings
 SHAREINDIA,Share India Securities,Paints & Coatings
 SHALPAINTS,Shalimar Paints,Paints & Coatings
@@ -639,12 +620,11 @@ FINOLEX,Finolex Industries,Pipes & Plastics
 PRINCEPIPE,Prince Pipes and Fittings,Pipes & Plastics
 KEI,KEI Industries,Pipes & Plastics
 POLYCAB,Polycab India,Pipes & Plastics
-HAVELLS,Havells India (Wires),Pipes & Plastics
 PARAMOUNT,Paramount Communications,Pipes & Plastics
 KPRELIANCE,KP Reliance,Pipes & Plastics
 TPLASTIK,Tinna Plastic & Infrastructure,Pipes & Plastics
 SOMANYCERA,Somany Ceramics,Pipes & Plastics
-HSIL,HSIL,Pipes & Plastics
+HSIL,HSIL (Hindustan Sanitaryware),Building Materials
 HINDWARE,Hindware Home Innovation,Pipes & Plastics
 GREENPLY,Greenply Industries,Building Materials
 CENTURY,Century Plyboards India,Building Materials
@@ -652,11 +632,7 @@ STYLAM,Stylam Industries,Building Materials
 GREENLAM,Greenlam Industries,Building Materials
 SUNTECKREALTY,Sunteck Realty,Building Materials
 SAINT,Saint-Gobain India,Building Materials
-AHLUCONT,Ahluwalia Contracts India,Building Materials
-HSIL,Hindustan Sanitaryware,Building Materials
-FORTIS,Fortis Malar Hospitals,Building Materials
 JKTYRE,JK Tyre & Industries,Building Materials
-WOCKPHARMA,Wockhardt,Media & Entertainment
 ZEEMEDIA,Zee Media Corporation,Media & Entertainment
 TVSHOLDING,TV18 Broadcast,Media & Entertainment
 SUNTV,Sun TV Network,Media & Entertainment
@@ -669,31 +645,24 @@ NDTV,NDTV,Media & Entertainment
 JAGRAN,Jagran Prakashan,Media & Entertainment
 DBCORP,DB Corp,Media & Entertainment
 HT MEDIA,HT Media,Media & Entertainment
-NAVNETEDUL,Navneet Education,Media & Entertainment
 APTECHT,Aptech,Media & Entertainment
 CARELEARN,Career Point,Media & Entertainment
 CLARIS,Claris Lifesciences,Media & Entertainment
 XELPMOC,Xelpmoc Design and Tech,Media & Entertainment
-ZENTEC,Zen Technologies,Media & Entertainment
 PRAKASH,Prakash Industries,Media & Entertainment
-NAUKRI,Naukri.com (Info Edge),Media & Entertainment
 BRIGHTCOM,Brightcom Group,Media & Entertainment
-NAZARA,Nazara Technologies,Media & Entertainment
 RHIM,RHI Magnesita India,Special Materials
 IFBAGRO,IFB Agro Industries,Special Materials
 MOREPENLAB,Morepen Laboratories,Special Materials
 THEMIS,Themis Medicare,Special Materials
-VIMTALABS,Vimta Labs,Special Materials
+VIMTALABS,Vimta Labs,Pharmaceuticals
 PRAXIS,Praxis Home Retail,Special Materials
 DREDGING,Dredging Corporation of India,Special Materials
 MUKAND,Mukand,Special Materials
 SHRIRAMPPS,Shriram Properties,Special Materials
-GICRE,GIC Re,Special Materials
-IPCALAB,IPCA Laboratories,Special Materials
-DEEPAKFERT,Deepak Fertilisers,Special Materials
 GHCL,GHCL,Special Materials
 TCPL,TCPL Packaging,Special Materials
-WINDLAS,Windlas Biotech,Special Materials
+WINDLAS,Windlas Biotech,Pharmaceuticals
 GOCOLORS,Go Fashion India,Retail
 ZUDIO,Zudio (Trent),Retail
 LANDMARK,Landmark Cars,Retail
@@ -701,7 +670,6 @@ BARBEQUE,Barbeque Nation Hospitality,Hospitality & Tourism
 SAPPHIRE,Sapphire Foods India,Hospitality & Tourism
 BURGER,Burger King India,Hospitality & Tourism
 SNOWMAN,Snowman Logistics,Logistics & Transportation
-MAHLOG,Mahindra Logistics,Logistics & Transportation
 FEDEX,FedEx Express,Logistics & Transportation
 DTIL,Delhi Integrated Multi-Modal Transit,Logistics & Transportation
 EMKAY,Emkay Global Financial Services,Financial Services
@@ -720,7 +688,6 @@ CEREBRA,Cerebra Integrated Technologies,IT
 SILVERLINE,Silverline Technologies,IT
 IGATE,iGate Corporation,IT
 INDBULL,Indiabulls Ventures,Financial Services
-SPANDANA,Spandana Sphoorty Financial,Financial Services
 PAISABAZAAR,Paisabazaar.com,Financial Services
 CREDITACC,CreditAccess Grameen,Financial Services
 ARMANFIN,Arman Financial Services,Financial Services
@@ -742,7 +709,6 @@ VIJAYABANK,Vijaya Bank,Banking
 DENABANK,Dena Bank,Banking
 ALLBANK,Allahabad Bank,Banking
 ORIENTBANK,Oriental Bank of Commerce,Banking
-KARURVYSYA,Karur Vysya Bank,Banking
 TAMILNADBNK,Tamilnad Mercantile Bank,Banking
 NAINITAL,Nainital Bank,Banking
 DHANLAXMI,Dhanlaxmi Bank,Banking
@@ -761,30 +727,21 @@ ACME,ACME Solar Holdings,Power
 GREENKO,Greenko Energies,Power
 TORPOWER,Torrent Power,Power
 CGENERGY,CG Power and Industrial Solutions,Power
-BHEL,BHEL (Power segment),Power
-TRIL,Thermax (Power),Power
 NACLIND,NACL Industries,Agriculture & Food Processing
 EXCEL,Excel Crop Care,Agriculture & Food Processing
 PARRY,EID Parry India,Agriculture & Food Processing
 JBCHEM,JB Chemicals & Pharmaceuticals,Pharmaceuticals
 SUNCLARO,Sun Clarion,Pharmaceuticals
-SEQUENT,Sequent Scientific,Pharmaceuticals
 ANUH,Anuh Pharma,Pharmaceuticals
 FINESTAR,Fine Star Jewellery,Pharmaceuticals
 PHIBRO,Phibro Animal Health,Pharmaceuticals
 ORCHID,Orchid Pharma,Pharmaceuticals
 SMRUTHI,Smruthi Organics,Pharmaceuticals
 ASTEC,Astec LifeSciences,Pharmaceuticals
-VIMTALABS,Vimta Labs,Pharmaceuticals
-WINDLAS,Windlas Biotech,Pharmaceuticals
-SUVEN,Suven Life Sciences,Pharmaceuticals
-GPPL,Gujarat Pipavav Port,Infrastructure
 MUNDRAPORT,Adani Mundra Port,Infrastructure
-ESAB,ESAB India,Capital Goods & Engineering
 INGERSRAND,Ingersoll Rand India,Capital Goods & Engineering
 MERLINTM,Merlin Group,Real Estate
 MAHSCOOTER,Maharashtra Scooters,Automobile
-STARHEALTH,Star Health and Allied Insurance,Financial Services
 HDFC,HDFC,Financial Services
 TATAELX,Tata Elxsi (Design),IT
 INTELLICHECK,Intellicheck,IT
@@ -797,7 +754,5 @@ HATHWAY,Hathway Cable & Datacom,Telecom
 DEN,DEN Networks,Telecom
 SIEVERT,Siemens Healthineers India,Pharmaceuticals
 DIVI,Divi's Laboratories,Pharmaceuticals
-ACCELYA,Accelya Solutions,IT
-KOLTEPATIL,Kolte-Patil Developers,Real Estate
-NESCO,NESCO Exhibitions,Real Estate
-CAPACITE,Capacite Infraprojects,Infrastructure
+INDIGOPNTS,Indigo Paints,Paints & Coatings
+ISEC,ICICI Securities,Financial Services

@@ -133,25 +133,48 @@ class RSSEngine:
 
         scored_articles = await asyncio.gather(*[score_article(a) for a in processed_articles])
 
-        # Group by Sector
+        # Group by Sector & Map Stock Mentions
         sector_articles: Dict[str, List[Dict[str, Any]]] = {}
         stock_scores: Dict[str, Dict[str, Any]] = {}
 
         for a in scored_articles:
-            sec = a.get("sector", "Broad Market")
-            if sec not in sector_articles:
-                sector_articles[sec] = []
-            sector_articles[sec].append(a)
+            # Determine all relevant sectors for this article
+            # 1. Official sectors of mentioned stocks
+            article_sectors = set()
+            for sym in a.get("stock_mentions", []):
+                sym_sec = sector_engine.symbol_to_sector.get(sym)
+                if sym_sec and sym_sec != "Broad Market":
+                    article_sectors.add(sym_sec)
+
+            # 2. Keyword-classified sector fallback
+            classified_sec = a.get("sector")
+            if classified_sec and classified_sec != "Broad Market":
+                article_sectors.add(classified_sec)
+
+            if not article_sectors:
+                article_sectors.add("Broad Market")
+
+            # Store all associated sectors and canonical primary sector
+            a["all_sectors"] = sorted(list(article_sectors))
+            a["sector"] = a["all_sectors"][0]
+
+            # Index article under every relevant sector
+            for sec in article_sectors:
+                if sec not in sector_articles:
+                    sector_articles[sec] = []
+                sector_articles[sec].append(a)
 
             # Stock level aggregation for gainers/losers
+            # STRICT UNIVERSAL GUARANTEE: Stock's sector is ALWAYS its official canonical sector from company.csv
             for sym in a.get("stock_mentions", []):
+                actual_sym_sec = sector_engine.symbol_to_sector.get(sym, "Broad Market")
                 if sym not in stock_scores:
                     stock_scores[sym] = {
                         "symbol": sym,
                         "positive_score": 0.0,
                         "negative_score": 0.0,
                         "article_count": 0,
-                        "sector": sec,
+                        "sector": actual_sym_sec,
                         "top_article_title": a["title"]
                     }
                 score = a["sentiment_score"]
