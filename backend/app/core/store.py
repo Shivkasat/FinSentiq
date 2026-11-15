@@ -15,7 +15,16 @@ class CentralStore:
       - User requests read directly from this pre-populated RAM store (<2ms latency).
     """
     def __init__(self, persistence_file: str = "data/market_store.json"):
-        self.persistence_file = persistence_file
+        from pathlib import Path
+        base_dir = Path(__file__).resolve().parent.parent.parent  # backend/
+        # Check both backend/data and root data
+        if (base_dir / persistence_file).exists():
+            self.persistence_file = str(base_dir / persistence_file)
+        elif Path(persistence_file).exists():
+            self.persistence_file = str(Path(persistence_file).resolve())
+        else:
+            self.persistence_file = str(base_dir / persistence_file)
+
         self.sector_articles: Dict[str, List[Dict[str, Any]]] = {}
         self.gainers_losers: Dict[str, Any] = {"gainers": [], "losers": []}
         self.market_summary: Dict[str, Any] = {}

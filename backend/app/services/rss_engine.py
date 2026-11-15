@@ -30,6 +30,8 @@ RSS_FEEDS = [
 def clean_html(raw_html: str) -> str:
     if not raw_html:
         return ""
+    if "<" not in raw_html:
+        return raw_html.strip()
     soup = BeautifulSoup(raw_html, "html.parser")
     return soup.get_text(separator=" ", strip=True)
 

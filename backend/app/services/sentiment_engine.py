@@ -124,7 +124,11 @@ Respond ONLY with a JSON object adhering strictly to this schema:
             data["confidence"] = max(0.0, min(1.0, float(data.get("confidence", 0.8))))
             return data
         except Exception as e:
-            logger.warning(f"Groq sentiment analysis failed, falling back to lexicon: {e}")
+            if "expired_api_key" in str(e) or "401" in str(e):
+                logger.warning("GROQ_API_KEY is invalid or expired. Switching to deterministic financial lexicon engine.")
+                self.client = None
+            else:
+                logger.warning(f"Groq sentiment analysis failed, falling back to lexicon: {e}")
             return self.lexicon_score(title + " " + (summary or ""))
 
 sentiment_engine = SentimentEngine()

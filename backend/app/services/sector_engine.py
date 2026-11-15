@@ -2,121 +2,207 @@ import os
 import csv
 import re
 import logging
+from pathlib import Path
 from typing import Dict, Set, List, Optional
 from app.core.config import settings
 
 logger = logging.getLogger("finsentiq.sector")
 
-# Primary Sector mapping and keywords
+# Tokens that look like symbols but are common English words
+FALSE_POSITIVE_SYMBOLS = frozenset({
+    "IT", "AM", "PM", "IN", "ON", "AT", "TO", "OR", "AN", "AS", "BE",
+    "IS", "DO", "GO", "BY", "IF", "NO", "SO", "UP", "US", "UK", "EU",
+    "FY", "YY", "QQ", "MF", "PE", "PB", "CF", "ALL", "NEW", "BUY", "SELL"
+})
+
+# Well-known Indian market company aliases mapping directly to ticker symbols
+WELL_KNOWN_ALIASES = {
+    "reliance": "RELIANCE",
+    "ril": "RELIANCE",
+    "reliance industries": "RELIANCE",
+    "tcs": "TCS",
+    "tata consultancy": "TCS",
+    "infosys": "INFY",
+    "infy": "INFY",
+    "hdfc bank": "HDFCBANK",
+    "hdfc": "HDFCBANK",
+    "icici bank": "ICICIBANK",
+    "icici": "ICICIBANK",
+    "sbi": "SBIN",
+    "state bank of india": "SBIN",
+    "state bank": "SBIN",
+    "bharti airtel": "BHARTIARTL",
+    "airtel": "BHARTIARTL",
+    "tata motors": "TATAMOTORS",
+    "maruti": "MARUTI",
+    "maruti suzuki": "MARUTI",
+    "mahindra": "M&M",
+    "m&m": "M&M",
+    "bajaj finance": "BAJFINANCE",
+    "bajaj finserv": "BAJAJFINSV",
+    "l&t": "LT",
+    "larsen": "LT",
+    "larsen & toubro": "LT",
+    "itc": "ITC",
+    "hindustan unilever": "HINDUNILVR",
+    "hul": "HINDUNILVR",
+    "wipro": "WIPRO",
+    "hcl tech": "HCLTECH",
+    "tech mahindra": "TECHM",
+    "axis bank": "AXISBANK",
+    "kotak bank": "KOTAKBANK",
+    "kotak mahindra": "KOTAKBANK",
+    "sun pharma": "SUNPHARMA",
+    "dr reddy": "DRREDDY",
+    "cipla": "CIPLA",
+    "tata steel": "TATASTEEL",
+    "jsw steel": "JSWSTEEL",
+    "hindalco": "HINDALCO",
+    "adani enterprises": "ADANIENT",
+    "adani ports": "ADANIPORTS",
+    "adani green": "ADANIGREEN",
+    "adani power": "ADANIPOWER",
+    "ntpc": "NTPC",
+    "ongc": "ONGC",
+    "power grid": "POWERGRID",
+    "coal india": "COALINDIA",
+    "titan": "TITAN",
+    "zomato": "ZOMATO",
+    "swiggy": "SWIGGY",
+    "paytm": "PAYTM",
+    "one97": "PAYTM",
+    "jio financial": "JIOFIN",
+    "jio": "JIOFIN",
+    "vedanta": "VEDL",
+    "dlf": "DLF",
+    "ultratech": "ULTRACEMCO",
+    "grasim": "GRASIM",
+    "indusind bank": "INDUSINDBK",
+    "canara bank": "CANBK",
+    "punjab national bank": "PNB",
+    "pnb": "PNB",
+    "bank of baroda": "BANKBARODA"
+}
+
 SECTOR_KEYWORDS = {
     "Banking & Finance": [
         "bank", "banking", "rbi", "nbfc", "credit", "loan", "lending", "npa",
-        "fintech", "repo rate", "monetary policy", "liquidity", "deposit", "hdfc", "sbi", "icici", "kotak", "axis"
+        "fintech", "repo rate", "monetary policy", "liquidity", "deposit"
     ],
     "Information Technology": [
         "it", "software", "tech", "ai", "artificial intelligence", "cloud",
-        "saas", "digital", "tcs", "infosys", "wipro", "hcl", "tech mahindra", "cybersecurity"
+        "saas", "digital", "cybersecurity", "outsourcing"
     ],
     "Automotive": [
-        "auto", "automobile", "ev", "electric vehicle", "car", "suv", "two-wheeler",
-        "tata motors", "maruti", "mahindra", "bajaj auto", "hero motocorp", "oems"
+        "auto", "automobile", "ev", "electric vehicle", "car", "suv", "two-wheeler", "oems"
     ],
     "Pharma & Healthcare": [
-        "pharma", "pharmaceutical", "drug", "fda", "usfda", "biotech", "hospital",
-        "sun pharma", "dr reddy", "cipla", "lupin", "healthcare", "clinical"
+        "pharma", "pharmaceutical", "drug", "fda", "usfda", "biotech", "hospital", "clinical"
     ],
     "Energy, Oil & Gas": [
-        "oil", "gas", "petroleum", "crude", "refinery", "energy", "solar",
-        "renewable", "power", "ntpc", "ongc", "reliance", "bpcl", "ioc", "adani green"
+        "oil", "gas", "petroleum", "crude", "refinery", "energy", "solar", "renewable", "power"
     ],
     "Metals & Mining": [
-        "metal", "steel", "iron", "aluminum", "copper", "mining", "coal",
-        "tata steel", "jsw steel", "hindalco", "vedanta", "nmdc"
+        "metal", "steel", "iron", "aluminum", "copper", "mining", "coal"
     ],
     "FMCG & Consumer": [
-        "fmcg", "consumer", "retail", "food", "beverage", "hul", "itc",
-        "nestle", "britannia", "dabur", "marico", "rural demand"
+        "fmcg", "consumer", "retail", "food", "beverage", "rural demand"
     ],
     "Infrastructure & Realty": [
-        "infrastructure", "infra", "realty", "real estate", "housing", "construction",
-        "cement", "l&t", "dlf", "ultratech", "godrej properties", "highways", "railways"
+        "infrastructure", "infra", "realty", "real estate", "housing", "construction", "cement"
     ],
     "Telecom & Media": [
-        "telecom", "5g", "spectrum", "broadband", "airtel", "jio", "vodafone",
-        "media", "entertainment", "broadcasting"
+        "telecom", "5g", "spectrum", "broadband", "media", "entertainment"
     ]
 }
 
+GENERIC_STOP_WORDS = frozenset({
+    "bank", "finance", "industries", "services", "enterprises", "india",
+    "power", "steel", "motors", "group", "holdings", "energy", "pharma",
+    "capital", "technology", "technologies", "corp", "corporation"
+})
+
 class SectorEngine:
-    def __init__(self, csv_path: str = settings.COMPANY_CSV_PATH):
-        self.csv_path = csv_path
+    def __init__(self):
         self.valid_symbols: Set[str] = set()
         self.symbol_to_sector: Dict[str, str] = {}
         self.company_to_symbol: Dict[str, str] = {}
         self._load_csv()
 
     def _load_csv(self):
-        if not os.path.exists(self.csv_path):
-            # Try alternate path relative to root
-            alt_path = "company.csv"
-            if os.path.exists(alt_path):
-                self.csv_path = alt_path
-            else:
-                logger.warning(f"Company CSV file not found at {self.csv_path}. Symbol lookup will be limited.")
-                return
+        base_dir = Path(__file__).resolve().parent.parent
+        candidates = [
+            base_dir / "company.csv",
+            Path("backend/app/company.csv"),
+            Path("app/company.csv"),
+            Path("company.csv")
+        ]
+
+        csv_file = None
+        for p in candidates:
+            if p.exists():
+                csv_file = p
+                break
+
+        if not csv_file:
+            logger.warning("company.csv could not be located. Initializing with well-known market tickers.")
+            for alias, sym in WELL_KNOWN_ALIASES.items():
+                self.valid_symbols.add(sym)
+                self.company_to_symbol[alias] = sym
+            return
 
         try:
-            with open(self.csv_path, mode="r", encoding="utf-8-sig") as f:
+            with open(csv_file, mode="r", encoding="utf-8-sig") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    symbol = row.get("Symbol", "").strip().upper()
-                    company = row.get("Company Name", "").strip()
-                    sector = row.get("Industry", "").strip() or row.get("Sector", "").strip() or "Broad Market"
+                    symbol = (row.get("SYMBOL") or row.get("Symbol") or "").strip().upper()
+                    company = (row.get("COMPANY_NAME") or row.get("Company Name") or "").strip()
+                    sector = (row.get("SECTOR") or row.get("Sector") or row.get("Industry") or "").strip() or "Broad Market"
 
                     if symbol:
                         self.valid_symbols.add(symbol)
                         self.symbol_to_sector[symbol] = sector
                         if company:
-                            # Clean company name
                             clean_name = re.sub(r"\b(ltd|limited|pvt|corporation|corp|india|industries)\b", "", company, flags=re.IGNORECASE).strip()
-                            if len(clean_name) > 3:
+                            if len(clean_name) >= 3 and clean_name.lower() not in GENERIC_STOP_WORDS:
                                 self.company_to_symbol[clean_name.lower()] = symbol
-            logger.info(f"Loaded {len(self.valid_symbols)} stock symbols from {self.csv_path}")
+
+            for alias, sym in WELL_KNOWN_ALIASES.items():
+                self.valid_symbols.add(sym)
+                self.company_to_symbol[alias] = sym
+                if sym not in self.symbol_to_sector:
+                    self.symbol_to_sector[sym] = "Broad Market"
+
+            logger.info(f"SectorEngine successfully loaded {len(self.valid_symbols)} stock symbols and {len(self.company_to_symbol)} company mappings from {csv_file}")
         except Exception as e:
             logger.error(f"Error loading company CSV: {e}")
 
     def extract_symbols(self, text: str) -> List[str]:
-        """Extract stock tickers and mapped company names from headline/text."""
         found = set()
-        text_upper = text.upper()
         text_lower = text.lower()
+        text_upper = text.upper()
 
-        # 1. Match against known NSE symbols with word boundary
-        for word in re.findall(r"\b[A-Z]{3,12}\b", text_upper):
-            if word in self.valid_symbols:
-                found.add(word)
-
-        # 2. Match company names
-        for company_name, symbol in self.company_to_symbol.items():
-            if re.search(r"\b" + re.escape(company_name) + r"\b", text_lower):
+        for name, symbol in self.company_to_symbol.items():
+            if len(name) < 3:
+                continue
+            pattern = r"\b" + re.escape(name) + r"\b"
+            if re.search(pattern, text_lower):
                 found.add(symbol)
 
-        return list(found)
+        for word in re.findall(r"\b[A-Z]{3,15}\b", text_upper):
+            if word in self.valid_symbols and word not in FALSE_POSITIVE_SYMBOLS:
+                found.add(word)
+
+        return list(found)[:5]
 
     def classify_sector(self, text: str, symbols: List[str]) -> str:
-        """Classify article into sector based on extracted symbols and text keywords."""
-        # Symbol priority
         if symbols:
             first_symbol = symbols[0]
             if first_symbol in self.symbol_to_sector:
                 csv_sector = self.symbol_to_sector[first_symbol]
-                # Map to our standard sectors
-                for std_sector, keywords in SECTOR_KEYWORDS.items():
-                    if any(k in csv_sector.lower() for k in keywords):
-                        return std_sector
-                return csv_sector
+                if csv_sector and csv_sector != "Broad Market":
+                    return csv_sector
 
-        # Keyword frequency scoring
         text_lower = text.lower()
         sector_scores = {}
         for sector, keywords in SECTOR_KEYWORDS.items():

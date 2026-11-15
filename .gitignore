@@ -27,3 +27,11 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Node & Frontend
+node_modules/
+dist/
+.vite/
+
+# Root local scratch data
+/data/
