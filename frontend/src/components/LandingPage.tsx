@@ -151,6 +151,39 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               </p>
             </div>
 
+            {/* Card 4: Smart Divergence Radar */}
+            <div className="p-6 rounded-2xl border border-surface-border bg-surface hover:border-cyan-500/50 transition duration-300 space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                <ShieldCheck className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-white">Smart Divergence & Mispricing Radar</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                4-Quadrant algorithmic matrix detecting disconnects between news sentiment and price action — uncovering institutional dip-buys and retail bull traps.
+              </p>
+            </div>
+
+            {/* Card 5: Portfolio Risk Scanner */}
+            <div className="p-6 rounded-2xl border border-surface-border bg-surface hover:border-rose-500/50 transition duration-300 space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center">
+                <Lock className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-white">Portfolio Risk & Catalyst Scanner</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Upload your equity portfolio (CSV or quick builder) to cross-reference your capital exposure against live regulatory, earnings, and news downside risks.
+              </p>
+            </div>
+
+            {/* Card 6: Ask FinSentiq AI Copilot */}
+            <div className="p-6 rounded-2xl border border-surface-border bg-surface hover:border-indigo-500/50 transition duration-300 space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                <Cpu className="h-5 w-5" />
+              </div>
+              <h4 className="text-base font-bold text-white">Ask FinSentiq AI Market Copilot</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Dalal Street dedicated conversational copilot providing grounded, citation-backed answers on Indian equities directly from verified financial filings.
+              </p>
+            </div>
+
           </div>
 
         </div>

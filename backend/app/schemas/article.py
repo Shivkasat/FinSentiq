@@ -27,6 +27,9 @@ class Article(BaseModel):
     reasoning: Optional[str] = None
     age_hours: float = 0.0
     decayed_score: float = 0.0
+    is_roundup: bool = False
+    is_single_stock: bool = False
+    primary_symbol: Optional[str] = None
 
 class StockGainerLoser(BaseModel):
     symbol: str

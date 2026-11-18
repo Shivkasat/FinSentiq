@@ -4,6 +4,7 @@ from fastapi import APIRouter, Query, HTTPException
 from app.core.store import central_store
 from app.services.rss_engine import rss_engine
 from app.services.sector_engine import sector_engine
+from app.services.market_data import market_data_service
 
 router = APIRouter(prefix="/news", tags=["News & Sentiment"])
 logger = logging.getLogger("finsentiq.api.news")
@@ -13,6 +14,10 @@ def calculate_movers_for_articles(articles: list, target_sector: Optional[str] =
     is_specific = bool(target_sector and target_sector.lower() not in ("all", "all sectors", ""))
 
     for a in articles:
+        # Prevent generic morning roundup listicles from corrupting stock scores
+        if a.get("is_roundup", False):
+            continue
+
         for sym in a.get("stock_mentions", []):
             actual_stock_sector = sector_engine.symbol_to_sector.get(sym, "Broad Market")
 
@@ -43,6 +48,15 @@ def calculate_movers_for_articles(articles: list, target_sector: Optional[str] =
         net = round(d["positive_score"] - d["negative_score"], 2)
         d["net_score"] = net
         d["sentiment_label"] = "Bullish" if net > 1.5 else "Bearish" if net < -1.5 else "Neutral"
+
+        # Enrich with live price & auto-validation
+        quote = market_data_service.get_stock_price(sym, sentiment_score=net)
+        d["price"] = quote["price"]
+        d["change"] = quote["change"]
+        d["percent_change"] = quote["percent_change"]
+        d["prediction_aligned"] = quote["prediction_aligned"]
+        d["validation_outcome"] = quote["validation_outcome"]
+
         stocks_list.append(d)
 
     gainers = sorted([s for s in stocks_list if s["net_score"] > 0], key=lambda x: x["net_score"], reverse=True)[:10]
@@ -84,8 +98,28 @@ async def get_articles(
 
 @router.get("/market-overview")
 async def get_market_overview():
-    """Returns overall market sector sentiment heatmap and overall top bullish/bearish stock movers."""
-    return central_store.get_market_overview()
+    """Returns overall market sector sentiment heatmap, top movers, and prediction accuracy scoreboard."""
+    overview = central_store.get_market_overview()
+    gainers = overview.get("gainers", [])
+    losers = overview.get("losers", [])
+
+    # Evaluate accuracy and price correlation
+    accuracy = market_data_service.evaluate_signals_accuracy(gainers, losers)
+
+    return {
+        **overview,
+        "gainers": accuracy["evaluated_gainers"],
+        "losers": accuracy["evaluated_losers"],
+        "accuracy_scoreboard": {
+            "win_rate": accuracy["win_rate"],
+            "total_signals": accuracy["total_signals"],
+            "successful_predictions": accuracy["successful_predictions"],
+            "gainers_avg_return": accuracy["gainers_avg_return"],
+            "losers_avg_return": accuracy["losers_avg_return"],
+            "alpha_spread": accuracy["alpha_spread"],
+            "precision_at_k": accuracy["precision_at_k"]
+        }
+    }
 
 @router.post("/refresh-feeds", status_code=202)
 async def trigger_refresh():

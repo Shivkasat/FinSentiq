@@ -3,7 +3,7 @@ import csv
 import re
 import logging
 from pathlib import Path
-from typing import Dict, Set, List, Optional
+from typing import Dict, Set, List, Optional, Any
 from app.core.config import settings
 
 logger = logging.getLogger("finsentiq.sector")
@@ -13,48 +13,90 @@ FALSE_POSITIVE_SYMBOLS = frozenset({
     "IT", "AM", "PM", "IN", "ON", "AT", "TO", "OR", "AN", "AS", "BE",
     "IS", "DO", "GO", "BY", "IF", "NO", "SO", "UP", "US", "UK", "EU",
     "FY", "YY", "QQ", "MF", "PE", "PB", "CF", "ALL", "NEW", "BUY", "SELL",
-    "DOLLAR", "OIL", "GOLD", "GAS", "TEA", "IDEA", "POWER", "STEEL", "BANK"
+    "DOLLAR", "OIL", "GOLD", "GAS", "TEA", "IDEA", "POWER", "STEEL", "BANK",
+    "NET", "HIGH", "LOW", "GAIN", "FALL", "BEST", "CARE", "FAST", "STAR",
+    "REAL", "TRUE", "FREE", "COST", "DEAL", "AUTO", "TECH", "DATA", "CORP",
+    "INDIAN", "INDIA", "GLOBAL", "MARKET", "STOCK", "TRADE", "SHARE", "PRICE",
+    "NEWS", "TODAY", "RECORD", "VALUE", "ALERT", "BULL", "BEAR", "CALL", "PUT",
+    "HOLD", "TARGET", "VIEW", "TIME", "OPEN", "CLOSE", "WAR", "PEACE", "RATE",
+    "UNIT", "KEY", "TOP", "LOSS", "BASE", "BOND", "FUND", "FLOW", "GROW",
+    "RISE", "BEAT", "MISS", "HIKE", "DROP", "CRASH", "BOOM", "PEAK", "SLIP", "SURGE"
 })
+
+ROUNDUP_PATTERNS = [
+    r"\bstocks to watch\b",
+    r"\bbuzzing stocks\b",
+    r"\btop stocks (to|for)\b",
+    r"\bstocks in (news|focus|action)\b",
+    r"\bmarket (wrap|live|updates|closing|outlook)\b",
+    r"\bgift nifty\b",
+    r"\bopening bell\b",
+    r"\bclosing bell\b",
+    r"\bf&o ban\b",
+    r"\btrade setup\b",
+    r"\bwhat to watch\b",
+    r"\btrading guide\b",
+    r"\bbrokerage radar\b",
+    r"\bstock radar\b",
+    r"\bshare market today\b",
+    r"\bsensex today\b",
+    r"\bnifty today\b",
+    r"\bsensex, nifty\b",
+    r"\bnifty, sensex\b",
+    r"\b5 stocks\b",
+    r"\b10 stocks\b",
+    r"\bbuy or sell\b",
+    r"\bbuzzing scrips\b"
+]
 
 # Well-known Indian market company aliases mapping directly to ticker symbols
 WELL_KNOWN_ALIASES = {
+    "reliance industries": "RELIANCE",
     "reliance": "RELIANCE",
     "ril": "RELIANCE",
-    "reliance industries": "RELIANCE",
-    "tcs": "TCS",
+    "tata consultancy services": "TCS",
     "tata consultancy": "TCS",
+    "tcs": "TCS",
     "infosys": "INFY",
     "infy": "INFY",
     "hdfc bank": "HDFCBANK",
     "hdfc": "HDFCBANK",
     "icici bank": "ICICIBANK",
     "icici": "ICICIBANK",
-    "sbi": "SBIN",
     "state bank of india": "SBIN",
     "state bank": "SBIN",
+    "sbi": "SBIN",
     "bharti airtel": "BHARTIARTL",
     "airtel": "BHARTIARTL",
     "tata motors": "TATAMOTORS",
-    "maruti": "MARUTI",
     "maruti suzuki": "MARUTI",
+    "maruti": "MARUTI",
+    "mahindra & mahindra": "M&M",
+    "mahindra and mahindra": "M&M",
     "mahindra": "M&M",
     "m&m": "M&M",
     "bajaj finance": "BAJFINANCE",
     "bajaj finserv": "BAJAJFINSV",
-    "l&t": "LT",
-    "larsen": "LT",
     "larsen & toubro": "LT",
+    "larsen and toubro": "LT",
+    "larsen": "LT",
+    "l&t": "LT",
     "itc": "ITC",
     "hindustan unilever": "HINDUNILVR",
     "hul": "HINDUNILVR",
     "wipro": "WIPRO",
     "hcl tech": "HCLTECH",
+    "hcl technologies": "HCLTECH",
     "tech mahindra": "TECHM",
     "axis bank": "AXISBANK",
+    "kotak mahindra bank": "KOTAKBANK",
     "kotak bank": "KOTAKBANK",
-    "kotak mahindra": "KOTAKBANK",
+    "kotak": "KOTAKBANK",
     "sun pharma": "SUNPHARMA",
+    "sun pharmaceuticals": "SUNPHARMA",
     "dr reddy": "DRREDDY",
+    "dr reddy's": "DRREDDY",
+    "dr reddys": "DRREDDY",
     "cipla": "CIPLA",
     "tata steel": "TATASTEEL",
     "jsw steel": "JSWSTEEL",
@@ -66,23 +108,41 @@ WELL_KNOWN_ALIASES = {
     "ntpc": "NTPC",
     "ongc": "ONGC",
     "power grid": "POWERGRID",
+    "powergrid": "POWERGRID",
     "coal india": "COALINDIA",
+    "titan company": "TITAN",
     "titan": "TITAN",
     "zomato": "ZOMATO",
     "swiggy": "SWIGGY",
     "paytm": "PAYTM",
     "one97": "PAYTM",
     "jio financial": "JIOFIN",
-    "jio": "JIOFIN",
+    "jio financial services": "JIOFIN",
     "vedanta": "VEDL",
     "dlf": "DLF",
+    "ultratech cement": "ULTRACEMCO",
     "ultratech": "ULTRACEMCO",
+    "grasim industries": "GRASIM",
     "grasim": "GRASIM",
     "indusind bank": "INDUSINDBK",
+    "indusind": "INDUSINDBK",
     "canara bank": "CANBK",
     "punjab national bank": "PNB",
     "pnb": "PNB",
-    "bank of baroda": "BANKBARODA"
+    "bank of baroda": "BANKBARODA",
+    "bharat electronics": "BEL",
+    "bel": "BEL",
+    "hindustan aeronautics": "HAL",
+    "hal": "HAL",
+    "senco gold": "SENCO",
+    "mazagon dock": "MAZDOCK",
+    "garden reach": "GRSE",
+    "j kumar infra": "JKUMAR",
+    "j kumar": "JKUMAR",
+    "j. kumar": "JKUMAR",
+    "jagatjit industries": "JAGATJIT",
+    "jagatjit": "JAGATJIT",
+    "mobikwik": "MOBIKWIK"
 }
 
 SECTOR_KEYWORDS = {
@@ -114,6 +174,9 @@ SECTOR_KEYWORDS = {
     ],
     "Telecom & Media": [
         "telecom", "5g", "spectrum", "broadband", "media", "entertainment"
+    ],
+    "Defence & Aerospace": [
+        "defence", "defense", "aerospace", "missile", "warship", "ammunition", "ordnance"
     ]
 }
 
@@ -124,7 +187,7 @@ GENERIC_STOP_WORDS = frozenset({
     "dollar", "oil", "gas", "gold", "silver", "copper", "coal", "sugar",
     "tea", "coffee", "cement", "paper", "chemicals", "market", "global",
     "national", "international", "digital", "system", "systems", "solutions",
-    "securities", "life", "general", "mutual", "fund", "funds"
+    "securities", "life", "general", "mutual", "fund", "funds", "ltd", "limited"
 })
 
 class SectorEngine:
@@ -171,7 +234,6 @@ class SectorEngine:
                             clean_name = re.sub(r"\b(ltd|limited|pvt|corporation|corp|india|industries)\b", "", company, flags=re.IGNORECASE).strip()
                             if len(clean_name) >= 3 and clean_name.lower() not in GENERIC_STOP_WORDS:
                                 self.company_to_symbol[clean_name.lower()] = symbol
-                            # Retain full original company name
                             if len(company) >= 4 and company.lower() not in GENERIC_STOP_WORDS:
                                 self.company_to_symbol[company.lower()] = symbol
 
@@ -185,23 +247,67 @@ class SectorEngine:
         except Exception as e:
             logger.error(f"Error loading company CSV: {e}")
 
+    def is_market_roundup(self, text: str) -> bool:
+        """Determines if a headline or article is a generic morning listicle or broad market wrap."""
+        if not text:
+            return False
+        t_lower = text.lower()
+        return any(re.search(p, t_lower) for p in ROUNDUP_PATTERNS)
+
     def extract_symbols(self, text: str) -> List[str]:
+        """
+        High-precision symbol extraction without blanket uppercase conversion.
+        Prevents common dictionary collisions and commodity false positives.
+        """
+        if not text:
+            return []
+
         found = set()
         text_lower = text.lower()
-        text_upper = text.upper()
 
-        for name, symbol in self.company_to_symbol.items():
-            if len(name) < 3:
+        # 1. Match company aliases (ordered from longest phrase to shortest)
+        sorted_aliases = sorted(self.company_to_symbol.keys(), key=len, reverse=True)
+        for name in sorted_aliases:
+            if len(name) < 3 or name in GENERIC_STOP_WORDS:
                 continue
             pattern = r"\b" + re.escape(name) + r"\b"
             if re.search(pattern, text_lower):
-                found.add(symbol)
+                found.add(self.company_to_symbol[name])
+                if len(found) >= 5:
+                    break
 
-        for word in re.findall(r"\b[A-Z]{3,15}\b", text_upper):
+        # 2. Match raw UPPERCASE tickers ONLY (strictly avoiding text.upper() blanket conversions)
+        raw_caps = re.findall(r"\b[A-Z]{3,12}\b", text)
+        for word in raw_caps:
             if word in self.valid_symbols and word not in FALSE_POSITIVE_SYMBOLS:
                 found.add(word)
+                if len(found) >= 5:
+                    break
 
         return list(found)[:5]
+
+    def extract_symbols_with_metadata(self, text: str, title: str = "") -> Dict[str, Any]:
+        """
+        Extracts symbols along with institutional metadata:
+        identifying whether an article is a listicle roundup or a focused single-stock catalyst.
+        """
+        check_title = title if title else text[:140]
+        is_roundup = self.is_market_roundup(check_title)
+        symbols = self.extract_symbols(text)
+
+        # Multi-stock articles (3 or more) in headlines behave like listicle roundups
+        if len(symbols) >= 3:
+            is_roundup = True
+
+        is_single = (len(symbols) == 1 and not is_roundup)
+        primary = symbols[0] if symbols else None
+
+        return {
+            "symbols": symbols,
+            "is_roundup": is_roundup,
+            "is_single_stock": is_single,
+            "primary_symbol": primary
+        }
 
     def classify_sector(self, text: str, symbols: List[str]) -> str:
         if symbols:

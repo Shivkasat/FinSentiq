@@ -1,5 +1,5 @@
 import React from 'react';
-import { Activity, Star, Terminal, Sun, Moon, LogIn, LogOut, User as UserIcon, Home, LayoutDashboard } from 'lucide-react';
+import { Activity, Star, Terminal, Sun, Moon, LogIn, LogOut, User as UserIcon, Home, LayoutDashboard, Sparkles, Bot, ShieldAlert, Radar, RefreshCw } from 'lucide-react';
 
 interface NavbarProps {
   currentView: 'landing' | 'dashboard';
@@ -10,8 +10,13 @@ interface NavbarProps {
   isBackendConnected?: boolean;
   watchlistCount?: number;
   onOpenWatchlist: () => void;
+  onOpenPortfolio: () => void;
+  onOpenDivergence: () => void;
   onOpenLogs: () => void;
+  onOpenCopilot: () => void;
   onOpenAuth: (mode: 'login' | 'register') => void;
+  onRefreshFeeds?: () => void;
+  isRefreshingFeeds?: boolean;
   user: any | null;
   onLogout: () => void;
   isLightMode: boolean;
@@ -27,8 +32,13 @@ export const Navbar: React.FC<NavbarProps> = ({
   isBackendConnected = false,
   watchlistCount = 0,
   onOpenWatchlist,
+  onOpenPortfolio,
+  onOpenDivergence,
   onOpenLogs,
+  onOpenCopilot,
   onOpenAuth,
+  onRefreshFeeds,
+  isRefreshingFeeds = false,
   user,
   onLogout,
   isLightMode,
@@ -89,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center gap-3">
           
           {/* Live Status Pill */}
-          <div className="hidden xl:flex items-center gap-3 px-3.5 py-1.5 rounded-lg bg-[#0B0E14] border border-surface-border text-xs font-mono">
+          <div className="hidden lg:flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-[#0B0E14] border border-surface-border text-xs font-mono">
             {isBackendConnected && totalArticles > 0 ? (
               <>
                 <div className="flex items-center gap-1.5">
@@ -97,14 +107,28 @@ export const Navbar: React.FC<NavbarProps> = ({
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                  <span className="text-slate-300 font-semibold">Store Synced</span>
+                  <span className="text-slate-200 font-semibold">{totalArticles} Live Articles</span>
                 </div>
                 <span className="text-slate-600">•</span>
-                <span className="text-slate-400">{totalArticles} Articles Active</span>
+                <span className="text-slate-400">10m Auto-Sweep</span>
                 <span className="text-slate-600">•</span>
                 <span className={overallMood === 'Bullish' ? 'text-emerald-400 font-bold' : overallMood === 'Bearish' ? 'text-rose-400 font-bold' : 'text-slate-400'}>
-                  Mood: {overallMood}
+                  {overallMood}
                 </span>
+
+                {onRefreshFeeds && (
+                  <button
+                    onClick={onRefreshFeeds}
+                    disabled={isRefreshingFeeds}
+                    className="ml-1 px-2.5 py-1 rounded bg-surface border border-surface-border hover:border-indigo-500/50 hover:bg-indigo-500/10 text-slate-200 flex items-center gap-1.5 transition disabled:opacity-50 cursor-pointer"
+                    title="Fetch fresh live RSS feeds from financial publications right now"
+                  >
+                    <RefreshCw className={`h-3 w-3 ${isRefreshingFeeds ? 'animate-spin text-indigo-400' : 'text-slate-400'}`} />
+                    <span className="text-[11px] font-sans font-medium text-slate-300">
+                      {isRefreshingFeeds ? 'Refreshing...' : 'Sync Live'}
+                    </span>
+                  </button>
+                )}
               </>
             ) : (
               <div className="flex items-center gap-2 text-rose-400">
@@ -113,6 +137,38 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
             )}
           </div>
+
+          {/* AI Copilot Button */}
+          <button
+            onClick={onOpenCopilot}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600/20 border border-indigo-500/40 hover:bg-indigo-600/30 text-xs font-semibold text-indigo-300 transition shadow-sm shadow-indigo-500/10"
+            title="Ask Market Copilot"
+          >
+            <Bot className="h-4 w-4 text-indigo-400" />
+            <span className="hidden sm:inline">Ask Copilot</span>
+            <span className="px-1 py-0.2 rounded bg-indigo-500/30 text-[9px] font-mono text-indigo-200">AI</span>
+          </button>
+
+          {/* Divergence Radar Button */}
+          <button
+            onClick={onOpenDivergence}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-indigo-500/10 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/20 text-xs font-semibold text-cyan-300 transition shadow-sm"
+            title="Open Smart Divergence & Mispricing Radar"
+          >
+            <Radar className="h-4 w-4 text-cyan-400" />
+            <span className="hidden sm:inline">Divergence Radar</span>
+            <span className="px-1 py-0.2 rounded bg-cyan-500/30 text-[9px] font-mono text-cyan-200">RADAR</span>
+          </button>
+
+          {/* Portfolio Scanner Button */}
+          <button
+            onClick={onOpenPortfolio}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface border border-surface-border hover:border-indigo-500/50 hover:bg-indigo-500/10 text-xs font-semibold text-slate-200 transition"
+            title="Scan your stock portfolio against news risk"
+          >
+            <ShieldAlert className="h-4 w-4 text-amber-400" />
+            <span className="hidden sm:inline">Portfolio Risk</span>
+          </button>
 
           {/* Watchlist Button */}
           <button

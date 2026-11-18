@@ -17,10 +17,25 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, onOpenSummary
       {/* Header tags */}
       <div>
         <div className="flex items-center justify-between gap-2 mb-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 flex-wrap">
             <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
               {article.sector}
             </span>
+            {article.impact_type && article.impact_type !== 'Unknown' && (
+              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${
+                article.impact_type.includes('Earnings')
+                  ? 'bg-amber-500/10 text-amber-300 border-amber-500/20'
+                  : article.impact_type.includes('Regulatory')
+                    ? 'bg-purple-500/10 text-purple-300 border-purple-500/20'
+                    : article.impact_type.includes('Orders')
+                      ? 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20'
+                      : article.impact_type.includes('Corporate')
+                        ? 'bg-blue-500/10 text-blue-300 border-blue-500/20'
+                        : 'bg-indigo-500/10 text-indigo-300 border-indigo-500/20'
+              }`}>
+                {article.impact_type}
+              </span>
+            )}
             <span className="text-xs text-slate-400 font-medium">
               {article.source}
             </span>

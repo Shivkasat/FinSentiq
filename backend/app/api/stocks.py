@@ -3,6 +3,8 @@ from typing import List, Optional
 from pydantic import BaseModel
 from fastapi import APIRouter, Query, HTTPException
 from app.services.sector_engine import sector_engine
+from app.services.market_data import market_data_service
+from app.core.store import central_store
 
 router = APIRouter(prefix="/stocks", tags=["Stock Search & Info"])
 logger = logging.getLogger("finsentiq.api.stocks")
@@ -55,24 +57,23 @@ async def search_stocks(q: str = Query(..., min_length=1, description="Stock tic
 @router.get("/quote/{symbol}")
 async def get_stock_quote(symbol: str):
     """
-    Returns market reference data for a given stock symbol.
+    Returns live market quote with auto-validation for a given stock symbol.
     """
     sym = symbol.strip().upper()
     sec = sector_engine.symbol_to_sector.get(sym)
     if not sec and sym not in sector_engine.valid_symbols:
         raise HTTPException(status_code=404, detail="Stock symbol not found")
 
-    import random
-    # Deterministic seed based on symbol for consistent demo prices
-    random.seed(sum(ord(c) for c in sym))
-    base_price = round(random.uniform(150, 4200), 2)
-    change = round(random.uniform(-45, 65), 2)
-    percent_change = round((change / base_price) * 100, 2)
+    quote = market_data_service.get_stock_price(sym)
+    quote["sector"] = sec or "Broad Market"
+    return quote
 
-    return {
-        "symbol": sym,
-        "price": base_price,
-        "change": change,
-        "percent_change": percent_change,
-        "sector": sec or "Broad Market"
-    }
+@router.get("/accuracy")
+async def get_prediction_accuracy():
+    """
+    Returns empirical signal verification metrics (Win Rate, Alpha Spread, Precision@K).
+    """
+    overview = central_store.get_market_overview()
+    gainers = overview.get("gainers", [])
+    losers = overview.get("losers", [])
+    return market_data_service.evaluate_signals_accuracy(gainers, losers)

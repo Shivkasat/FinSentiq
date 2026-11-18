@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     
     # LLM / Groq
     GROQ_API_KEY: str = Field(default="", env="GROQ_API_KEY")
-    GROQ_MODEL: str = "llama-3.3-70b-versatile"
+    GROQ_MODEL: str = "openai/gpt-oss-120b"
     
     # Feed & Cache Sync
     FEED_FETCH_INTERVAL_MINUTES: int = 10

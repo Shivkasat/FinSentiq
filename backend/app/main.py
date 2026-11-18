@@ -14,6 +14,9 @@ from app.api.stocks import router as stocks_router
 from app.api.summarize import router as summarize_router
 from app.api.logs import router as logs_router, log_event
 from app.api.auth import router as auth_router
+from app.api.copilot import router as copilot_router
+from app.api.portfolio import router as portfolio_router
+from app.api.divergence import router as divergence_router
 
 # Configure Structured Logging
 logging.basicConfig(
@@ -43,11 +46,10 @@ async def periodic_feed_worker():
 async def lifespan(app: FastAPI):
     logger.info("Initializing FinSentiq FastAPI Engine...")
     
-    overview = central_store.get_market_overview()
-    if not overview.get("summary") or overview["summary"].get("total_articles", 0) == 0:
-        logger.info("Central store is cold. Triggering initial background ingestion...")
-        log_event("Store cold boot — starting initial RSS ingestion")
-        asyncio.create_task(rss_engine.ingest_and_process_all())
+    # Trigger immediate live RSS feed ingestion on every server startup
+    logger.info("Server started: Launching immediate live RSS feed ingestion cycle...")
+    log_event("Server boot: Launching immediate live RSS feed ingestion across all financial sources")
+    asyncio.create_task(rss_engine.ingest_and_process_all())
 
     worker_task = asyncio.create_task(periodic_feed_worker())
     log_event(f"Scheduler active: periodic sweep every {settings.FEED_FETCH_INTERVAL_MINUTES}m")
@@ -81,6 +83,23 @@ def create_application() -> FastAPI:
     app.include_router(summarize_router, prefix=settings.API_V1_STR)
     app.include_router(logs_router, prefix=settings.API_V1_STR)
     app.include_router(auth_router, prefix=settings.API_V1_STR)
+    app.include_router(copilot_router, prefix=settings.API_V1_STR)
+    app.include_router(portfolio_router, prefix=settings.API_V1_STR)
+    app.include_router(divergence_router, prefix=settings.API_V1_STR)
+
+    @app.get("/", tags=["Root"])
+    async def root():
+        overview = central_store.get_market_overview()
+        total = overview.get("summary", {}).get("total_articles", 0)
+        return {
+            "name": settings.PROJECT_NAME,
+            "version": settings.VERSION,
+            "status": "online",
+            "cached_articles_count": total,
+            "docs_url": "/docs",
+            "health_url": "/health",
+            "frontend_dashboard": "http://localhost:5173"
+        }
 
     @app.get("/health", tags=["Health"])
     async def health_check():

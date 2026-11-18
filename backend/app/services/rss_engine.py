@@ -13,18 +13,17 @@ from app.core.store import central_store
 
 logger = logging.getLogger("finsentiq.rss")
 
-# High-quality Indian Financial RSS Feeds
+# High-quality Indian Financial RSS Feeds focused on Equities and Corporate Catalysts (All Verified 200 OK)
 RSS_FEEDS = [
     {"source": "Economic Times", "url": "https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146842.cms"},
-    {"source": "Economic Times", "url": "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms"},
-    {"source": "Livemint", "url": "https://www.livemint.com/rss/markets"},
     {"source": "Livemint", "url": "https://www.livemint.com/rss/companies"},
-    {"source": "Business Standard", "url": "https://www.business-standard.com/rss/markets-106.rss"},
+    {"source": "Livemint", "url": "https://www.livemint.com/rss/markets"},
     {"source": "Business Standard", "url": "https://www.business-standard.com/rss/companies-101.rss"},
+    {"source": "Business Standard", "url": "https://www.business-standard.com/rss/markets-106.rss"},
     {"source": "Moneycontrol", "url": "https://www.moneycontrol.com/rss/marketreports.xml"},
-    {"source": "Moneycontrol", "url": "https://www.moneycontrol.com/rss/business.xml"},
     {"source": "Financial Express", "url": "https://www.financialexpress.com/market/feed/"},
-    {"source": "NDTV Profit", "url": "https://www.ndtvprofit.com/rss/feed"}
+    {"source": "Zee Business Hindi", "url": "https://www.zeebiz.com/hindi/market-news.xml"},
+    {"source": "Zee News Hindi Business", "url": "https://zeenews.india.com/hindi/business/rss.xml"}
 ]
 
 def clean_html(raw_html: str) -> str:
@@ -103,33 +102,47 @@ class RSSEngine:
             logger.info("No new articles discovered this cycle.")
             return
 
-        # Parallel symbol extraction and sector classification
+        # High-precision symbol extraction and sector classification
         processed_articles = []
         for art in raw_articles:
-            symbols = sector_engine.extract_symbols(art["title"] + " " + art.get("summary", ""))
+            combined_text = art["title"] + " " + art.get("summary", "")
+            meta = sector_engine.extract_symbols_with_metadata(combined_text, title=art["title"])
+            symbols = meta["symbols"]
             sector = sector_engine.classify_sector(art["title"], symbols)
             art["stock_mentions"] = symbols
             art["sector"] = sector
+            art["is_roundup"] = meta["is_roundup"]
+            art["is_single_stock"] = meta["is_single_stock"]
+            art["primary_symbol"] = meta["primary_symbol"]
             processed_articles.append(art)
 
-        # Batch sentiment evaluation (limited concurrency to respect Groq rate limits)
-        semaphore = asyncio.Semaphore(10)
+        # Smart Batch Sentiment Evaluation:
+        # 1. Company catalysts with stock mentions: Deep LLM evaluation (with rate limit protection & pacing)
+        # 2. General / Macro articles without stock mentions: High-speed contextual financial grammar engine
+        semaphore = asyncio.Semaphore(2)
 
         async def score_article(a: Dict[str, Any]):
-            async with semaphore:
-                sentiment = await sentiment_engine.analyze_sentiment(a["title"], a.get("summary"))
-                a["sentiment_label"] = sentiment.get("sentiment_label", "Neutral")
-                raw_score = sentiment.get("sentiment_score", 0.0)
-                a["sentiment_score"] = raw_score
-                a["confidence"] = sentiment.get("confidence", 0.8)
-                a["impact_type"] = sentiment.get("impact_type", "Unknown")
-                a["reasoning"] = sentiment.get("reasoning", "")
-                
-                # Apply source weight & time decay
-                age_hours, decay = sentiment_engine.compute_time_decay(a.get("published_iso"))
-                a["age_hours"] = age_hours
-                a["decayed_score"] = round(raw_score * a.get("source_weight", 1.0) * decay, 2)
-                return a
+            has_stocks = bool(a.get("stock_mentions"))
+            if has_stocks:
+                async with semaphore:
+                    sentiment = await sentiment_engine.analyze_sentiment(a["title"], a.get("summary"))
+                    await asyncio.sleep(0.25)
+            else:
+                combined_text = a["title"] + " " + a.get("summary", "")
+                sentiment = sentiment_engine.lexicon_score(combined_text)
+
+            a["sentiment_label"] = sentiment.get("sentiment_label", "Neutral")
+            raw_score = sentiment.get("sentiment_score", 0.0)
+            a["sentiment_score"] = raw_score
+            a["confidence"] = sentiment.get("confidence", 0.8)
+            a["impact_type"] = sentiment.get("impact_type", "Unknown")
+            a["reasoning"] = sentiment.get("reasoning", "")
+            
+            # Apply source weight & time decay
+            age_hours, decay = sentiment_engine.compute_time_decay(a.get("published_iso"))
+            a["age_hours"] = age_hours
+            a["decayed_score"] = round(raw_score * a.get("source_weight", 1.0) * decay, 2)
+            return a
 
         scored_articles = await asyncio.gather(*[score_article(a) for a in processed_articles])
 
@@ -165,7 +178,13 @@ class RSSEngine:
                 sector_articles[sec].append(a)
 
             # Stock level aggregation for gainers/losers
-            # STRICT UNIVERSAL GUARANTEE: Stock's sector is ALWAYS its official canonical sector from company.csv
+            # STRICT UNIVERSAL GUARANTEE: Exclude generic market roundup listicles from contaminating stock sentiment!
+            if a.get("is_roundup", False):
+                continue
+
+            # Pure company catalysts (single stock) get 1.25x high-conviction multiplier
+            weight_mult = 1.25 if a.get("is_single_stock", False) else 1.0
+
             for sym in a.get("stock_mentions", []):
                 actual_sym_sec = sector_engine.symbol_to_sector.get(sym, "Broad Market")
                 if sym not in stock_scores:
@@ -177,7 +196,7 @@ class RSSEngine:
                         "sector": actual_sym_sec,
                         "top_article_title": a["title"]
                     }
-                score = a["sentiment_score"]
+                score = a["sentiment_score"] * weight_mult
                 if score > 0:
                     stock_scores[sym]["positive_score"] += score
                 elif score < 0:

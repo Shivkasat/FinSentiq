@@ -32,6 +32,7 @@ Thumbs.db
 node_modules/
 dist/
 .vite/
+*.tsbuildinfo
 
 # Root local scratch data
 /data/

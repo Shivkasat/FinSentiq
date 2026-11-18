@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Article, MarketOverview, WatchlistData, AISummaryResult } from '../types';
+import { Article, MarketOverview, WatchlistData, AISummaryResult, DivergenceRadarResponse, DivergenceAnomaly } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/v1';
 
@@ -21,6 +21,11 @@ export const fetchArticles = async (params?: { sector?: string; sentiment?: stri
 
 export const fetchMarketOverview = async (): Promise<MarketOverview> => {
   const { data } = await apiClient.get('/news/market-overview');
+  return data;
+};
+
+export const refreshFeeds = async (): Promise<{ message: string }> => {
+  const { data } = await apiClient.post('/news/refresh-feeds');
   return data;
 };
 
@@ -55,6 +60,26 @@ export const fetchSystemLogs = async (): Promise<{ logs: string[] }> => {
   return data;
 };
 
+export const queryCopilot = async (query: string) => {
+  const { data } = await apiClient.post('/copilot/query', { query });
+  return data;
+};
+
+export const fetchPredictionAccuracy = async () => {
+  const { data } = await apiClient.get('/stocks/accuracy');
+  return data;
+};
+
+export const scanPortfolio = async (holdings: Array<{ symbol: string; quantity: number; buy_price: number }>, userId: string = 'guest_user') => {
+  const { data } = await apiClient.post('/portfolio/scan', { holdings, user_id: userId });
+  return data;
+};
+
+export const fetchSamplePortfolioScan = async () => {
+  const { data } = await apiClient.get('/portfolio/sample');
+  return data;
+};
+
 export const registerUser = async (data: { username: string; email: string; password: string }) => {
   const resp = await apiClient.post('/auth/register', data);
   if (resp.data.access_token) {
@@ -76,6 +101,16 @@ export const loginUser = async (data: { username_or_email: string; password: str
 export const logoutUser = () => {
   localStorage.removeItem('finsentiq_token');
   localStorage.removeItem('finsentiq_user');
+};
+
+export const fetchDivergenceRadar = async (): Promise<DivergenceRadarResponse> => {
+  const resp = await apiClient.get('/divergence/radar');
+  return resp.data.data;
+};
+
+export const fetchStockDivergence = async (symbol: string): Promise<DivergenceAnomaly> => {
+  const resp = await apiClient.get(`/divergence/stock/${symbol}`);
+  return resp.data.data;
 };
 
 export const getStoredUser = () => {

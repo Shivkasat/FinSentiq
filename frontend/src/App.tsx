@@ -9,6 +9,11 @@ import { AISummaryModal } from './components/AISummaryModal';
 import { WatchlistModal } from './components/WatchlistModal';
 import { LogsModal } from './components/LogsModal';
 import { AuthModal } from './components/AuthModal';
+import { AccuracyScoreboard } from './components/AccuracyScoreboard';
+import { AICopilotModal } from './components/AICopilotModal';
+import { PortfolioScannerModal } from './components/PortfolioScannerModal';
+import { BreakingNewsTicker } from './components/BreakingNewsTicker';
+import { DivergenceRadarModal } from './components/DivergenceRadarModal';
 import {
   fetchArticles,
   fetchMarketOverview,
@@ -17,10 +22,11 @@ import {
   removeWatchlistSymbol,
   summarizeArticle,
   fetchSystemLogs,
+  refreshFeeds,
   getStoredUser,
   logoutUser,
 } from './api';
-import { Search, ShieldAlert, Sparkles, TrendingUp, AlertTriangle, RefreshCw } from 'lucide-react';
+import { Search, ShieldAlert, Sparkles, TrendingUp, AlertTriangle, RefreshCw, Bot, Radar, Compass } from 'lucide-react';
 
 export const App: React.FC = () => {
   const queryClient = useQueryClient();
@@ -47,6 +53,10 @@ export const App: React.FC = () => {
   // Modals state
   const [isWatchlistOpen, setIsWatchlistOpen] = useState<boolean>(false);
   const [isLogsOpen, setIsLogsOpen] = useState<boolean>(false);
+  const [isCopilotOpen, setIsCopilotOpen] = useState<boolean>(false);
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState<boolean>(false);
+  const [isDivergenceOpen, setIsDivergenceOpen] = useState<boolean>(false);
+  const [isRefreshingFeeds, setIsRefreshingFeeds] = useState<boolean>(false);
   const [authModalState, setAuthModalState] = useState<{ isOpen: boolean; mode: 'login' | 'register' }>({
     isOpen: false,
     mode: 'login',
@@ -92,7 +102,24 @@ export const App: React.FC = () => {
         search: searchQuery || undefined,
       }),
     staleTime: 15 * 1000,
+    refetchInterval: 60 * 1000,
   });
+
+  // Manual & Instant Feed Ingestion Trigger
+  const handleRefreshFeeds = async () => {
+    setIsRefreshingFeeds(true);
+    try {
+      await refreshFeeds();
+      setTimeout(() => {
+        refetchOverview();
+        refetchArticles();
+        setIsRefreshingFeeds(false);
+      }, 3500);
+    } catch (err) {
+      console.error('Failed to trigger feed refresh:', err);
+      setIsRefreshingFeeds(false);
+    }
+  };
 
   // 3. User Watchlist
   const { data: watchlistData } = useQuery({
@@ -188,13 +215,26 @@ export const App: React.FC = () => {
         isBackendConnected={Boolean(overview && !overviewError)}
         watchlistCount={watchlist.length}
         onOpenWatchlist={() => setIsWatchlistOpen(true)}
+        onOpenPortfolio={() => setIsPortfolioOpen(true)}
+        onOpenDivergence={() => setIsDivergenceOpen(true)}
         onOpenLogs={() => setIsLogsOpen(true)}
+        onOpenCopilot={() => setIsCopilotOpen(true)}
         onOpenAuth={(mode) => setAuthModalState({ isOpen: true, mode })}
+        onRefreshFeeds={handleRefreshFeeds}
+        isRefreshingFeeds={isRefreshingFeeds}
         user={user}
         onLogout={handleLogout}
         isLightMode={isLightMode}
         onToggleTheme={toggleTheme}
       />
+
+      {/* Breaking Catalyst Marquee Ticker */}
+      {currentView === 'dashboard' && (
+        <BreakingNewsTicker
+          articles={articlesData?.articles || []}
+          onOpenSummary={handleOpenSummary}
+        />
+      )}
 
       {/* View 1: Landing Page */}
       {currentView === 'landing' ? (
@@ -236,6 +276,39 @@ export const App: React.FC = () => {
               onSelectSector={setSelectedSector}
             />
           )}
+
+          {/* Smart Divergence & Mispricing Radar Quick-Trigger Banner */}
+          <div className="rounded-xl border border-cyan-500/30 bg-gradient-to-r from-[#0C1524] via-surface to-[#0C1524] p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg shadow-cyan-950/20">
+            <div className="flex items-center gap-3">
+              <div className="p-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+                <Radar className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-cyan-300">
+                    Smart Divergence & Mispricing Radar
+                  </span>
+                  <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
+                    Institutional Disconnect Anomaly Scan
+                  </span>
+                </div>
+                <p className="text-xs text-slate-400">
+                  Real-time detection of high-conviction disconnects between news sentiment catalysts and price returns (Dip-Buys & Bull Traps)
+                </p>
+              </div>
+            </div>
+
+            <button
+              onClick={() => setIsDivergenceOpen(true)}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 text-white font-semibold text-xs transition shadow-md shadow-cyan-600/20 shrink-0"
+            >
+              <Compass className="h-4 w-4" />
+              <span>Launch 4-Quadrant Radar</span>
+            </button>
+          </div>
+
+          {/* Real-Time Signal Accuracy & Empirical Verification Scoreboard */}
+          <AccuracyScoreboard scoreboard={overview?.accuracy_scoreboard} />
 
           {/* Top Movers (Bullish vs Bearish) — Dynamic per selected sector or overall market */}
           <MarketMovers
@@ -364,6 +437,38 @@ export const App: React.FC = () => {
           setCurrentView('dashboard');
         }}
       />
+
+      {/* AI Market Copilot Modal */}
+      <AICopilotModal
+        isOpen={isCopilotOpen}
+        onClose={() => setIsCopilotOpen(false)}
+      />
+
+      {/* Portfolio Risk & Catalyst Scanner Modal */}
+      <PortfolioScannerModal
+        isOpen={isPortfolioOpen}
+        onClose={() => setIsPortfolioOpen(false)}
+        userId={userId}
+      />
+
+      {/* Smart Divergence & Mispricing Radar Modal */}
+      <DivergenceRadarModal
+        isOpen={isDivergenceOpen}
+        onClose={() => setIsDivergenceOpen(false)}
+        onOpenCopilot={(_sym) => setIsCopilotOpen(true)}
+      />
+
+      {/* Floating Copilot Launcher Pill */}
+      {currentView === 'dashboard' && !isCopilotOpen && (
+        <button
+          onClick={() => setIsCopilotOpen(true)}
+          className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-600 hover:scale-105 text-white font-semibold text-xs shadow-xl shadow-indigo-600/30 transition-all border border-indigo-400/30 group"
+        >
+          <Bot className="h-4 w-4 group-hover:rotate-12 transition-transform" />
+          <span>Ask FinSentiq AI</span>
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
+        </button>
+      )}
 
     </div>
   );

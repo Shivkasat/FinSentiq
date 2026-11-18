@@ -63,13 +63,35 @@ export const MarketMovers: React.FC<MoversProps> = ({
                     <Star className="h-3.5 w-3.5 fill-current" />
                   </button>
                   <div>
-                    <span className="font-mono font-bold text-xs text-white">{stock.symbol}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono font-bold text-xs text-white">{stock.symbol}</span>
+                      {stock.price && (
+                        <span className="text-[11px] font-mono text-slate-300">
+                          ₹{stock.price.toLocaleString('en-IN')}
+                        </span>
+                      )}
+                    </div>
                     <p className="text-[10px] text-slate-400 line-clamp-1">{stock.sector}</p>
                   </div>
                 </div>
-                <div className="text-right">
-                  <span className="font-mono text-xs font-bold text-emerald-400">+{stock.net_score}</span>
-                  <p className="text-[10px] text-slate-400 font-mono">{stock.article_count} news</p>
+
+                <div className="flex items-center gap-3">
+                  {stock.percent_change !== undefined && (
+                    <div className="text-right">
+                      <span className={`text-[11px] font-mono font-bold ${stock.percent_change >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                        {stock.percent_change >= 0 ? `+${stock.percent_change}%` : `${stock.percent_change}%`}
+                      </span>
+                      {stock.prediction_aligned && (
+                        <span className="block text-[9px] uppercase tracking-wider text-emerald-400/90 font-medium">
+                          ✓ Aligned
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  <div className="text-right border-l border-slate-800 pl-2.5">
+                    <span className="font-mono text-xs font-bold text-emerald-400">+{stock.net_score}</span>
+                    <p className="text-[10px] text-slate-400 font-mono">{stock.article_count} news</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -112,13 +134,35 @@ export const MarketMovers: React.FC<MoversProps> = ({
                     <Star className="h-3.5 w-3.5 fill-current" />
                   </button>
                   <div>
-                    <span className="font-mono font-bold text-xs text-white">{stock.symbol}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono font-bold text-xs text-white">{stock.symbol}</span>
+                      {stock.price && (
+                        <span className="text-[11px] font-mono text-slate-300">
+                          ₹{stock.price.toLocaleString('en-IN')}
+                        </span>
+                      )}
+                    </div>
                     <p className="text-[10px] text-slate-400 line-clamp-1">{stock.sector}</p>
                   </div>
                 </div>
-                <div className="text-right">
-                  <span className="font-mono text-xs font-bold text-rose-400">{stock.net_score}</span>
-                  <p className="text-[10px] text-slate-400 font-mono">{stock.article_count} news</p>
+
+                <div className="flex items-center gap-3">
+                  {stock.percent_change !== undefined && (
+                    <div className="text-right">
+                      <span className={`text-[11px] font-mono font-bold ${stock.percent_change <= 0 ? 'text-rose-400' : 'text-emerald-400'}`}>
+                        {stock.percent_change > 0 ? `+${stock.percent_change}%` : `${stock.percent_change}%`}
+                      </span>
+                      {stock.prediction_aligned && (
+                        <span className="block text-[9px] uppercase tracking-wider text-rose-400/90 font-medium">
+                          ✓ Aligned
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  <div className="text-right border-l border-slate-800 pl-2.5">
+                    <span className="font-mono text-xs font-bold text-rose-400">{stock.net_score}</span>
+                    <p className="text-[10px] text-slate-400 font-mono">{stock.article_count} news</p>
+                  </div>
                 </div>
               </div>
             ))}

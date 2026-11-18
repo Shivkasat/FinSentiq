@@ -4,12 +4,36 @@ import os
 from pathlib import Path
 
 # Add backend to path
+sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath("backend"))
 from app.services.sector_engine import sector_engine
+from app.services.sentiment_engine import sentiment_engine
 
-store_file = os.path.abspath("backend/data/market_store.json")
-with open(store_file, "r", encoding="utf-8") as f:
-    data = json.load(f)
+candidates = [
+    Path("data/market_store.json"),
+    Path("backend/data/market_store.json"),
+    Path("../data/market_store.json")
+]
+
+source_file = None
+max_articles = 0
+best_data = None
+
+for c in candidates:
+    if c.exists():
+        try:
+            with open(c, "r", encoding="utf-8") as f:
+                d = json.load(f)
+                count = sum(len(arts) for arts in d.get("sector_articles", {}).values())
+                if count > max_articles:
+                    max_articles = count
+                    source_file = c
+                    best_data = d
+        except Exception:
+            pass
+
+print(f"Selected richest source: {source_file} with {max_articles} total sector entries")
+data = best_data
 
 # Extract all unique articles
 seen_links = set()
@@ -21,22 +45,39 @@ for sec, arts in data.get("sector_articles", {}).items():
             seen_links.add(link)
             unique_articles.append(a)
 
-print(f"Total unique raw articles in store: {len(unique_articles)}")
+print(f"Total unique raw articles to process: {len(unique_articles)}")
 
-# Re-process each article: fix symbols, fix sectors
+# Re-process each article: fix symbols, fix sectors, detect roundups
 new_sector_articles = {}
 stock_scores = {}
+roundup_count = 0
+single_catalyst_count = 0
 
 for a in unique_articles:
     title_text = a.get("title", "") + " " + a.get("summary", "")
-    symbols = sector_engine.extract_symbols(title_text)
+    meta = sector_engine.extract_symbols_with_metadata(title_text, title=a.get("title", ""))
     
-    # Also keep valid existing stock mentions
-    for existing_sym in a.get("stock_mentions", []):
-        if existing_sym in sector_engine.valid_symbols:
-            symbols.append(existing_sym)
-    symbols = list(set(symbols))[:5]
+    symbols = meta["symbols"]
+    is_roundup = meta["is_roundup"]
+    is_single = meta["is_single_stock"]
+    primary_sym = meta["primary_symbol"]
+
     a["stock_mentions"] = symbols
+    a["is_roundup"] = is_roundup
+    a["is_single_stock"] = is_single
+    a["primary_symbol"] = primary_sym
+
+    # Re-evaluate with contextual financial sentiment engine
+    sent = sentiment_engine.lexicon_score(title_text)
+    a["sentiment_label"] = sent["sentiment_label"]
+    a["sentiment_score"] = sent["sentiment_score"]
+    a["impact_type"] = sent["impact_type"]
+    a["reasoning"] = sent["reasoning"]
+
+    if is_roundup:
+        roundup_count += 1
+    elif is_single:
+        single_catalyst_count += 1
 
     # Collect all sectors this article belongs to based on mentioned stocks
     article_sectors = set()
@@ -62,7 +103,13 @@ for a in unique_articles:
             new_sector_articles[s] = []
         new_sector_articles[s].append(a)
 
-    # Aggregate stock scores
+    # STRICT ACCURACY GUARANTEE: Exclude generic market roundup listicles from contaminating stock sentiment!
+    if is_roundup:
+        continue
+
+    # Pure company catalysts (single stock) get 1.25x high-conviction multiplier
+    weight_mult = 1.25 if is_single else 1.0
+
     for sym in symbols:
         canonical_sector = sector_engine.symbol_to_sector.get(sym, "Broad Market")
         if sym not in stock_scores:
@@ -74,7 +121,7 @@ for a in unique_articles:
                 "sector": canonical_sector,
                 "top_article_title": a.get("title", "")
             }
-        score = a.get("sentiment_score", 0.0)
+        score = a.get("sentiment_score", 0.0) * weight_mult
         if score > 0:
             stock_scores[sym]["positive_score"] += score
         elif score < 0:
@@ -110,16 +157,28 @@ for sec, arts in new_sector_articles.items():
 
 data["sector_articles"] = new_sector_articles
 data["gainers_losers"] = {"gainers": gainers, "losers": losers}
+if "market_summary" not in data:
+    data["market_summary"] = {}
 data["market_summary"]["sectors"] = sorted(sector_summaries, key=lambda x: x["article_count"], reverse=True)
 data["market_summary"]["total_articles"] = len(unique_articles)
 
-with open(store_file, "w", encoding="utf-8") as f:
-    json.dump(data, f, indent=2)
+# Write to both locations using canonical absolute paths
+canonical_paths = [
+    Path(r"C:\Sentix\data\market_store.json"),
+    Path(r"C:\Sentix\backend\data\market_store.json")
+]
 
-print("Successfully re-hydrated market_store.json!")
-print("--- NEW TOP GAINERS ---")
+for dest in canonical_paths:
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    with open(dest, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+    print(f"Saved synchronized store to {dest.resolve()}")
+
+print(f"Identified {roundup_count} generic roundups (cleanly isolated from stock sentiment).")
+print(f"Identified {single_catalyst_count} pure single-stock catalysts.")
+print("--- CLEAN TOP GAINERS ---")
 for g in gainers:
     print(f"  {g['symbol']} | Sector: {g['sector']} | Score: {g['net_score']} | Count: {g['article_count']}")
-print("--- NEW TOP LOSERS ---")
+print("--- CLEAN TOP LOSERS ---")
 for l in losers:
     print(f"  {l['symbol']} | Sector: {l['sector']} | Score: {l['net_score']} | Count: {l['article_count']}")
